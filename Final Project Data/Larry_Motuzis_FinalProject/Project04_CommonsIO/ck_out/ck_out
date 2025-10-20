@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="org.apache.commons.io.input.Tailer$Tailable" />
+			<role name="FactoryMethod()" element="org.apache.commons.io.input.Tailer$Tailable::getRandomAccess(java.lang.String):org.apache.commons.io.input.Tailer$RandomAccessResourceBridge" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.monitor.SerializableFileTime" />
+			<role name="uniqueInstance" element="org.apache.commons.io.monitor.SerializableFileTime::EPOCH:org.apache.commons.io.monitor.SerializableFileTime" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.filefilter.SymbolicLinkFileFilter" />
+			<role name="uniqueInstance" element="org.apache.commons.io.filefilter.SymbolicLinkFileFilter::INSTANCE:org.apache.commons.io.filefilter.SymbolicLinkFileFilter" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.file.StandardDeleteOption" />
+			<role name="uniqueInstance" element="org.apache.commons.io.file.StandardDeleteOption::OVERRIDE_READ_ONLY:org.apache.commons.io.file.StandardDeleteOption" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.file.Counters$NoopCounter" />
+			<role name="uniqueInstance" element="org.apache.commons.io.file.Counters$NoopCounter::INSTANCE:org.apache.commons.io.file.Counters$NoopCounter" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.file.spi.FileSystemProviders" />
+			<role name="uniqueInstance" element="org.apache.commons.io.file.spi.FileSystemProviders::INSTALLED:org.apache.commons.io.file.spi.FileSystemProviders" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.file.NoopPathVisitor" />
+			<role name="uniqueInstance" element="org.apache.commons.io.file.NoopPathVisitor::INSTANCE:org.apache.commons.io.file.NoopPathVisitor" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.file.Counters$NoopPathCounters" />
+			<role name="uniqueInstance" element="org.apache.commons.io.file.Counters$NoopPathCounters::INSTANCE:org.apache.commons.io.file.Counters$NoopPathCounters" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.input.BrokenReader" />
+			<role name="uniqueInstance" element="org.apache.commons.io.input.BrokenReader::INSTANCE:org.apache.commons.io.input.BrokenReader" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.input.BrokenInputStream" />
+			<role name="uniqueInstance" element="org.apache.commons.io.input.BrokenInputStream::INSTANCE:org.apache.commons.io.input.BrokenInputStream" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.input.NullInputStream" />
+			<role name="uniqueInstance" element="org.apache.commons.io.input.NullInputStream::INSTANCE:org.apache.commons.io.input.NullInputStream" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.input.NullReader" />
+			<role name="uniqueInstance" element="org.apache.commons.io.input.NullReader::INSTANCE:org.apache.commons.io.input.NullReader" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.output.NullAppendable" />
+			<role name="uniqueInstance" element="org.apache.commons.io.output.NullAppendable::INSTANCE:org.apache.commons.io.output.NullAppendable" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.output.BrokenOutputStream" />
+			<role name="uniqueInstance" element="org.apache.commons.io.output.BrokenOutputStream::INSTANCE:org.apache.commons.io.output.BrokenOutputStream" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.output.BrokenWriter" />
+			<role name="uniqueInstance" element="org.apache.commons.io.output.BrokenWriter::INSTANCE:org.apache.commons.io.output.BrokenWriter" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.function.IOConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.io.function.IOConsumer::NOOP_IO_CONSUMER:org.apache.commons.io.function.IOConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.io.function.IOIntConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.io.function.IOIntConsumer::NOOP:org.apache.commons.io.function.IOIntConsumer" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter" />
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="org.apache.commons.io.filefilter.IOFileFilter" />
+			<role name="Decorator" element="org.apache.commons.io.filefilter.NotFileFilter" />
+			<role name="component" element="org.apache.commons.io.filefilter.NotFileFilter::filter:org.apache.commons.io.filefilter.IOFileFilter" />
+			<role name="Operation()" element="org.apache.commons.io.filefilter.NotFileFilter::accept(java.io.File):boolean" />
+			<role name="Operation()" element="org.apache.commons.io.filefilter.NotFileFilter::accept(java.io.File, java.lang.String):boolean" />
+		</instance>
+	</pattern>
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="org.apache.commons.io.file.CountingPathVisitor" />
+			<role name="State" element="org.apache.commons.io.file.PathFilter" />
+			<role name="state" element="org.apache.commons.io.file.CountingPathVisitor::fileFilter:org.apache.commons.io.file.PathFilter" />
+			<role name="state" element="org.apache.commons.io.file.CountingPathVisitor::directoryFilter:org.apache.commons.io.file.PathFilter" />
+			<role name="Request()" element="org.apache.commons.io.file.CountingPathVisitor::accept(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes):boolean" />
+			<role name="Request()" element="org.apache.commons.io.file.CountingPathVisitor::preVisitDirectory(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes):java.nio.file.FileVisitResult" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.file.DirectoryStreamFilter" />
+			<role name="State" element="org.apache.commons.io.file.PathFilter" />
+			<role name="state" element="org.apache.commons.io.file.DirectoryStreamFilter::pathFilter:org.apache.commons.io.file.PathFilter" />
+			<role name="Request()" element="org.apache.commons.io.file.DirectoryStreamFilter::accept(java.nio.file.Path):boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.input.BoundedInputStream" />
+			<role name="State" element="org.apache.commons.io.function.IOBiConsumer" />
+			<role name="state" element="org.apache.commons.io.input.BoundedInputStream::onMaxCount:org.apache.commons.io.function.IOBiConsumer" />
+			<role name="Request()" element="org.apache.commons.io.input.BoundedInputStream::onMaxLength(long, long):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.function.UncheckedIOIterable" />
+			<role name="State" element="org.apache.commons.io.function.IOIterable" />
+			<role name="state" element="org.apache.commons.io.function.UncheckedIOIterable::delegate:org.apache.commons.io.function.IOIterable" />
+			<role name="Request()" element="org.apache.commons.io.function.UncheckedIOIterable::iterator():java.util.Iterator" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.function.UncheckedIOBaseStream" />
+			<role name="State" element="org.apache.commons.io.function.IOBaseStream" />
+			<role name="state" element="org.apache.commons.io.function.UncheckedIOBaseStream::delegate:org.apache.commons.io.function.IOBaseStream" />
+			<role name="Request()" element="org.apache.commons.io.function.UncheckedIOBaseStream::onClose(java.lang.Runnable):java.util.stream.BaseStream" />
+			<role name="Request()" element="org.apache.commons.io.function.UncheckedIOBaseStream::parallel():java.util.stream.BaseStream" />
+			<role name="Request()" element="org.apache.commons.io.function.UncheckedIOBaseStream::sequential():java.util.stream.BaseStream" />
+			<role name="Request()" element="org.apache.commons.io.function.UncheckedIOBaseStream::unordered():java.util.stream.BaseStream" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.function.UncheckedIOSpliterator" />
+			<role name="State" element="org.apache.commons.io.function.IOSpliterator" />
+			<role name="state" element="org.apache.commons.io.function.UncheckedIOSpliterator::delegate:org.apache.commons.io.function.IOSpliterator" />
+			<role name="Request()" element="org.apache.commons.io.function.UncheckedIOSpliterator::trySplit():java.util.Spliterator" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.input.Tailer" />
+			<role name="State" element="org.apache.commons.io.input.Tailer$Tailable" />
+			<role name="state" element="org.apache.commons.io.input.Tailer::tailable:org.apache.commons.io.input.Tailer$Tailable" />
+			<role name="Request()" element="org.apache.commons.io.input.Tailer::run():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.input.Tailer" />
+			<role name="State" element="org.apache.commons.io.input.TailerListener" />
+			<role name="state" element="org.apache.commons.io.input.Tailer::listener:org.apache.commons.io.input.TailerListener" />
+			<role name="Request()" element="org.apache.commons.io.input.Tailer::readLines(org.apache.commons.io.input.Tailer$RandomAccessResourceBridge):long" />
+			<role name="Request()" element="org.apache.commons.io.input.Tailer::run():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.output.ThresholdingOutputStream" />
+			<role name="State" element="org.apache.commons.io.function.IOConsumer" />
+			<role name="state" element="org.apache.commons.io.output.ThresholdingOutputStream::thresholdConsumer:org.apache.commons.io.function.IOConsumer" />
+			<role name="Request()" element="org.apache.commons.io.output.ThresholdingOutputStream::thresholdReached():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.file.CountingPathVisitor" />
+			<role name="State" element="org.apache.commons.io.file.Counters$PathCounters" />
+			<role name="state" element="org.apache.commons.io.file.CountingPathVisitor::pathCounters:org.apache.commons.io.file.Counters$PathCounters" />
+			<role name="Request()" element="org.apache.commons.io.file.CountingPathVisitor::updateDirCounter(java.nio.file.Path, java.io.IOException):void" />
+			<role name="Request()" element="org.apache.commons.io.file.CountingPathVisitor::updateFileCounters(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.input.ByteBufferCleaner" />
+			<role name="State" element="org.apache.commons.io.input.ByteBufferCleaner$Cleaner" />
+			<role name="state" element="org.apache.commons.io.input.ByteBufferCleaner::INSTANCE:org.apache.commons.io.input.ByteBufferCleaner$Cleaner" />
+			<role name="Request()" element="org.apache.commons.io.input.ByteBufferCleaner::clean(java.nio.ByteBuffer):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.file.Counters$AbstractPathCounters" />
+			<role name="State" element="org.apache.commons.io.file.Counters$Counter" />
+			<role name="state" element="org.apache.commons.io.file.Counters$AbstractPathCounters::fileCounter:org.apache.commons.io.file.Counters$Counter" />
+			<role name="state" element="org.apache.commons.io.file.Counters$AbstractPathCounters::directoryCounter:org.apache.commons.io.file.Counters$Counter" />
+			<role name="state" element="org.apache.commons.io.file.Counters$AbstractPathCounters::byteCounter:org.apache.commons.io.file.Counters$Counter" />
+			<role name="Request()" element="org.apache.commons.io.file.Counters$AbstractPathCounters::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.io.output.ThresholdingOutputStream" />
+			<role name="State" element="org.apache.commons.io.function.IOFunction" />
+			<role name="state" element="org.apache.commons.io.output.ThresholdingOutputStream::outputStreamGetter:org.apache.commons.io.function.IOFunction" />
+			<role name="Request()" element="org.apache.commons.io.output.ThresholdingOutputStream::getOutputStream():java.io.OutputStream" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy">
+		<instance>
+			<role name="Context" element="org.apache.commons.io.FileSystem" />
+			<role name="Strategy" element="org.apache.commons.io.FileSystem$NameLengthStrategy" />
+			<role name="strategy" element="org.apache.commons.io.FileSystem::nameLengthStrategy:org.apache.commons.io.FileSystem$NameLengthStrategy" />
+			<role name="ContextInterface()" element="org.apache.commons.io.FileSystem::toLegalFileName(java.lang.CharSequence, char, java.nio.charset.Charset):java.lang.String" />
+		</instance>
+	</pattern>
+	<pattern name="Bridge">
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.io.input.ProxyInputStream" />
+			<role name="Implementor" element="org.apache.commons.io.function.IOIntConsumer" />
+			<role name="implementor" element="org.apache.commons.io.input.ProxyInputStream::afterRead:org.apache.commons.io.function.IOIntConsumer" />
+			<role name="Operation()" element="org.apache.commons.io.input.ProxyInputStream::afterRead(int):void" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.io.file.SimplePathVisitor" />
+			<role name="Implementor" element="org.apache.commons.io.function.IOBiFunction" />
+			<role name="implementor" element="org.apache.commons.io.file.SimplePathVisitor::visitFileFailedFunction:org.apache.commons.io.function.IOBiFunction" />
+			<role name="Operation()" element="org.apache.commons.io.file.SimplePathVisitor::visitFileFailed(java.nio.file.Path, java.io.IOException):java.nio.file.FileVisitResult" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.io.output.AbstractByteArrayOutputStream" />
+			<role name="TemplateMethod()" element="org.apache.commons.io.output.AbstractByteArrayOutputStream::toString():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.commons.io.output.AbstractByteArrayOutputStream::toString(java.nio.charset.Charset):java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.commons.io.output.AbstractByteArrayOutputStream::toString(java.lang.String):java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.commons.io.output.AbstractByteArrayOutputStream::write(byte[]):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.io.FileSystem$NameLengthStrategy" />
+			<role name="TemplateMethod()" element="org.apache.commons.io.FileSystem$NameLengthStrategy::isWithinLimit(java.lang.CharSequence, int, java.nio.charset.Charset):boolean" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+

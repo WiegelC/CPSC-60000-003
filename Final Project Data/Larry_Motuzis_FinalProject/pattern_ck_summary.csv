@@ -1,0 +1,11 @@
+project,pattern_classes,nonpattern_classes,avg_wmc_pattern,avg_wmc_nonpattern,avg_cbo_pattern,avg_cbo_nonpattern,avg_lcom_pattern,avg_lcom_nonpattern
+Project02_CommonsMath/ck_out,171,545,20.953,12.484,6.485,4.127,75.018,12.78
+Project03_CommonsLang/ck_out,68,306,10.382,27.67,3.706,3.637,29.838,497.111
+Project04_CommonsIO/ck_out,45,297,12.333,14.768,3.978,3.828,37.8,145.889
+Project05_CommonsCollections/ck_out,96,487,18.854,12.556,5.365,4.84,41.073,57.735
+Project06_POI/ck_out_ooxml,69,762,65.913,18.982,16.275,7.688,989.029,66.543
+Project06_POI/ck_out_poi,310,1308,28.365,13.84,8.955,4.89,395.403,41.99
+Project07_PDFBox/ck_out,87,642,35.632,19.12,10.632,6.715,167.759,57.6
+Project08_Tika/ck_out,60,312,18.883,10.821,6.783,3.679,54.367,15.856
+Project09_JFreeChart/ck_out,132,527,58.409,21.825,10.985,5.522,837.583,68.808
+Project10_JGraphT/ck_out,195,462,23.082,11.851,8.067,4.379,26.856,19.511

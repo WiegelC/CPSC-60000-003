@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="org.apache.pdfbox.contentstream.PDContentStream" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.contentstream.PDContentStream::getResources():org.apache.pdfbox.pdmodel.PDResources" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.contentstream.PDContentStream::getBBox():org.apache.pdfbox.pdmodel.common.PDRectangle" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.pdfbox.pdmodel.ResourceCacheCreateFunction" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.ResourceCacheCreateFunction::create():org.apache.pdfbox.pdmodel.ResourceCache" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.pdfbox.pdmodel.common.COSObjectable" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.common.COSObjectable::getCOSObject():org.apache.pdfbox.cos.COSBase" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.pdfbox.pdmodel.interactive.form.PDField" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.interactive.form.PDField::exportFDF():org.apache.pdfbox.pdmodel.fdf.FDFField" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.pdfbox.pdmodel.font.PDFontLike" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.font.PDFontLike::getFontDescriptor():org.apache.pdfbox.pdmodel.font.PDFontDescriptor" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.pdfbox.pdmodel.font.PDSimpleFont" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.font.PDSimpleFont::readEncodingFromFont():org.apache.pdfbox.pdmodel.font.encoding.Encoding" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.pdfbox.pdmodel.font.FontMapper" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.font.FontMapper::getTrueTypeFont(java.lang.String, org.apache.pdfbox.pdmodel.font.PDFontDescriptor):org.apache.pdfbox.pdmodel.font.FontMapping" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.font.FontMapper::getFontBoxFont(java.lang.String, org.apache.pdfbox.pdmodel.font.PDFontDescriptor):org.apache.pdfbox.pdmodel.font.FontMapping" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.font.FontMapper::getCIDFont(java.lang.String, org.apache.pdfbox.pdmodel.font.PDFontDescriptor, org.apache.pdfbox.pdmodel.font.PDCIDSystemInfo):org.apache.pdfbox.pdmodel.font.CIDFontMapping" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.pdfbox.pdmodel.graphics.shading.PDMeshBasedShadingType" />
+			<role name="FactoryMethod()" element="org.apache.pdfbox.pdmodel.graphics.shading.PDMeshBasedShadingType::generatePatch(java.awt.geom.Point2D[], float[][]):org.apache.pdfbox.pdmodel.graphics.shading.Patch" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.cos.COSNull" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.cos.COSNull::NULL:org.apache.pdfbox.cos.COSNull" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.encryption.SecurityHandlerFactory" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.encryption.SecurityHandlerFactory::INSTANCE:org.apache.pdfbox.pdmodel.encryption.SecurityHandlerFactory" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.font.encoding.SymbolEncoding" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.font.encoding.SymbolEncoding::INSTANCE:org.apache.pdfbox.pdmodel.font.encoding.SymbolEncoding" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.font.encoding.ZapfDingbatsEncoding" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.font.encoding.ZapfDingbatsEncoding::INSTANCE:org.apache.pdfbox.pdmodel.font.encoding.ZapfDingbatsEncoding" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.font.encoding.MacRomanEncoding" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.font.encoding.MacRomanEncoding::INSTANCE:org.apache.pdfbox.pdmodel.font.encoding.MacRomanEncoding" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.font.encoding.WinAnsiEncoding" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.font.encoding.WinAnsiEncoding::INSTANCE:org.apache.pdfbox.pdmodel.font.encoding.WinAnsiEncoding" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.font.encoding.MacOSRomanEncoding" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.font.encoding.MacOSRomanEncoding::INSTANCE:org.apache.pdfbox.pdmodel.font.encoding.MacOSRomanEncoding" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.font.encoding.MacExpertEncoding" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.font.encoding.MacExpertEncoding::INSTANCE:org.apache.pdfbox.pdmodel.font.encoding.MacExpertEncoding" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.font.encoding.StandardEncoding" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.font.encoding.StandardEncoding::INSTANCE:org.apache.pdfbox.pdmodel.font.encoding.StandardEncoding" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceCMYK" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceCMYK::INSTANCE:org.apache.pdfbox.pdmodel.graphics.color.PDDeviceCMYK" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceGray" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceGray::INSTANCE:org.apache.pdfbox.pdmodel.graphics.color.PDDeviceGray" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB::INSTANCE:org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.pdfparser.xref.FreeXReference" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.pdfparser.xref.FreeXReference::NULL_ENTRY:org.apache.pdfbox.pdfparser.xref.FreeXReference" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.text.PDFTextStripper$LineItem" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.text.PDFTextStripper$LineItem::WORD_SEPARATOR:org.apache.pdfbox.text.PDFTextStripper$LineItem" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.filter.DecodeOptions" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.filter.DecodeOptions::DEFAULT:org.apache.pdfbox.filter.DecodeOptions" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.pdfbox.filter.FilterFactory" />
+			<role name="uniqueInstance" element="org.apache.pdfbox.filter.FilterFactory::INSTANCE:org.apache.pdfbox.filter.FilterFactory" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adapter" element="org.apache.pdfbox.pdmodel.common.function.PDFunctionType4" />
+			<role name="Adaptee" element="org.apache.pdfbox.pdmodel.common.function.type4.InstructionSequence" />
+			<role name="adaptee" element="org.apache.pdfbox.pdmodel.common.function.PDFunctionType4::instructions:org.apache.pdfbox.pdmodel.common.function.type4.InstructionSequence" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.common.function.PDFunctionType4::eval(float[]):float[]" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateStructure" />
+			<role name="Adapter" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder" />
+			<role name="adaptee" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::pdfStructure:org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateStructure" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createPage(org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSignDesigner):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createTemplate(org.apache.pdfbox.pdmodel.PDPage):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createAcroForm(org.apache.pdfbox.pdmodel.PDDocument):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createSignatureField(org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createSignature(org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField, org.apache.pdfbox.pdmodel.PDPage, java.lang.String):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createAcroFormDictionary(org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm, org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createSignatureRectangle(org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField, org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSignDesigner):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createAffineTransform(java.awt.geom.AffineTransform):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createProcSetArray():void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createSignatureImage(org.apache.pdfbox.pdmodel.PDDocument, java.awt.image.BufferedImage):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createFormatterRectangle(int[]):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createHolderFormStream(org.apache.pdfbox.pdmodel.PDDocument):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createHolderFormResources():void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createHolderForm(org.apache.pdfbox.pdmodel.PDResources, org.apache.pdfbox.pdmodel.common.PDStream, org.apache.pdfbox.pdmodel.common.PDRectangle):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createAppearanceDictionary(org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject, org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createInnerFormStream(org.apache.pdfbox.pdmodel.PDDocument):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createInnerFormResource():void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createInnerForm(org.apache.pdfbox.pdmodel.PDResources, org.apache.pdfbox.pdmodel.common.PDStream, org.apache.pdfbox.pdmodel.common.PDRectangle):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::insertInnerFormToHolderResources(org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject, org.apache.pdfbox.pdmodel.PDResources):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createImageFormStream(org.apache.pdfbox.pdmodel.PDDocument):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createImageFormResources():void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createImageForm(org.apache.pdfbox.pdmodel.PDResources, org.apache.pdfbox.pdmodel.PDResources, org.apache.pdfbox.pdmodel.common.PDStream, org.apache.pdfbox.pdmodel.common.PDRectangle, java.awt.geom.AffineTransform, org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createBackgroundLayerForm(org.apache.pdfbox.pdmodel.PDResources, org.apache.pdfbox.pdmodel.common.PDRectangle):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::injectAppearanceStreams(org.apache.pdfbox.pdmodel.common.PDStream, org.apache.pdfbox.pdmodel.common.PDStream, org.apache.pdfbox.pdmodel.common.PDStream, org.apache.pdfbox.cos.COSName, org.apache.pdfbox.cos.COSName, org.apache.pdfbox.cos.COSName, org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSignDesigner):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createVisualSignature(org.apache.pdfbox.pdmodel.PDDocument):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::createWidgetDictionary(org.apache.pdfbox.pdmodel.interactive.form.PDSignatureField, org.apache.pdfbox.pdmodel.PDResources):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSigBuilder::closeTemplate(org.apache.pdfbox.pdmodel.PDDocument):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.pdfbox.pdmodel.font.PDCIDFontType2Embedder" />
+			<role name="Adapter" element="org.apache.pdfbox.pdmodel.font.PDType0Font" />
+			<role name="adaptee" element="org.apache.pdfbox.pdmodel.font.PDType0Font::embedder:org.apache.pdfbox.pdmodel.font.PDCIDFontType2Embedder" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.PDType0Font::addToSubset(int):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.PDType0Font::subset():void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.PDType0Font::willBeSubset():boolean" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.pdfbox.cos.COSDictionary" />
+			<role name="Adapter" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage" />
+			<role name="adaptee" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::parameters:org.apache.pdfbox.cos.COSDictionary" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::getBitsPerComponent():int" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::setBitsPerComponent(int):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::getColorSpace():org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::setColorSpace(org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::getHeight():int" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::setHeight(int):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::getWidth():int" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::setWidth(int):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::getInterpolate():boolean" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::setInterpolate(boolean):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::setDecode(org.apache.pdfbox.cos.COSArray):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::getDecode():org.apache.pdfbox.cos.COSArray" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::isStencil():boolean" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.image.PDInlineImage::setStencil(boolean):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.pdfbox.pdmodel.PDDocument" />
+			<role name="Adapter" element="org.apache.pdfbox.pdfwriter.COSWriter" />
+			<role name="adaptee" element="org.apache.pdfbox.pdfwriter.COSWriter::pdDocument:org.apache.pdfbox.pdmodel.PDDocument" />
+			<role name="Request()" element="org.apache.pdfbox.pdfwriter.COSWriter::visitFromStream(org.apache.pdfbox.cos.COSStream):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdfwriter.COSWriter::visitFromString(org.apache.pdfbox.cos.COSString):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.pdfbox.cos.COSObjectKey" />
+			<role name="Adapter" element="org.apache.pdfbox.pdfwriter.COSWriter" />
+			<role name="adaptee" element="org.apache.pdfbox.pdfwriter.COSWriter::currentObjectKey:org.apache.pdfbox.cos.COSObjectKey" />
+			<role name="Request()" element="org.apache.pdfbox.pdfwriter.COSWriter::visitFromStream(org.apache.pdfbox.cos.COSStream):void" />
+			<role name="Request()" element="org.apache.pdfbox.pdfwriter.COSWriter::visitFromString(org.apache.pdfbox.cos.COSString):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.pdfbox.pdmodel.font.FontFormat" />
+			<role name="Adapter" element="org.apache.pdfbox.pdmodel.font.FileSystemFontProvider$FSFontInfo" />
+			<role name="adaptee" element="org.apache.pdfbox.pdmodel.font.FileSystemFontProvider$FSFontInfo::format:org.apache.pdfbox.pdmodel.font.FontFormat" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.FileSystemFontProvider$FSFontInfo::getFont():org.apache.fontbox.FontBoxFont" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.pdfbox.pdfwriter.COSWriter" />
+			<role name="Adapter" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.SigningSupport" />
+			<role name="adaptee" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.SigningSupport::cosWriter:org.apache.pdfbox.pdfwriter.COSWriter" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.SigningSupport::getContent():java.io.InputStream" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.SigningSupport::setSignature(byte[]):void" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Decorator" element="org.apache.pdfbox.pdmodel.graphics.color.PDICCBased" />
+			<role name="component" element="org.apache.pdfbox.pdmodel.graphics.color.PDICCBased::alternateColorSpace:org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Operation()" element="org.apache.pdfbox.pdmodel.graphics.color.PDICCBased::toRGB(float[]):float[]" />
+			<role name="Operation()" element="org.apache.pdfbox.pdmodel.graphics.color.PDICCBased::toRGBImage(java.awt.image.WritableRaster):java.awt.image.BufferedImage" />
+			<role name="Operation()" element="org.apache.pdfbox.pdmodel.graphics.color.PDICCBased::toRawImage(java.awt.image.WritableRaster):java.awt.image.BufferedImage" />
+			<role name="Operation()" element="org.apache.pdfbox.pdmodel.graphics.color.PDICCBased::getDefaultDecode(int):float[]" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Decorator" element="org.apache.pdfbox.pdmodel.graphics.color.PDSeparation" />
+			<role name="component" element="org.apache.pdfbox.pdmodel.graphics.color.PDSeparation::alternateColorSpace:org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Operation()" element="org.apache.pdfbox.pdmodel.graphics.color.PDSeparation::toRGB(float[]):float[]" />
+			<role name="Operation()" element="org.apache.pdfbox.pdmodel.graphics.color.PDSeparation::toRGBImage(java.awt.image.WritableRaster):java.awt.image.BufferedImage" />
+		</instance>
+	</pattern>
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="State" element="org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Context" element="org.apache.pdfbox.pdmodel.graphics.color.PDColor" />
+			<role name="state" element="org.apache.pdfbox.pdmodel.graphics.color.PDColor::colorSpace:org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.color.PDColor::getComponents():float[]" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.graphics.color.PDColor::toRGB():int" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.cos.COSUpdateState" />
+			<role name="State" element="org.apache.pdfbox.cos.COSUpdateInfo" />
+			<role name="state" element="org.apache.pdfbox.cos.COSUpdateState::updateInfo:org.apache.pdfbox.cos.COSUpdateInfo" />
+			<role name="Request()" element="org.apache.pdfbox.cos.COSUpdateState::setOriginDocumentState(org.apache.pdfbox.cos.COSDocumentState, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.cos.COSIncrement" />
+			<role name="State" element="org.apache.pdfbox.cos.COSUpdateInfo" />
+			<role name="state" element="org.apache.pdfbox.cos.COSIncrement::incrementOrigin:org.apache.pdfbox.cos.COSUpdateInfo" />
+			<role name="Request()" element="org.apache.pdfbox.cos.COSIncrement::updateDifferentOrigin(org.apache.pdfbox.cos.COSUpdateState):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateCreator" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateBuilder" />
+			<role name="state" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateCreator::pdfBuilder:org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateBuilder" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateCreator::getPdfStructure():org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateStructure" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDFTemplateCreator::buildPDF(org.apache.pdfbox.pdmodel.interactive.digitalsignature.visible.PDVisibleSignDesigner):java.io.InputStream" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.rendering.GlyphCache" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.font.PDVectorFont" />
+			<role name="state" element="org.apache.pdfbox.rendering.GlyphCache::font:org.apache.pdfbox.pdmodel.font.PDVectorFont" />
+			<role name="Request()" element="org.apache.pdfbox.rendering.GlyphCache::getPathForCharacterCode(int):java.awt.geom.GeneralPath" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdfwriter.COSWriter" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.interactive.digitalsignature.SignatureInterface" />
+			<role name="state" element="org.apache.pdfbox.pdfwriter.COSWriter::signatureInterface:org.apache.pdfbox.pdmodel.interactive.digitalsignature.SignatureInterface" />
+			<role name="Request()" element="org.apache.pdfbox.pdfwriter.COSWriter::doWriteSignature():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.cos.COSDocument" />
+			<role name="State" element="org.apache.pdfbox.cos.ICOSParser" />
+			<role name="state" element="org.apache.pdfbox.cos.COSDocument::parser:org.apache.pdfbox.cos.ICOSParser" />
+			<role name="Request()" element="org.apache.pdfbox.cos.COSDocument::createCOSStream(org.apache.pdfbox.cos.COSDictionary, long, long):org.apache.pdfbox.cos.COSStream" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.cos.COSObject" />
+			<role name="State" element="org.apache.pdfbox.cos.ICOSParser" />
+			<role name="state" element="org.apache.pdfbox.cos.COSObject::parser:org.apache.pdfbox.cos.ICOSParser" />
+			<role name="Request()" element="org.apache.pdfbox.cos.COSObject::getObject():org.apache.pdfbox.cos.COSBase" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdmodel.PDPage" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.ResourceCache" />
+			<role name="state" element="org.apache.pdfbox.pdmodel.PDPage::resourceCache:org.apache.pdfbox.pdmodel.ResourceCache" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDPage::removeResources(org.apache.pdfbox.cos.COSDictionary):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdmodel.PDResources" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.ResourceCache" />
+			<role name="state" element="org.apache.pdfbox.pdmodel.PDResources::cache:org.apache.pdfbox.pdmodel.ResourceCache" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDResources::getFont(org.apache.pdfbox.cos.COSName):org.apache.pdfbox.pdmodel.font.PDFont" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDResources::getColorSpace(org.apache.pdfbox.cos.COSName, boolean):org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDResources::getExtGState(org.apache.pdfbox.cos.COSName):org.apache.pdfbox.pdmodel.graphics.state.PDExtendedGraphicsState" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDResources::getShading(org.apache.pdfbox.cos.COSName):org.apache.pdfbox.pdmodel.graphics.shading.PDShading" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDResources::getPattern(org.apache.pdfbox.cos.COSName):org.apache.pdfbox.pdmodel.graphics.pattern.PDAbstractPattern" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDResources::getProperties(org.apache.pdfbox.cos.COSName):org.apache.pdfbox.pdmodel.documentinterchange.markedcontent.PDPropertyList" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDResources::getXObject(org.apache.pdfbox.cos.COSName):org.apache.pdfbox.pdmodel.graphics.PDXObject" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdmodel.common.function.type4.Parser$Tokenizer" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.common.function.type4.Parser$SyntaxHandler" />
+			<role name="state" element="org.apache.pdfbox.pdmodel.common.function.type4.Parser$Tokenizer::handler:org.apache.pdfbox.pdmodel.common.function.type4.Parser$SyntaxHandler" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.common.function.type4.Parser$Tokenizer::scanNewLine():void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.common.function.type4.Parser$Tokenizer::scanWhitespace():void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.common.function.type4.Parser$Tokenizer::scanComment():void" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.common.function.type4.Parser$Tokenizer::scanToken():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdmodel.PDDocumentCatalog" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.fixup.PDDocumentFixup" />
+			<role name="state" element="org.apache.pdfbox.pdmodel.PDDocumentCatalog::acroFormFixupApplied:org.apache.pdfbox.pdmodel.fixup.PDDocumentFixup" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.PDDocumentCatalog::getAcroForm(org.apache.pdfbox.pdmodel.fixup.PDDocumentFixup):org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdfparser.COSParser" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.encryption.SecurityHandler" />
+			<role name="state" element="org.apache.pdfbox.pdfparser.COSParser::securityHandler:org.apache.pdfbox.pdmodel.encryption.SecurityHandler" />
+			<role name="Request()" element="org.apache.pdfbox.pdfparser.COSParser::prepareDecryption():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdmodel.ResourceCacheFactory" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.ResourceCacheCreateFunction" />
+			<role name="state" element="org.apache.pdfbox.pdmodel.ResourceCacheFactory::resourceCacheCreateFunction:org.apache.pdfbox.pdmodel.ResourceCacheCreateFunction" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.ResourceCacheFactory::createResourceCache():org.apache.pdfbox.pdmodel.ResourceCache" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.pdfbox.pdmodel.font.FontMapperImpl" />
+			<role name="State" element="org.apache.pdfbox.pdmodel.font.FontProvider" />
+			<role name="state" element="org.apache.pdfbox.pdmodel.font.FontMapperImpl::fontProvider:org.apache.pdfbox.pdmodel.font.FontProvider" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.FontMapperImpl::setProvider(org.apache.pdfbox.pdmodel.font.FontProvider):void" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge">
+		<instance>
+			<role name="Implementor" element="org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Abstraction" element="org.apache.pdfbox.pdmodel.graphics.shading.ShadingContext" />
+			<role name="implementor" element="org.apache.pdfbox.pdmodel.graphics.shading.ShadingContext::shadingColorSpace:org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace" />
+			<role name="Operation()" element="org.apache.pdfbox.pdmodel.graphics.shading.ShadingContext::convertToRGB(float[]):int" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.contentstream.operator.color.SetColor" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.contentstream.operator.color.SetColor::process(org.apache.pdfbox.contentstream.operator.Operator, java.util.List):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.common.function.type4.RelationalOperators$AbstractNumberComparisonOperator" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.common.function.type4.RelationalOperators$AbstractNumberComparisonOperator::execute(org.apache.pdfbox.pdmodel.common.function.type4.ExecutionContext):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.common.function.type4.BitwiseOperators$AbstractLogicalOperator" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.common.function.type4.BitwiseOperators$AbstractLogicalOperator::execute(org.apache.pdfbox.pdmodel.common.function.type4.ExecutionContext):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.common.function.PDFunction" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.common.function.PDFunction::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.common.PDNameTreeNode" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.common.PDNameTreeNode::getKids():java.util.List" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.common.PDNameTreeNode::getNames():java.util.Map" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.interactive.form.PDTerminalField" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.interactive.form.PDTerminalField::applyChange():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.interactive.form.PDField" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.interactive.form.PDField::importFDF(org.apache.pdfbox.pdmodel.fdf.FDFField):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.font.PDCIDFont" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.PDCIDFont::hasExplicitWidth(int):boolean" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.PDCIDFont::getPositionVector(int):org.apache.pdfbox.util.Vector" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.PDCIDFont::getVerticalDisplacementVectorY(int):float" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.PDCIDFont::getWidth(int):float" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.font.PDSimpleFont" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.PDSimpleFont::readEncoding():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.font.FontInfo" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.FontInfo::getWeightClassAsPanose():int" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.FontInfo::getCodePageRange():long" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.FontInfo::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.font.PDFont" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.PDFont::getWidth(int):float" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.PDFont::encode(java.lang.String):byte[]" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.PDFont::getStringWidth(java.lang.String):float" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.font.TrueTypeEmbedder" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.font.TrueTypeEmbedder::subset():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.graphics.shading.TriangleBasedShadingContext" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.graphics.shading.TriangleBasedShadingContext::createPixelTable(java.awt.Rectangle):void" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.graphics.shading.TriangleBasedShadingContext::getRaster(int, int, int, int):java.awt.image.Raster" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.graphics.shading.PDTriangleBasedShadingType" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.graphics.shading.PDTriangleBasedShadingType::getBounds(java.awt.geom.AffineTransform, org.apache.pdfbox.util.Matrix):java.awt.geom.Rectangle2D" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.pdmodel.graphics.shading.PDMeshBasedShadingType" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.pdmodel.graphics.shading.PDMeshBasedShadingType::readPatch(javax.imageio.stream.ImageInputStream, boolean, java.awt.geom.Point2D[], float[][], long, long, org.apache.pdfbox.pdmodel.common.PDRange, org.apache.pdfbox.pdmodel.common.PDRange, org.apache.pdfbox.pdmodel.common.PDRange[], org.apache.pdfbox.util.Matrix, java.awt.geom.AffineTransform, int):org.apache.pdfbox.pdmodel.graphics.shading.Patch" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.pdfbox.filter.Filter" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.filter.Filter::decode(java.io.InputStream, java.io.OutputStream, org.apache.pdfbox.cos.COSDictionary, int, org.apache.pdfbox.filter.DecodeOptions):org.apache.pdfbox.filter.DecodeResult" />
+			<role name="TemplateMethod()" element="org.apache.pdfbox.filter.Filter::encode(java.io.InputStream, java.io.OutputStream, org.apache.pdfbox.cos.COSDictionary, int):void" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor">
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSArray" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSArray::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSBoolean" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSBoolean::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSDictionary" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSDictionary::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSDocument" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSDocument::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSFloat" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSFloat::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSInteger" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSInteger::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSName" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSName::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSNull" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSNull::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSObject" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSObject::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSStream" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSStream::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+		<instance>
+			<role name="Visitor" element="org.apache.pdfbox.cos.ICOSVisitor" />
+			<role name="ConcreteElement" element="org.apache.pdfbox.cos.COSString" />
+			<role name="Accept()" element="org.apache.pdfbox.cos.COSString::accept(org.apache.pdfbox.cos.ICOSVisitor):void" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy">
+		<instance>
+			<role name="Proxy" element="org.apache.pdfbox.pdmodel.font.PDType0Font" />
+			<role name="RealSubject" element="org.apache.pdfbox.pdmodel.font.PDCIDFont" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.PDType0Font::getFontDescriptor():org.apache.pdfbox.pdmodel.font.PDFontDescriptor" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.PDType0Font::hasExplicitWidth(int):boolean" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.PDType0Font::getAverageFontWidth():float" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.PDType0Font::getPositionVector(int):org.apache.pdfbox.util.Vector" />
+			<role name="Request()" element="org.apache.pdfbox.pdmodel.font.PDType0Font::getWidth(int):float" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility">
+		<instance>
+			<role name="Handler" element="org.apache.pdfbox.pdmodel.common.PDNameTreeNode" />
+			<role name="successor" element="org.apache.pdfbox.pdmodel.common.PDNameTreeNode::parent:org.apache.pdfbox.pdmodel.common.PDNameTreeNode" />
+		</instance>
+	</pattern>
+</system>
+

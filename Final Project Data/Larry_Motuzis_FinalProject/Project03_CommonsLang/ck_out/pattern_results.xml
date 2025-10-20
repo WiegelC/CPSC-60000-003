@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method" />
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.Range$ComparableComparator" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.Range$ComparableComparator::INSTANCE:org.apache.commons.lang3.Range$ComparableComparator" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.tuple.ImmutableTriple" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.tuple.ImmutableTriple::NULL:org.apache.commons.lang3.tuple.ImmutableTriple" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.tuple.ImmutablePair" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.tuple.ImmutablePair::NULL:org.apache.commons.lang3.tuple.ImmutablePair" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableLongUnaryOperator" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableLongUnaryOperator::NOP:org.apache.commons.lang3.function.FailableLongUnaryOperator" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableConsumer::NOP:org.apache.commons.lang3.function.FailableConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableLongConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableLongConsumer::NOP:org.apache.commons.lang3.function.FailableLongConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableDoubleToLongFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableDoubleToLongFunction::NOP:org.apache.commons.lang3.function.FailableDoubleToLongFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableObjIntConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableObjIntConsumer::NOP:org.apache.commons.lang3.function.FailableObjIntConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableObjDoubleConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableObjDoubleConsumer::NOP:org.apache.commons.lang3.function.FailableObjDoubleConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableToBooleanFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableToBooleanFunction::NOP:org.apache.commons.lang3.function.FailableToBooleanFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableIntUnaryOperator" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableIntUnaryOperator::NOP:org.apache.commons.lang3.function.FailableIntUnaryOperator" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableIntToLongFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableIntToLongFunction::NOP:org.apache.commons.lang3.function.FailableIntToLongFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableIntToDoubleFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableIntToDoubleFunction::NOP:org.apache.commons.lang3.function.FailableIntToDoubleFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableDoubleConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableDoubleConsumer::NOP:org.apache.commons.lang3.function.FailableDoubleConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableToIntFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableToIntFunction::NOP:org.apache.commons.lang3.function.FailableToIntFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableLongToIntFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableLongToIntFunction::NOP:org.apache.commons.lang3.function.FailableLongToIntFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableIntFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableIntFunction::NOP:org.apache.commons.lang3.function.FailableIntFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.ByteConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.ByteConsumer::NOP:org.apache.commons.lang3.function.ByteConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableBiFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableBiFunction::NOP:org.apache.commons.lang3.function.FailableBiFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableDoubleToIntFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableDoubleToIntFunction::NOP:org.apache.commons.lang3.function.FailableDoubleToIntFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableToDoubleBiFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableToDoubleBiFunction::NOP:org.apache.commons.lang3.function.FailableToDoubleBiFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableIntToFloatFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableIntToFloatFunction::NOP:org.apache.commons.lang3.function.FailableIntToFloatFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableIntConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableIntConsumer::NOP:org.apache.commons.lang3.function.FailableIntConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableBiConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableBiConsumer::NOP:org.apache.commons.lang3.function.FailableBiConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableDoubleFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableDoubleFunction::NOP:org.apache.commons.lang3.function.FailableDoubleFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableFunction::NOP:org.apache.commons.lang3.function.FailableFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableLongToDoubleFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableLongToDoubleFunction::NOP:org.apache.commons.lang3.function.FailableLongToDoubleFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableToIntBiFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableToIntBiFunction::NOP:org.apache.commons.lang3.function.FailableToIntBiFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableToLongFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableToLongFunction::NOP:org.apache.commons.lang3.function.FailableToLongFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableObjLongConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableObjLongConsumer::NOP:org.apache.commons.lang3.function.FailableObjLongConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableDoubleUnaryOperator" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableDoubleUnaryOperator::NOP:org.apache.commons.lang3.function.FailableDoubleUnaryOperator" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableToDoubleFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableToDoubleFunction::NOP:org.apache.commons.lang3.function.FailableToDoubleFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableByteConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableByteConsumer::NOP:org.apache.commons.lang3.function.FailableByteConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.BooleanConsumer" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.BooleanConsumer::NOP:org.apache.commons.lang3.function.BooleanConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableLongFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableLongFunction::NOP:org.apache.commons.lang3.function.FailableLongFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableToLongBiFunction" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableToLongBiFunction::NOP:org.apache.commons.lang3.function.FailableToLongBiFunction" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.function.FailableSupplier" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.function.FailableSupplier::NUL:org.apache.commons.lang3.function.FailableSupplier" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.time.FastDatePrinter$TwoDigitYearField" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.time.FastDatePrinter$TwoDigitYearField::INSTANCE:org.apache.commons.lang3.time.FastDatePrinter$TwoDigitYearField" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.time.FastDatePrinter$TwoDigitMonthField" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.time.FastDatePrinter$TwoDigitMonthField::INSTANCE:org.apache.commons.lang3.time.FastDatePrinter$TwoDigitMonthField" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.time.CalendarUtils" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.time.CalendarUtils::INSTANCE:org.apache.commons.lang3.time.CalendarUtils" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField::INSTANCE:org.apache.commons.lang3.time.FastDatePrinter$UnpaddedMonthField" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.lang3.compare.ObjectToStringComparator" />
+			<role name="uniqueInstance" element="org.apache.commons.lang3.compare.ObjectToStringComparator::INSTANCE:org.apache.commons.lang3.compare.ObjectToStringComparator" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter" />
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="org.apache.commons.lang3.time.FastDatePrinter$NumberRule" />
+			<role name="Decorator" element="org.apache.commons.lang3.time.FastDatePrinter$DayInWeekField" />
+			<role name="component" element="org.apache.commons.lang3.time.FastDatePrinter$DayInWeekField::rule:org.apache.commons.lang3.time.FastDatePrinter$NumberRule" />
+			<role name="Operation()" element="org.apache.commons.lang3.time.FastDatePrinter$DayInWeekField::appendTo(java.lang.Appendable, int):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.lang3.time.FastDatePrinter$NumberRule" />
+			<role name="Decorator" element="org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField" />
+			<role name="component" element="org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField::rule:org.apache.commons.lang3.time.FastDatePrinter$NumberRule" />
+			<role name="Operation()" element="org.apache.commons.lang3.time.FastDatePrinter$TwelveHourField::appendTo(java.lang.Appendable, int):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.lang3.time.FastDatePrinter$NumberRule" />
+			<role name="Decorator" element="org.apache.commons.lang3.time.FastDatePrinter$TwentyFourHourField" />
+			<role name="component" element="org.apache.commons.lang3.time.FastDatePrinter$TwentyFourHourField::rule:org.apache.commons.lang3.time.FastDatePrinter$NumberRule" />
+			<role name="Operation()" element="org.apache.commons.lang3.time.FastDatePrinter$TwentyFourHourField::appendTo(java.lang.Appendable, int):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.lang3.time.FastDatePrinter$NumberRule" />
+			<role name="Decorator" element="org.apache.commons.lang3.time.FastDatePrinter$WeekYear" />
+			<role name="component" element="org.apache.commons.lang3.time.FastDatePrinter$WeekYear::rule:org.apache.commons.lang3.time.FastDatePrinter$NumberRule" />
+			<role name="Operation()" element="org.apache.commons.lang3.time.FastDatePrinter$WeekYear::appendTo(java.lang.Appendable, int):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.lang3.exception.ExceptionContext" />
+			<role name="Decorator" element="org.apache.commons.lang3.exception.ContextedException" />
+			<role name="component" element="org.apache.commons.lang3.exception.ContextedException::exceptionContext:org.apache.commons.lang3.exception.ExceptionContext" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedException::getContextEntries():java.util.List" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedException::getContextLabels():java.util.Set" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedException::getContextValues(java.lang.String):java.util.List" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedException::getFirstContextValue(java.lang.String):java.lang.Object" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedException::getFormattedExceptionMessage(java.lang.String):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.lang3.exception.ExceptionContext" />
+			<role name="Decorator" element="org.apache.commons.lang3.exception.ContextedRuntimeException" />
+			<role name="component" element="org.apache.commons.lang3.exception.ContextedRuntimeException::exceptionContext:org.apache.commons.lang3.exception.ExceptionContext" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getContextEntries():java.util.List" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getContextLabels():java.util.Set" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getContextValues(java.lang.String):java.util.List" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getFirstContextValue(java.lang.String):java.lang.Object" />
+			<role name="Operation()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getFormattedExceptionMessage(java.lang.String):java.lang.String" />
+		</instance>
+	</pattern>
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="org.apache.commons.lang3.time.FastDatePrinter" />
+			<role name="State" element="org.apache.commons.lang3.time.FastDatePrinter$Rule" />
+			<role name="state" element="org.apache.commons.lang3.time.FastDatePrinter::rules:org.apache.commons.lang3.time.FastDatePrinter$Rule[]" />
+			<role name="state" element="org.apache.commons.lang3.time.FastDatePrinter::EMPTY_RULE_ARRAY:org.apache.commons.lang3.time.FastDatePrinter$Rule[]" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDatePrinter::applyRules(, B):java.lang.Appendable" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDatePrinter::init():void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.lang3.function.FailableConsumer" />
+			<role name="Context" element="org.apache.commons.lang3.event.EventListenerSupport$ProxyInvocationHandler" />
+			<role name="state" element="org.apache.commons.lang3.event.EventListenerSupport$ProxyInvocationHandler::handler:org.apache.commons.lang3.function.FailableConsumer" />
+			<role name="Request()" element="org.apache.commons.lang3.event.EventListenerSupport$ProxyInvocationHandler::handle(java.lang.Throwable):void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.lang3.time.StopWatch$State" />
+			<role name="Context" element="org.apache.commons.lang3.time.StopWatch" />
+			<role name="state" element="org.apache.commons.lang3.time.StopWatch::runningState:org.apache.commons.lang3.time.StopWatch$State" />
+			<role name="Request()" element="org.apache.commons.lang3.time.StopWatch::isStarted():boolean" />
+			<role name="Request()" element="org.apache.commons.lang3.time.StopWatch::isStopped():boolean" />
+			<role name="Request()" element="org.apache.commons.lang3.time.StopWatch::isSuspended():boolean" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge">
+		<instance>
+			<role name="Implementor" element="org.apache.commons.lang3.function.FailableConsumer" />
+			<role name="Abstraction" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer" />
+			<role name="implementor" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer::closer:org.apache.commons.lang3.function.FailableConsumer" />
+			<role name="Operation()" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer::close():void" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer" />
+			<role name="Implementor" element="org.apache.commons.lang3.function.FailableSupplier" />
+			<role name="implementor" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer::initializer:org.apache.commons.lang3.function.FailableSupplier" />
+			<role name="Operation()" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer::initialize():java.lang.Object" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.Strings" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.Strings::equalsAny(java.lang.CharSequence, java.lang.CharSequence[]):boolean" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.Strings::indexOf(java.lang.CharSequence, java.lang.CharSequence):int" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.Strings::lastIndexOf(java.lang.CharSequence, java.lang.CharSequence):int" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.Strings::replace(java.lang.String, java.lang.String, java.lang.String, int):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.tuple.Pair" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Pair::compareTo(org.apache.commons.lang3.tuple.Pair):int" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Pair::getKey():java.lang.Object" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Pair::getValue():java.lang.Object" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Pair::toString():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Pair::toString(java.lang.String):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.tuple.Triple" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Triple::compareTo(org.apache.commons.lang3.tuple.Triple):int" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Triple::equals(java.lang.Object):boolean" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Triple::hashCode():int" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Triple::toString():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.tuple.Triple::toString(java.lang.String):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.time.AbstractFormatCache" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.time.AbstractFormatCache::lambda$getInstance$1(java.lang.String, java.util.TimeZone, java.util.Locale, org.apache.commons.lang3.time.AbstractFormatCache$ArrayKey):java.text.Format" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.time.FastDateParser$PatternStrategy" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.time.FastDateParser$PatternStrategy::parse(org.apache.commons.lang3.time.FastDateParser, java.util.Calendar, java.lang.String, java.text.ParsePosition, int):boolean" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.concurrent.EventCountCircuitBreaker$AbstractStateStrategy" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.concurrent.EventCountCircuitBreaker$AbstractStateStrategy::isCheckIntervalFinished(org.apache.commons.lang3.concurrent.EventCountCircuitBreaker, org.apache.commons.lang3.concurrent.EventCountCircuitBreaker$CheckIntervalData, long):boolean" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer::close():void" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.concurrent.AbstractConcurrentInitializer::initialize():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.text.translate.CodePointTranslator" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.text.translate.CodePointTranslator::translate(java.lang.CharSequence, int, java.io.Writer):int" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.text.translate.CharSequenceTranslator" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.text.translate.CharSequenceTranslator::translate(java.lang.CharSequence, java.io.Writer):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.lang3.text.StrMatcher" />
+			<role name="TemplateMethod()" element="org.apache.commons.lang3.text.StrMatcher::isMatch(char[], int):int" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor" />
+	<pattern name="Proxy">
+		<instance>
+			<role name="Proxy" element="org.apache.commons.lang3.time.FastDateFormat" />
+			<role name="RealSubject" element="org.apache.commons.lang3.time.FastDateParser" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::parse(java.lang.String):java.util.Date" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::parse(java.lang.String, java.text.ParsePosition):java.util.Date" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::parse(java.lang.String, java.text.ParsePosition, java.util.Calendar):boolean" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::parseObject(java.lang.String, java.text.ParsePosition):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.apache.commons.lang3.time.FastDateFormat" />
+			<role name="RealSubject" element="org.apache.commons.lang3.time.FastDatePrinter" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::format(java.util.Calendar):java.lang.String" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::format(java.util.Calendar, java.lang.StringBuffer):java.lang.StringBuffer" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::format(java.util.Date):java.lang.String" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::format(java.util.Date, java.lang.StringBuffer):java.lang.StringBuffer" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::format(long):java.lang.String" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::format(long, java.lang.StringBuffer):java.lang.StringBuffer" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::getLocale():java.util.Locale" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::getPattern():java.lang.String" />
+			<role name="Request()" element="org.apache.commons.lang3.time.FastDateFormat::getTimeZone():java.util.TimeZone" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy2">
+		<instance>
+			<role name="Proxy" element="org.apache.commons.lang3.exception.ContextedException" />
+			<role name="RealSubject" element="org.apache.commons.lang3.exception.DefaultExceptionContext" />
+			<role name="Subject" element="org.apache.commons.lang3.exception.ExceptionContext" />
+			<role name="subject" element="org.apache.commons.lang3.exception.ContextedException::exceptionContext:org.apache.commons.lang3.exception.ExceptionContext" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedException::getContextEntries():java.util.List" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedException::getContextLabels():java.util.Set" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedException::getContextValues(java.lang.String):java.util.List" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedException::getFirstContextValue(java.lang.String):java.lang.Object" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedException::getFormattedExceptionMessage(java.lang.String):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.apache.commons.lang3.exception.ContextedRuntimeException" />
+			<role name="RealSubject" element="org.apache.commons.lang3.exception.DefaultExceptionContext" />
+			<role name="Subject" element="org.apache.commons.lang3.exception.ExceptionContext" />
+			<role name="subject" element="org.apache.commons.lang3.exception.ContextedRuntimeException::exceptionContext:org.apache.commons.lang3.exception.ExceptionContext" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getContextEntries():java.util.List" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getContextLabels():java.util.Set" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getContextValues(java.lang.String):java.util.List" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getFirstContextValue(java.lang.String):java.lang.Object" />
+			<role name="Request()" element="org.apache.commons.lang3.exception.ContextedRuntimeException::getFormattedExceptionMessage(java.lang.String):java.lang.String" />
+		</instance>
+	</pattern>
+	<pattern name="Chain of Responsibility" />
+</system>
+

@@ -1,0 +1,2 @@
+file,class,method,variable,usage
+/Users/thiago/Documents/Thiago/CodeToAnalyze/resilience4j-spring/src/main/java/com/frandorado/resilience4jspring/Resilience4jSpringApplication.java,com.frandorado.resilience4jspring.Resilience4jSpringApplication,"applicationRunner/2[com.frandorado.resilience4jspring.Resilience4jSpringApplication.CircuitBreakerTestService,com.frandorado.resilience4jspring.CircuitBreaker]",consumer,3

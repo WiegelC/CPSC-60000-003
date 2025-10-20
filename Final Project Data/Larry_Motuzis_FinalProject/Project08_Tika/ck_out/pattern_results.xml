@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="org.apache.tika.extractor.EmbeddedDocumentExtractorFactory" />
+			<role name="FactoryMethod()" element="org.apache.tika.extractor.EmbeddedDocumentExtractorFactory::newInstance(org.apache.tika.metadata.Metadata, org.apache.tika.parser.ParseContext):org.apache.tika.extractor.EmbeddedDocumentExtractor" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.tika.parser.ParserFactory" />
+			<role name="FactoryMethod()" element="org.apache.tika.parser.ParserFactory::build():org.apache.tika.parser.Parser" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.tika.metadata.writefilter.MetadataWriteFilterFactory" />
+			<role name="FactoryMethod()" element="org.apache.tika.metadata.writefilter.MetadataWriteFilterFactory::newInstance():org.apache.tika.metadata.writefilter.MetadataWriteFilter" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="org.apache.tika.detect.EmptyDetector" />
+			<role name="uniqueInstance" element="org.apache.tika.detect.EmptyDetector::INSTANCE:org.apache.tika.detect.EmptyDetector" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.renderer.PageRangeRequest" />
+			<role name="uniqueInstance" element="org.apache.tika.renderer.PageRangeRequest::RENDER_ALL:org.apache.tika.renderer.PageRangeRequest" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.sax.xpath.Matcher" />
+			<role name="uniqueInstance" element="org.apache.tika.sax.xpath.Matcher::FAIL:org.apache.tika.sax.xpath.Matcher" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.sax.StoppingEarlyException" />
+			<role name="uniqueInstance" element="org.apache.tika.sax.StoppingEarlyException::INSTANCE:org.apache.tika.sax.StoppingEarlyException" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.language.detect.LanguageResult" />
+			<role name="uniqueInstance" element="org.apache.tika.language.detect.LanguageResult::NULL:org.apache.tika.language.detect.LanguageResult" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.extractor.EmbeddedBytesSelector" />
+			<role name="uniqueInstance" element="org.apache.tika.extractor.EmbeddedBytesSelector::ACCEPT_ALL:org.apache.tika.extractor.EmbeddedBytesSelector" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.parser.EmptyParser" />
+			<role name="uniqueInstance" element="org.apache.tika.parser.EmptyParser::INSTANCE:org.apache.tika.parser.EmptyParser" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.parser.ErrorParser" />
+			<role name="uniqueInstance" element="org.apache.tika.parser.ErrorParser::INSTANCE:org.apache.tika.parser.ErrorParser" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.parser.external.ExternalParser$LineConsumer" />
+			<role name="uniqueInstance" element="org.apache.tika.parser.external.ExternalParser$LineConsumer::NULL:org.apache.tika.parser.external.ExternalParser$LineConsumer" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.parser.AutoDetectParserConfig" />
+			<role name="uniqueInstance" element="org.apache.tika.parser.AutoDetectParserConfig::DEFAULT:org.apache.tika.parser.AutoDetectParserConfig" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.mime.MimeTypes" />
+			<role name="uniqueInstance" element="org.apache.tika.mime.MimeTypes::DEFAULT_TYPES:org.apache.tika.mime.MimeTypes" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.tika.metadata.filter.NoOpFilter" />
+			<role name="uniqueInstance" element="org.apache.tika.metadata.filter.NoOpFilter::NOOP_FILTER:org.apache.tika.metadata.filter.NoOpFilter" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adaptee" element="org.apache.tika.mime.MediaTypeRegistry" />
+			<role name="Adapter" element="org.apache.tika.detect.CompositeDetector" />
+			<role name="adaptee" element="org.apache.tika.detect.CompositeDetector::registry:org.apache.tika.mime.MediaTypeRegistry" />
+			<role name="Request()" element="org.apache.tika.detect.CompositeDetector::detect(java.io.InputStream, org.apache.tika.metadata.Metadata):org.apache.tika.mime.MediaType" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.tika.parser.ParseContext" />
+			<role name="Adapter" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor" />
+			<role name="adaptee" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor::context:org.apache.tika.parser.ParseContext" />
+			<role name="Request()" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor::shouldParseEmbedded(org.apache.tika.metadata.Metadata):boolean" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.tika.io.TemporaryResources" />
+			<role name="Adapter" element="org.apache.tika.embedder.ExternalEmbedder" />
+			<role name="adaptee" element="org.apache.tika.embedder.ExternalEmbedder::tmp:org.apache.tika.io.TemporaryResources" />
+			<role name="Request()" element="org.apache.tika.embedder.ExternalEmbedder::embed(org.apache.tika.metadata.Metadata, java.io.InputStream, java.io.OutputStream, org.apache.tika.parser.ParseContext):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.apache.tika.extractor.ParserContainerExtractor" />
+			<role name="Adaptee" element="org.apache.tika.parser.Parser" />
+			<role name="adaptee" element="org.apache.tika.extractor.ParserContainerExtractor::parser:org.apache.tika.parser.Parser" />
+			<role name="Request()" element="org.apache.tika.extractor.ParserContainerExtractor::isSupported(org.apache.tika.io.TikaInputStream):boolean" />
+			<role name="Request()" element="org.apache.tika.extractor.ParserContainerExtractor::extract(org.apache.tika.io.TikaInputStream, org.apache.tika.extractor.ContainerExtractor, org.apache.tika.extractor.EmbeddedResourceHandler):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.tika.parser.Parser" />
+			<role name="Adapter" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor" />
+			<role name="adaptee" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor::DELEGATING_PARSER:org.apache.tika.parser.Parser" />
+			<role name="Request()" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor::parseEmbedded(org.apache.tika.io.TikaInputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.tika.detect.Detector" />
+			<role name="Adapter" element="org.apache.tika.extractor.ParserContainerExtractor" />
+			<role name="adaptee" element="org.apache.tika.extractor.ParserContainerExtractor::detector:org.apache.tika.detect.Detector" />
+			<role name="Request()" element="org.apache.tika.extractor.ParserContainerExtractor::isSupported(org.apache.tika.io.TikaInputStream):boolean" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.apache.tika.sax.BasicContentHandlerFactory" />
+			<role name="Adaptee" element="org.apache.tika.sax.BasicContentHandlerFactory$HANDLER_TYPE" />
+			<role name="adaptee" element="org.apache.tika.sax.BasicContentHandlerFactory::type:org.apache.tika.sax.BasicContentHandlerFactory$HANDLER_TYPE" />
+			<role name="Request()" element="org.apache.tika.sax.BasicContentHandlerFactory::getNewContentHandler(java.io.OutputStream, java.nio.charset.Charset):org.xml.sax.ContentHandler" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="org.apache.tika.parser.Parser" />
+			<role name="Decorator" element="org.apache.tika.fork.ForkParser" />
+			<role name="component" element="org.apache.tika.fork.ForkParser::parser:org.apache.tika.parser.Parser" />
+			<role name="Operation()" element="org.apache.tika.fork.ForkParser::getSupportedTypes(org.apache.tika.parser.ParseContext):java.util.Set" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.tika.parser.Parser" />
+			<role name="Decorator" element="org.apache.tika.parser.ParserDecorator" />
+			<role name="component" element="org.apache.tika.parser.ParserDecorator::parser:org.apache.tika.parser.Parser" />
+			<role name="Operation()" element="org.apache.tika.parser.ParserDecorator::getSupportedTypes(org.apache.tika.parser.ParseContext):java.util.Set" />
+			<role name="Operation()" element="org.apache.tika.parser.ParserDecorator::parse(java.io.InputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata, org.apache.tika.parser.ParseContext):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.tika.mime.Clause" />
+			<role name="Decorator" element="org.apache.tika.mime.Magic" />
+			<role name="component" element="org.apache.tika.mime.Magic::clause:org.apache.tika.mime.Clause" />
+			<role name="Operation()" element="org.apache.tika.mime.Magic::eval(byte[]):boolean" />
+			<role name="Operation()" element="org.apache.tika.mime.Magic::size():int" />
+		</instance>
+	</pattern>
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="org.apache.tika.extractor.ParserContainerExtractor$RecursiveParser" />
+			<role name="State" element="org.apache.tika.extractor.EmbeddedResourceHandler" />
+			<role name="state" element="org.apache.tika.extractor.ParserContainerExtractor$RecursiveParser::handler:org.apache.tika.extractor.EmbeddedResourceHandler" />
+			<role name="Request()" element="org.apache.tika.extractor.ParserContainerExtractor$RecursiveParser::parse(java.io.InputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata, org.apache.tika.parser.ParseContext):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.language.detect.LanguageWriter" />
+			<role name="State" element="org.apache.tika.language.detect.LanguageDetector" />
+			<role name="state" element="org.apache.tika.language.detect.LanguageWriter::detector:org.apache.tika.language.detect.LanguageDetector" />
+			<role name="Request()" element="org.apache.tika.language.detect.LanguageWriter::write(char[], int, int):void" />
+			<role name="Request()" element="org.apache.tika.language.detect.LanguageWriter::reset():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.parser.external.ExternalParser" />
+			<role name="State" element="org.apache.tika.parser.external.ExternalParser$LineConsumer" />
+			<role name="state" element="org.apache.tika.parser.external.ExternalParser::ignoredLineConsumer:org.apache.tika.parser.external.ExternalParser$LineConsumer" />
+			<role name="Request()" element="org.apache.tika.parser.external.ExternalParser::lambda$extractMetadata$2(java.io.InputStream, org.apache.tika.metadata.Metadata):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.Tika" />
+			<role name="State" element="org.apache.tika.parser.Parser" />
+			<role name="state" element="org.apache.tika.Tika::parser:org.apache.tika.parser.Parser" />
+			<role name="Request()" element="org.apache.tika.Tika::parseToString(java.io.InputStream, org.apache.tika.metadata.Metadata, int):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.io.TikaInputStream" />
+			<role name="State" element="org.apache.tika.io.InputStreamFactory" />
+			<role name="state" element="org.apache.tika.io.TikaInputStream::streamFactory:org.apache.tika.io.InputStreamFactory" />
+			<role name="Request()" element="org.apache.tika.io.TikaInputStream::get(org.apache.tika.io.InputStreamFactory, org.apache.tika.io.TemporaryResources):org.apache.tika.io.TikaInputStream" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.Tika" />
+			<role name="State" element="org.apache.tika.detect.Detector" />
+			<role name="state" element="org.apache.tika.Tika::detector:org.apache.tika.detect.Detector" />
+			<role name="Request()" element="org.apache.tika.Tika::detect(java.io.InputStream, org.apache.tika.metadata.Metadata):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.extractor.EmbeddedDocumentUtil" />
+			<role name="State" element="org.apache.tika.extractor.EmbeddedDocumentExtractor" />
+			<role name="state" element="org.apache.tika.extractor.EmbeddedDocumentUtil::embeddedDocumentExtractor:org.apache.tika.extractor.EmbeddedDocumentExtractor" />
+			<role name="Request()" element="org.apache.tika.extractor.EmbeddedDocumentUtil::parseEmbedded(org.apache.tika.io.TikaInputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.parser.digest.InputStreamDigester" />
+			<role name="State" element="org.apache.tika.parser.DigestingParser$Encoder" />
+			<role name="state" element="org.apache.tika.parser.digest.InputStreamDigester::encoder:org.apache.tika.parser.DigestingParser$Encoder" />
+			<role name="Request()" element="org.apache.tika.parser.digest.InputStreamDigester::digestStream(java.io.InputStream, org.apache.tika.metadata.Metadata):boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.Tika" />
+			<role name="State" element="org.apache.tika.language.translate.Translator" />
+			<role name="state" element="org.apache.tika.Tika::translator:org.apache.tika.language.translate.Translator" />
+			<role name="Request()" element="org.apache.tika.Tika::translate(java.lang.String, java.lang.String, java.lang.String):java.lang.String" />
+			<role name="Request()" element="org.apache.tika.Tika::translate(java.lang.String, java.lang.String):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.extractor.ParserContainerExtractor$RecursiveParser" />
+			<role name="State" element="org.apache.tika.extractor.ContainerExtractor" />
+			<role name="state" element="org.apache.tika.extractor.ParserContainerExtractor$RecursiveParser::extractor:org.apache.tika.extractor.ContainerExtractor" />
+			<role name="Request()" element="org.apache.tika.extractor.ParserContainerExtractor$RecursiveParser::parse(java.io.InputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata, org.apache.tika.parser.ParseContext):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.extractor.ParserContainerExtractor" />
+			<role name="State" element="org.apache.tika.parser.Parser" />
+			<role name="state" element="org.apache.tika.extractor.ParserContainerExtractor::parser:org.apache.tika.parser.Parser" />
+			<role name="Request()" element="org.apache.tika.extractor.ParserContainerExtractor::isSupported(org.apache.tika.io.TikaInputStream):boolean" />
+			<role name="Request()" element="org.apache.tika.extractor.ParserContainerExtractor::extract(org.apache.tika.io.TikaInputStream, org.apache.tika.extractor.ContainerExtractor, org.apache.tika.extractor.EmbeddedResourceHandler):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.parser.AutoDetectParser" />
+			<role name="State" element="org.apache.tika.detect.Detector" />
+			<role name="state" element="org.apache.tika.parser.AutoDetectParser::detector:org.apache.tika.detect.Detector" />
+			<role name="Request()" element="org.apache.tika.parser.AutoDetectParser::parse(java.io.InputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata, org.apache.tika.parser.ParseContext):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.metadata.Metadata" />
+			<role name="State" element="org.apache.tika.metadata.writefilter.MetadataWriteFilter" />
+			<role name="state" element="org.apache.tika.metadata.Metadata::writeFilter:org.apache.tika.metadata.writefilter.MetadataWriteFilter" />
+			<role name="Request()" element="org.apache.tika.metadata.Metadata::setMetadataWriteFilter(org.apache.tika.metadata.writefilter.MetadataWriteFilter):void" />
+			<role name="Request()" element="org.apache.tika.metadata.Metadata::add(java.lang.String, java.lang.String):void" />
+			<role name="Request()" element="org.apache.tika.metadata.Metadata::set(java.lang.String, java.lang.String):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.extractor.RUnpackExtractor" />
+			<role name="State" element="org.apache.tika.extractor.EmbeddedStreamTranslator" />
+			<role name="state" element="org.apache.tika.extractor.RUnpackExtractor::embeddedStreamTranslator:org.apache.tika.extractor.EmbeddedStreamTranslator" />
+			<role name="Request()" element="org.apache.tika.extractor.RUnpackExtractor::parseWithBytes(org.apache.tika.io.TikaInputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor" />
+			<role name="State" element="org.apache.tika.parser.Parser" />
+			<role name="state" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor::DELEGATING_PARSER:org.apache.tika.parser.Parser" />
+			<role name="Request()" element="org.apache.tika.extractor.ParsingEmbeddedDocumentExtractor::parseEmbedded(org.apache.tika.io.TikaInputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.config.ServiceLoader" />
+			<role name="State" element="org.apache.tika.config.LoadErrorHandler" />
+			<role name="state" element="org.apache.tika.config.ServiceLoader::handler:org.apache.tika.config.LoadErrorHandler" />
+			<role name="Request()" element="org.apache.tika.config.ServiceLoader::identifyStaticServiceProviders():java.util.List" />
+			<role name="Request()" element="org.apache.tika.config.ServiceLoader::loadStaticServiceProviders(, java.util.Collection):java.util.List" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.extractor.ParserContainerExtractor" />
+			<role name="State" element="org.apache.tika.detect.Detector" />
+			<role name="state" element="org.apache.tika.extractor.ParserContainerExtractor::detector:org.apache.tika.detect.Detector" />
+			<role name="Request()" element="org.apache.tika.extractor.ParserContainerExtractor::isSupported(org.apache.tika.io.TikaInputStream):boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.extractor.RUnpackExtractor" />
+			<role name="State" element="org.apache.tika.extractor.EmbeddedBytesSelector" />
+			<role name="state" element="org.apache.tika.extractor.RUnpackExtractor::embeddedBytesSelector:org.apache.tika.extractor.EmbeddedBytesSelector" />
+			<role name="Request()" element="org.apache.tika.extractor.RUnpackExtractor::storeEmbeddedBytes(java.nio.file.Path, org.apache.tika.metadata.Metadata):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.parser.DigestingParser" />
+			<role name="State" element="org.apache.tika.parser.DigestingParser$Digester" />
+			<role name="state" element="org.apache.tika.parser.DigestingParser::digester:org.apache.tika.parser.DigestingParser$Digester" />
+			<role name="Request()" element="org.apache.tika.parser.DigestingParser::parse(java.io.InputStream, org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata, org.apache.tika.parser.ParseContext):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.tika.sax.RecursiveParserWrapperHandler" />
+			<role name="State" element="org.apache.tika.metadata.filter.MetadataFilter" />
+			<role name="state" element="org.apache.tika.sax.RecursiveParserWrapperHandler::metadataFilter:org.apache.tika.metadata.filter.MetadataFilter" />
+			<role name="Request()" element="org.apache.tika.sax.RecursiveParserWrapperHandler::endEmbeddedDocument(org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata):void" />
+			<role name="Request()" element="org.apache.tika.sax.RecursiveParserWrapperHandler::endDocument(org.xml.sax.ContentHandler, org.apache.tika.metadata.Metadata):void" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge">
+		<instance>
+			<role name="Abstraction" element="org.apache.tika.sax.AbstractRecursiveParserWrapperHandler" />
+			<role name="Implementor" element="org.apache.tika.sax.ContentHandlerFactory" />
+			<role name="implementor" element="org.apache.tika.sax.AbstractRecursiveParserWrapperHandler::contentHandlerFactory:org.apache.tika.sax.ContentHandlerFactory" />
+			<role name="Operation()" element="org.apache.tika.sax.AbstractRecursiveParserWrapperHandler::getNewContentHandler():org.xml.sax.ContentHandler" />
+			<role name="Operation()" element="org.apache.tika.sax.AbstractRecursiveParserWrapperHandler::getNewContentHandler(java.io.OutputStream, java.nio.charset.Charset):org.xml.sax.ContentHandler" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="org.apache.tika.detect.TrainedModelDetector" />
+			<role name="TemplateMethod()" element="org.apache.tika.detect.TrainedModelDetector::loadDefaultModels(java.nio.file.Path):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.tika.config.TikaConfig$XmlLoader" />
+			<role name="TemplateMethod()" element="org.apache.tika.config.TikaConfig$XmlLoader::loadOverall(org.w3c.dom.Element, org.apache.tika.mime.MimeTypes, org.apache.tika.config.ServiceLoader):java.lang.Object" />
+			<role name="TemplateMethod()" element="org.apache.tika.config.TikaConfig$XmlLoader::loadOne(org.w3c.dom.Element, org.apache.tika.mime.MimeTypes, org.apache.tika.config.ServiceLoader):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.tika.language.detect.LanguageDetector" />
+			<role name="TemplateMethod()" element="org.apache.tika.language.detect.LanguageDetector::addText(java.lang.CharSequence):void" />
+			<role name="TemplateMethod()" element="org.apache.tika.language.detect.LanguageDetector::detect():org.apache.tika.language.detect.LanguageResult" />
+			<role name="TemplateMethod()" element="org.apache.tika.language.detect.LanguageDetector::detectAll(java.lang.String):java.util.List" />
+			<role name="TemplateMethod()" element="org.apache.tika.language.detect.LanguageDetector::detect(java.lang.CharSequence):org.apache.tika.language.detect.LanguageResult" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.tika.parser.multiple.AbstractMultipleParser" />
+			<role name="TemplateMethod()" element="org.apache.tika.parser.multiple.AbstractMultipleParser::parse(java.io.InputStream, org.xml.sax.ContentHandler, org.apache.tika.sax.ContentHandlerFactory, org.apache.tika.metadata.Metadata, org.apache.tika.parser.ParseContext):void" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+

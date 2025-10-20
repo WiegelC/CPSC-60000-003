@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="org.apache.poi.openxml4j.opc.internal.PartUnmarshaller" />
+			<role name="FactoryMethod()" element="org.apache.poi.openxml4j.opc.internal.PartUnmarshaller::unmarshall(org.apache.poi.openxml4j.opc.internal.unmarshallers.UnmarshallContext, java.io.InputStream):org.apache.poi.openxml4j.opc.PackagePart" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.poi.openxml4j.opc.OPCPackage" />
+			<role name="FactoryMethod()" element="org.apache.poi.openxml4j.opc.OPCPackage::createPartImpl(org.apache.poi.openxml4j.opc.PackagePartName, java.lang.String, boolean):org.apache.poi.openxml4j.opc.PackagePart" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="FactoryMethod()" element="org.apache.poi.xwpf.usermodel.IBody::insertNewTbl(org.apache.xmlbeans.XmlCursor):org.apache.poi.xwpf.usermodel.XWPFTable" />
+			<role name="FactoryMethod()" element="org.apache.poi.xwpf.usermodel.IBody::insertNewParagraph(org.apache.xmlbeans.XmlCursor):org.apache.poi.xwpf.usermodel.XWPFParagraph" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.poi.xssf.model.Comments" />
+			<role name="FactoryMethod()" element="org.apache.poi.xssf.model.Comments::findCellComment(org.apache.poi.ss.util.CellAddress):org.apache.poi.xssf.usermodel.XSSFComment" />
+			<role name="FactoryMethod()" element="org.apache.poi.xssf.model.Comments::createNewComment(org.apache.poi.ss.usermodel.ClientAnchor):org.apache.poi.xssf.usermodel.XSSFComment" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData" />
+			<role name="FactoryMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData::addSeries(org.apache.poi.xddf.usermodel.chart.XDDFDataSource, org.apache.poi.xddf.usermodel.chart.XDDFNumericalDataSource):org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="org.apache.poi.xwpf.usermodel.XWPFFactory" />
+			<role name="uniqueInstance" element="org.apache.poi.xwpf.usermodel.XWPFFactory::inst:org.apache.poi.xwpf.usermodel.XWPFFactory" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.poi.xssf.usermodel.XSSFFactory" />
+			<role name="uniqueInstance" element="org.apache.poi.xssf.usermodel.XSSFFactory::inst:org.apache.poi.xssf.usermodel.XSSFFactory" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.poi.xslf.usermodel.XSLFFactory" />
+			<role name="uniqueInstance" element="org.apache.poi.xslf.usermodel.XSLFFactory::inst:org.apache.poi.xslf.usermodel.XSLFFactory" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adapter" element="org.apache.poi.openxml4j.opc.PackagePart" />
+			<role name="Adaptee" element="org.apache.poi.openxml4j.opc.PackageRelationshipCollection" />
+			<role name="adaptee" element="org.apache.poi.openxml4j.opc.PackagePart::_relationships:org.apache.poi.openxml4j.opc.PackageRelationshipCollection" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.PackagePart::addExternalRelationship(java.lang.String, java.lang.String, java.lang.String):org.apache.poi.openxml4j.opc.PackageRelationship" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.PackagePart::addRelationship(org.apache.poi.openxml4j.opc.PackagePartName, org.apache.poi.openxml4j.opc.TargetMode, java.lang.String, java.lang.String):org.apache.poi.openxml4j.opc.PackageRelationship" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.PackagePart::clearRelationships():void" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.PackagePart::removeRelationship(java.lang.String):void" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.PackagePart::getRelationship(java.lang.String):org.apache.poi.openxml4j.opc.PackageRelationship" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.PackagePart::hasRelationships():boolean" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.PackagePart::isRelationshipExists(org.apache.poi.openxml4j.opc.PackageRelationship):boolean" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.apache.poi.openxml4j.opc.OPCPackage" />
+			<role name="Adaptee" element="org.apache.poi.openxml4j.opc.PackageRelationshipCollection" />
+			<role name="adaptee" element="org.apache.poi.openxml4j.opc.OPCPackage::relationships:org.apache.poi.openxml4j.opc.PackageRelationshipCollection" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.OPCPackage::addRelationship(org.apache.poi.openxml4j.opc.PackagePartName, org.apache.poi.openxml4j.opc.TargetMode, java.lang.String, java.lang.String):org.apache.poi.openxml4j.opc.PackageRelationship" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.OPCPackage::addExternalRelationship(java.lang.String, java.lang.String, java.lang.String):org.apache.poi.openxml4j.opc.PackageRelationship" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.OPCPackage::removeRelationship(java.lang.String):void" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.OPCPackage::clearRelationships():void" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.OPCPackage::getRelationship(java.lang.String):org.apache.poi.openxml4j.opc.PackageRelationship" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.OPCPackage::hasRelationships():boolean" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.OPCPackage::isRelationshipExists(org.apache.poi.openxml4j.opc.PackageRelationship):boolean" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.apache.poi.openxml4j.opc.internal.EncryptedTempFilePackagePart" />
+			<role name="Adaptee" element="org.apache.poi.poifs.crypt.temp.EncryptedTempData" />
+			<role name="adaptee" element="org.apache.poi.openxml4j.opc.internal.EncryptedTempFilePackagePart::tempFile:org.apache.poi.poifs.crypt.temp.EncryptedTempData" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.internal.EncryptedTempFilePackagePart::getInputStreamImpl():java.io.InputStream" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.internal.EncryptedTempFilePackagePart::getOutputStreamImpl():java.io.OutputStream" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.internal.EncryptedTempFilePackagePart::close():void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.apache.poi.xwpf.usermodel.XWPFParagraph" />
+			<role name="Adaptee" element="org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="adaptee" element="org.apache.poi.xwpf.usermodel.XWPFParagraph::part:org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFParagraph::getPart():org.apache.poi.ooxml.POIXMLDocumentPart" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFParagraph::getPartType():org.apache.poi.xwpf.usermodel.BodyType" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.apache.poi.xwpf.usermodel.XWPFTable" />
+			<role name="Adaptee" element="org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="adaptee" element="org.apache.poi.xwpf.usermodel.XWPFTable::part:org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFTable::getPart():org.apache.poi.ooxml.POIXMLDocumentPart" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFTable::getPartType():org.apache.poi.xwpf.usermodel.BodyType" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.apache.poi.xwpf.usermodel.XWPFTableCell" />
+			<role name="Adaptee" element="org.apache.poi.xwpf.usermodel.XWPFTableRow" />
+			<role name="adaptee" element="org.apache.poi.xwpf.usermodel.XWPFTableCell::tableRow:org.apache.poi.xwpf.usermodel.XWPFTableRow" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFTableCell::getPart():org.apache.poi.ooxml.POIXMLDocumentPart" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.poi.xssf.binary.XSSFBCellRange" />
+			<role name="Adapter" element="org.apache.poi.xssf.binary.XSSFBHyperlinksTable$HyperlinkSheetScraper" />
+			<role name="adaptee" element="org.apache.poi.xssf.binary.XSSFBHyperlinksTable$HyperlinkSheetScraper::hyperlinkCellRange:org.apache.poi.xssf.binary.XSSFBCellRange" />
+			<role name="Request()" element="org.apache.poi.xssf.binary.XSSFBHyperlinksTable$HyperlinkSheetScraper::handleRecord(int, byte[]):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.poi.xssf.binary.XSSFBCellRange" />
+			<role name="Adapter" element="org.apache.poi.xssf.binary.XSSFBCommentsTable" />
+			<role name="adaptee" element="org.apache.poi.xssf.binary.XSSFBCommentsTable::cellRange:org.apache.poi.xssf.binary.XSSFBCellRange" />
+			<role name="Request()" element="org.apache.poi.xssf.binary.XSSFBCommentsTable::handleRecord(int, byte[]):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller$NamespaceImpl" />
+			<role name="Adapter" element="org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller" />
+			<role name="adaptee" element="org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller::namespaceCoreProperties:org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller$NamespaceImpl" />
+			<role name="adaptee" element="org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller::namespaceDC:org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller$NamespaceImpl" />
+			<role name="adaptee" element="org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller::namespaceDcTerms:org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller$NamespaceImpl" />
+			<role name="adaptee" element="org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller::namespaceXSI:org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller$NamespaceImpl" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.internal.marshallers.PackagePropertiesMarshaller::marshall(org.apache.poi.openxml4j.opc.PackagePart, java.io.OutputStream):boolean" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.poi.xssf.usermodel.XSSFSheet" />
+			<role name="Adapter" element="org.apache.poi.xddf.usermodel.chart.XDDFDataSourcesFactory$AbstractCellRangeDataSource" />
+			<role name="adaptee" element="org.apache.poi.xddf.usermodel.chart.XDDFDataSourcesFactory$AbstractCellRangeDataSource::sheet:org.apache.poi.xssf.usermodel.XSSFSheet" />
+			<role name="Request()" element="org.apache.poi.xddf.usermodel.chart.XDDFDataSourcesFactory$AbstractCellRangeDataSource::getDataRangeReference():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.poi.openxml4j.util.ZipEntrySource" />
+			<role name="Adapter" element="org.apache.poi.openxml4j.opc.ZipPackage" />
+			<role name="adaptee" element="org.apache.poi.openxml4j.opc.ZipPackage::zipArchive:org.apache.poi.openxml4j.util.ZipEntrySource" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.ZipPackage::getPartsImpl():org.apache.poi.openxml4j.opc.PackagePartCollection" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.ZipPackage::revertImpl():void" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.ZipPackage::isClosed():boolean" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.poi.poifs.crypt.dsig.SignatureConfig" />
+			<role name="Adapter" element="org.apache.poi.poifs.crypt.dsig.services.TimeStampSimpleHttpClient" />
+			<role name="adaptee" element="org.apache.poi.poifs.crypt.dsig.services.TimeStampSimpleHttpClient::config:org.apache.poi.poifs.crypt.dsig.SignatureConfig" />
+			<role name="Request()" element="org.apache.poi.poifs.crypt.dsig.services.TimeStampSimpleHttpClient::init(org.apache.poi.poifs.crypt.dsig.SignatureConfig):void" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="Decorator" element="org.apache.poi.xwpf.usermodel.XWPFTableCell" />
+			<role name="component" element="org.apache.poi.xwpf.usermodel.XWPFTableCell::part:org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="Operation()" element="org.apache.poi.xwpf.usermodel.XWPFTableCell::getXWPFDocument():org.apache.poi.xwpf.usermodel.XWPFDocument" />
+		</instance>
+	</pattern>
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.streaming.DeferredSXSSFSheet" />
+			<role name="State" element="org.apache.poi.xssf.streaming.RowGeneratorFunction" />
+			<role name="state" element="org.apache.poi.xssf.streaming.DeferredSXSSFSheet::rowGenerator:org.apache.poi.xssf.streaming.RowGeneratorFunction" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.DeferredSXSSFSheet::writeRows(java.io.OutputStream):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xwpf.usermodel.XWPFParagraph" />
+			<role name="State" element="org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="state" element="org.apache.poi.xwpf.usermodel.XWPFParagraph::part:org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFParagraph::getPart():org.apache.poi.ooxml.POIXMLDocumentPart" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFParagraph::getPartType():org.apache.poi.xwpf.usermodel.BodyType" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xwpf.usermodel.XWPFTable" />
+			<role name="State" element="org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="state" element="org.apache.poi.xwpf.usermodel.XWPFTable::part:org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFTable::getPart():org.apache.poi.ooxml.POIXMLDocumentPart" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFTable::getPartType():org.apache.poi.xwpf.usermodel.BodyType" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler" />
+			<role name="State" element="org.apache.poi.xssf.model.Styles" />
+			<role name="state" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::stylesTable:org.apache.poi.xssf.model.Styles" />
+			<role name="Request()" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::startElement(java.lang.String, java.lang.String, java.lang.String, org.xml.sax.Attributes):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.streaming.SXSSFCell" />
+			<role name="State" element="org.apache.poi.xssf.streaming.SXSSFCell$Value" />
+			<role name="state" element="org.apache.poi.xssf.streaming.SXSSFCell::_value:org.apache.poi.xssf.streaming.SXSSFCell$Value" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::getCellType():org.apache.poi.ss.usermodel.CellType" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::setCellValueImpl(double):void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::setCellValueImpl(java.lang.String):void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::getCellFormula():java.lang.String" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::setCellValue(boolean):void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::setCellErrorValue(byte):void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::ensurePlainStringType():void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::ensureRichTextStringType():void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::ensureType(org.apache.poi.ss.usermodel.CellType):void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::ensureTypeOrFormulaType(org.apache.poi.ss.usermodel.CellType):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xwpf.usermodel.XWPFRun" />
+			<role name="State" element="org.apache.poi.xwpf.usermodel.IRunBody" />
+			<role name="state" element="org.apache.poi.xwpf.usermodel.XWPFRun::parent:org.apache.poi.xwpf.usermodel.IRunBody" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFRun::getDocument():org.apache.poi.xwpf.usermodel.XWPFDocument" />
+			<role name="Request()" element="org.apache.poi.xwpf.usermodel.XWPFRun::addPicture(java.io.InputStream, org.apache.poi.common.usermodel.PictureType, java.lang.String, int, int):org.apache.poi.xwpf.usermodel.XWPFPicture" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xslf.model.CharacterPropertyFetcher" />
+			<role name="State" element="org.apache.poi.xslf.model.CharacterPropertyFetcher$CharPropFetcher" />
+			<role name="state" element="org.apache.poi.xslf.model.CharacterPropertyFetcher::fetcher:org.apache.poi.xslf.model.CharacterPropertyFetcher$CharPropFetcher" />
+			<role name="Request()" element="org.apache.poi.xslf.model.CharacterPropertyFetcher::fetchProp(org.openxmlformats.schemas.drawingml.x2006.main.CTTextCharacterProperties):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xslf.model.ParagraphPropertyFetcher" />
+			<role name="State" element="org.apache.poi.xslf.model.ParagraphPropertyFetcher$ParaPropFetcher" />
+			<role name="state" element="org.apache.poi.xslf.model.ParagraphPropertyFetcher::fetcher:org.apache.poi.xslf.model.ParagraphPropertyFetcher$ParaPropFetcher" />
+			<role name="Request()" element="org.apache.poi.xslf.model.ParagraphPropertyFetcher::fetchProp(org.openxmlformats.schemas.drawingml.x2006.main.CTTextParagraphProperties):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.usermodel.XSSFSheet" />
+			<role name="State" element="org.apache.poi.xssf.model.Comments" />
+			<role name="state" element="org.apache.poi.xssf.usermodel.XSSFSheet::sheetComments:org.apache.poi.xssf.model.Comments" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::read(java.io.InputStream):void" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::getCellComment(org.apache.poi.ss.util.CellAddress):org.apache.poi.xssf.usermodel.XSSFComment" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::getCellComments():java.util.Map" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::removeRow(org.apache.poi.ss.usermodel.Row):void" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::removeOverwritten(int, int, int):void" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::shiftCommentsAndRows(int, int, int):void" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::shiftCommentsForColumns(org.apache.poi.xssf.usermodel.XSSFVMLDrawing, int, int, int):void" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::hasComments():boolean" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::getNumberOfComments():int" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFSheet::getCommentsTable(boolean):org.apache.poi.xssf.model.Comments" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.poi.openxml4j.util.ZipEntrySource" />
+			<role name="Context" element="org.apache.poi.openxml4j.opc.ZipPackage" />
+			<role name="state" element="org.apache.poi.openxml4j.opc.ZipPackage::zipArchive:org.apache.poi.openxml4j.util.ZipEntrySource" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.ZipPackage::getPartsImpl():org.apache.poi.openxml4j.opc.PackagePartCollection" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.ZipPackage::revertImpl():void" />
+			<role name="Request()" element="org.apache.poi.openxml4j.opc.ZipPackage::isClosed():boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.usermodel.XSSFComment" />
+			<role name="State" element="org.apache.poi.xssf.model.Comments" />
+			<role name="state" element="org.apache.poi.xssf.usermodel.XSSFComment::_comments:org.apache.poi.xssf.model.Comments" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFComment::getAuthor():java.lang.String" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFComment::setAuthor(java.lang.String):void" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFComment::setVisible(boolean):void" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFComment::setAddress(org.apache.poi.ss.util.CellAddress):void" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFComment::setString(org.apache.poi.ss.usermodel.RichTextString):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.binary.XSSFBSheetHandler" />
+			<role name="State" element="org.apache.poi.xssf.model.SharedStrings" />
+			<role name="state" element="org.apache.poi.xssf.binary.XSSFBSheetHandler::stringsTable:org.apache.poi.xssf.model.SharedStrings" />
+			<role name="Request()" element="org.apache.poi.xssf.binary.XSSFBSheetHandler::handleBrtCellIsst(byte[]):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler" />
+			<role name="State" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler$SheetContentsHandler" />
+			<role name="state" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::output:org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler$SheetContentsHandler" />
+			<role name="Request()" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::startElement(java.lang.String, java.lang.String, java.lang.String, org.xml.sax.Attributes):void" />
+			<role name="Request()" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::endElement(java.lang.String, java.lang.String, java.lang.String):void" />
+			<role name="Request()" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::outputCell():void" />
+			<role name="Request()" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::outputEmptyCellComment(org.apache.poi.ss.util.CellAddress):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.streaming.SXSSFCell" />
+			<role name="State" element="org.apache.poi.xssf.streaming.SXSSFCell$Property" />
+			<role name="state" element="org.apache.poi.xssf.streaming.SXSSFCell::_firstProperty:org.apache.poi.xssf.streaming.SXSSFCell$Property" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::removeProperty(int):void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::setProperty(int, java.lang.Object):void" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFCell::getPropertyValue(int, java.lang.String):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.binary.XSSFBSheetHandler" />
+			<role name="State" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler$SheetContentsHandler" />
+			<role name="state" element="org.apache.poi.xssf.binary.XSSFBSheetHandler::handler:org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler$SheetContentsHandler" />
+			<role name="Request()" element="org.apache.poi.xssf.binary.XSSFBSheetHandler::handleCellValue(java.lang.String):void" />
+			<role name="Request()" element="org.apache.poi.xssf.binary.XSSFBSheetHandler::startRow(int):void" />
+			<role name="Request()" element="org.apache.poi.xssf.binary.XSSFBSheetHandler::endRow(int):void" />
+			<role name="Request()" element="org.apache.poi.xssf.binary.XSSFBSheetHandler::dumpEmptyCellComment(org.apache.poi.ss.util.CellAddress, org.apache.poi.xssf.binary.XSSFBComment):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xdgf.usermodel.shape.ShapeDebuggerRenderer" />
+			<role name="State" element="org.apache.poi.xdgf.usermodel.shape.ShapeVisitorAcceptor" />
+			<role name="state" element="org.apache.poi.xdgf.usermodel.shape.ShapeDebuggerRenderer::_debugAcceptor:org.apache.poi.xdgf.usermodel.shape.ShapeVisitorAcceptor" />
+			<role name="Request()" element="org.apache.poi.xdgf.usermodel.shape.ShapeDebuggerRenderer::drawPath(org.apache.poi.xdgf.usermodel.XDGFShape):java.awt.geom.Path2D" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler" />
+			<role name="State" element="org.apache.poi.xssf.model.Comments" />
+			<role name="state" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::comments:org.apache.poi.xssf.model.Comments" />
+			<role name="Request()" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::outputCell():void" />
+			<role name="Request()" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::outputEmptyCellComment(org.apache.poi.ss.util.CellAddress):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler" />
+			<role name="State" element="org.apache.poi.xssf.model.SharedStrings" />
+			<role name="state" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::sharedStringsTable:org.apache.poi.xssf.model.SharedStrings" />
+			<role name="Request()" element="org.apache.poi.xssf.eventusermodel.XSSFSheetXMLHandler::outputCell():void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.poi.xssf.usermodel.IndexedColorMap" />
+			<role name="Context" element="org.apache.poi.xssf.usermodel.XSSFColor" />
+			<role name="state" element="org.apache.poi.xssf.usermodel.XSSFColor::indexedColorMap:org.apache.poi.xssf.usermodel.IndexedColorMap" />
+			<role name="Request()" element="org.apache.poi.xssf.usermodel.XSSFColor::getIndexedRGB():byte[]" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge">
+		<instance>
+			<role name="Abstraction" element="org.apache.poi.xwpf.usermodel.XWPFAbstractSDT" />
+			<role name="Implementor" element="org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="implementor" element="org.apache.poi.xwpf.usermodel.XWPFAbstractSDT::part:org.apache.poi.xwpf.usermodel.IBody" />
+			<role name="Operation()" element="org.apache.poi.xwpf.usermodel.XWPFAbstractSDT::getPart():org.apache.poi.ooxml.POIXMLDocumentPart" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series" />
+			<role name="Implementor" element="org.apache.poi.xddf.usermodel.chart.XDDFDataSource" />
+			<role name="implementor" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::categoryData:org.apache.poi.xddf.usermodel.chart.XDDFDataSource" />
+			<role name="Operation()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::replaceData(org.apache.poi.xddf.usermodel.chart.XDDFDataSource, org.apache.poi.xddf.usermodel.chart.XDDFNumericalDataSource):void" />
+			<role name="Operation()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::plot():void" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.poi.xdgf.usermodel.shape.ShapeVisitor" />
+			<role name="Implementor" element="org.apache.poi.xdgf.usermodel.shape.ShapeVisitorAcceptor" />
+			<role name="implementor" element="org.apache.poi.xdgf.usermodel.shape.ShapeVisitor::_acceptor:org.apache.poi.xdgf.usermodel.shape.ShapeVisitorAcceptor" />
+			<role name="Operation()" element="org.apache.poi.xdgf.usermodel.shape.ShapeVisitor::accept(org.apache.poi.xdgf.usermodel.XDGFShape):boolean" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.openxml4j.opc.internal.ContentTypeManager" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.internal.ContentTypeManager::save(java.io.OutputStream):boolean" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.openxml4j.opc.OPCPackage" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.OPCPackage::flush():void" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.OPCPackage::close():void" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.OPCPackage::revert():void" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.OPCPackage::getParts():java.util.ArrayList" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.OPCPackage::createPart(org.apache.poi.openxml4j.opc.PackagePartName, java.lang.String, boolean):org.apache.poi.openxml4j.opc.PackagePart" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.OPCPackage::save(java.io.OutputStream):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.openxml4j.opc.PackagePart" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.PackagePart::getInputStream():java.io.InputStream" />
+			<role name="TemplateMethod()" element="org.apache.poi.openxml4j.opc.PackagePart::getOutputStream():java.io.OutputStream" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.ooxml.POIXMLFactory" />
+			<role name="TemplateMethod()" element="org.apache.poi.ooxml.POIXMLFactory::createDocumentPart(org.apache.poi.ooxml.POIXMLDocumentPart, org.apache.poi.openxml4j.opc.PackagePart):org.apache.poi.ooxml.POIXMLDocumentPart" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xwpf.usermodel.XWPFAbstractFootnoteEndnote" />
+			<role name="TemplateMethod()" element="org.apache.poi.xwpf.usermodel.XWPFAbstractFootnoteEndnote::createParagraph():org.apache.poi.xwpf.usermodel.XWPFParagraph" />
+			<role name="TemplateMethod()" element="org.apache.poi.xwpf.usermodel.XWPFAbstractFootnoteEndnote::createTable():org.apache.poi.xwpf.usermodel.XWPFTable" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xssf.model.ParagraphPropertyFetcher" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.model.ParagraphPropertyFetcher::fetch(org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTShape):boolean" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xssf.binary.XSSFBParser" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.binary.XSSFBParser::readNext(byte):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xssf.usermodel.XSSFShape" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.XSSFShape::isNoFill():boolean" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.XSSFShape::setNoFill(boolean):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.XSSFShape::setFillColor(int, int, int):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.XSSFShape::setLineStyleColor(int, int, int):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.XSSFShape::setLineWidth(double):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.XSSFShape::setLineStyle(int):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xssf.usermodel.BaseXSSFFormulaEvaluator" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.BaseXSSFFormulaEvaluator::evaluateFormulaCellValue(org.apache.poi.ss.usermodel.Cell):org.apache.poi.ss.usermodel.CellValue" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xssf.usermodel.extensions.XSSFHeaderFooter" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.extensions.XSSFHeaderFooter::getValue():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.extensions.XSSFHeaderFooter::getCenter():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.extensions.XSSFHeaderFooter::getLeft():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.extensions.XSSFHeaderFooter::getRight():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.extensions.XSSFHeaderFooter::setCenter(java.lang.String):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.extensions.XSSFHeaderFooter::setLeft(java.lang.String):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xssf.usermodel.extensions.XSSFHeaderFooter::setRight(java.lang.String):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.poifs.crypt.dsig.SignatureLine" />
+			<role name="TemplateMethod()" element="org.apache.poi.poifs.crypt.dsig.SignatureLine::add(org.apache.xmlbeans.XmlObject, org.apache.poi.poifs.crypt.dsig.SignatureLine$AddPictureData):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xddf.usermodel.chart.XDDFChart" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChart::saveWorkbook(org.apache.poi.xssf.usermodel.XSSFWorkbook):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getId():long" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getPosition():org.apache.poi.xddf.usermodel.chart.AxisPosition" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setPosition(org.apache.poi.xddf.usermodel.chart.AxisPosition):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setNumberFormat(java.lang.String):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getNumberFormat():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::isSetLogBase():boolean" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setLogBase(double):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getLogBase():double" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::isSetMinimum():boolean" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setMinimum(double):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getMinimum():double" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::isSetMaximum():boolean" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setMaximum(double):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getMaximum():double" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getOrientation():org.apache.poi.xddf.usermodel.chart.AxisOrientation" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setOrientation(org.apache.poi.xddf.usermodel.chart.AxisOrientation):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getCrosses():org.apache.poi.xddf.usermodel.chart.AxisCrosses" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setCrosses(org.apache.poi.xddf.usermodel.chart.AxisCrosses):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::isVisible():boolean" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setVisible(boolean):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getMajorTickMark():org.apache.poi.xddf.usermodel.chart.AxisTickMark" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setMajorTickMark(org.apache.poi.xddf.usermodel.chart.AxisTickMark):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getMinorTickMark():org.apache.poi.xddf.usermodel.chart.AxisTickMark" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setMinorTickMark(org.apache.poi.xddf.usermodel.chart.AxisTickMark):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::getTickLabelPosition():org.apache.poi.xddf.usermodel.chart.AxisTickLabelPosition" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartAxis::setTickLabelPosition(org.apache.poi.xddf.usermodel.chart.AxisTickLabelPosition):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::setTitle(java.lang.String, org.apache.poi.ss.util.CellReference):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::plot():void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::setFillProperties(org.apache.poi.xddf.usermodel.XDDFFillProperties):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::setLineProperties(org.apache.poi.xddf.usermodel.XDDFLineProperties):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::clearDataPoint(long):void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData$Series::getDataPoint(long):org.apache.poi.xddf.usermodel.chart.XDDFDataPoint" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData" />
+			<role name="TemplateMethod()" element="org.apache.poi.xddf.usermodel.chart.XDDFChartData::removeSeries(int):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xslf.model.TextBodyPropertyFetcher" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.model.TextBodyPropertyFetcher::fetch(org.apache.poi.xslf.usermodel.XSLFShape):boolean" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xslf.usermodel.XSLFTextShape" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFTextShape::getTextBody():org.apache.poi.xddf.usermodel.text.XDDFTextBody" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFTextShape::clearText():void" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFTextShape::setText(java.lang.String):org.apache.poi.xslf.usermodel.XSLFTextRun" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFTextShape::addNewTextParagraph():org.apache.poi.xslf.usermodel.XSLFTextParagraph" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFTextShape::removeTextParagraph(org.apache.poi.xslf.usermodel.XSLFTextParagraph):boolean" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFTextShape::getTextBodyPr(boolean):org.openxmlformats.schemas.drawingml.x2006.main.CTTextBodyProperties" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFTextShape::copy(org.apache.poi.xslf.usermodel.XSLFShape):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.poi.xslf.usermodel.XSLFSheet" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFSheet::getSpTree():org.openxmlformats.schemas.presentationml.x2006.main.CTGroupShape" />
+			<role name="TemplateMethod()" element="org.apache.poi.xslf.usermodel.XSLFSheet::commit():void" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor">
+		<instance>
+			<role name="ConcreteElement" element="org.apache.poi.xdgf.usermodel.XDGFShape" />
+			<role name="Visitor" element="org.apache.poi.xdgf.usermodel.shape.ShapeVisitor" />
+			<role name="Accept()" element="org.apache.poi.xdgf.usermodel.XDGFShape::visitShapes(org.apache.poi.xdgf.usermodel.shape.ShapeVisitor, java.awt.geom.AffineTransform, int):void" />
+			<role name="Accept()" element="org.apache.poi.xdgf.usermodel.XDGFShape::visitShapes(org.apache.poi.xdgf.usermodel.shape.ShapeVisitor, int):void" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy">
+		<instance>
+			<role name="Proxy" element="org.apache.poi.xssf.streaming.SXSSFSheet" />
+			<role name="RealSubject" element="org.apache.poi.xssf.usermodel.XSSFSheet" />
+			<role name="Request()" element="org.apache.poi.xssf.streaming.SXSSFSheet::getVMLDrawing(boolean):org.apache.poi.xssf.usermodel.XSSFVMLDrawing" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility">
+		<instance>
+			<role name="Handler" element="org.apache.poi.xwpf.model.XWPFParagraphDecorator" />
+			<role name="successor" element="org.apache.poi.xwpf.model.XWPFParagraphDecorator::nextDecorator:org.apache.poi.xwpf.model.XWPFParagraphDecorator" />
+		</instance>
+		<instance>
+			<role name="Handler" element="org.apache.poi.xssf.streaming.SXSSFCell$Property" />
+			<role name="successor" element="org.apache.poi.xssf.streaming.SXSSFCell$Property::_next:org.apache.poi.xssf.streaming.SXSSFCell$Property" />
+		</instance>
+	</pattern>
+</system>
+

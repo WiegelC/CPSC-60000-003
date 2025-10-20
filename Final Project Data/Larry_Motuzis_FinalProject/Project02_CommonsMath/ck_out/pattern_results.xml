@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem::evaluate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.fitting.leastsquares.ValueAndJacobianFunction" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.fitting.leastsquares.ValueAndJacobianFunction::computeValue(double[]):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.fitting.leastsquares.ValueAndJacobianFunction::computeJacobian(double[]):org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation::getSigma(double):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresOptimizer" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresOptimizer::optimize(org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresOptimizer$Optimum" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.analysis.differentiation.UnivariateMatrixFunctionDifferentiator" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.analysis.differentiation.UnivariateMatrixFunctionDifferentiator::differentiate(org.apache.commons.math4.legacy.analysis.UnivariateMatrixFunction):org.apache.commons.math4.legacy.analysis.differentiation.UnivariateDifferentiableMatrixFunction" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.analysis.differentiation.UnivariateFunctionDifferentiator" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.analysis.differentiation.UnivariateFunctionDifferentiator::differentiate(org.apache.commons.math4.legacy.analysis.UnivariateFunction):org.apache.commons.math4.legacy.analysis.differentiation.UnivariateDifferentiableFunction" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.analysis.differentiation.UnivariateVectorFunctionDifferentiator" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.analysis.differentiation.UnivariateVectorFunctionDifferentiator::differentiate(org.apache.commons.math4.legacy.analysis.UnivariateVectorFunction):org.apache.commons.math4.legacy.analysis.differentiation.UnivariateDifferentiableVectorFunction" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.analysis.interpolation.UnivariateInterpolator" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.analysis.interpolation.UnivariateInterpolator::interpolate(double[], double[]):org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.analysis.interpolation.MultivariateInterpolator" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.analysis.interpolation.MultivariateInterpolator::interpolate(double[][], double[]):org.apache.commons.math4.legacy.analysis.MultivariateFunction" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.FieldDecompositionSolver" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldDecompositionSolver::solve(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldDecompositionSolver::solve(org.apache.commons.math4.legacy.linear.FieldMatrix):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldDecompositionSolver::getInverse():org.apache.commons.math4.legacy.linear.FieldMatrix" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::createMatrix(int, int):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::copy():org.apache.commons.math4.legacy.linear.FieldMatrix" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.DecompositionSolver" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.DecompositionSolver::solve(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.DecompositionSolver::solve(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::append(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::append(double):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::getSubVector(int, int):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::append(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::append(T):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::copy():org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::ebeDivide(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::ebeMultiply(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::getSubVector(int, int):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::outerProduct(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::subtract(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::add(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::mapAdd(T):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::mapSubtract(T):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::mapMultiply(T):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::mapDivide(T):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldVector::mapInv():org.apache.commons.math4.legacy.linear.FieldVector" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldMatrix::getRowVector(int):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldMatrix::getColumnVector(int):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldMatrix::operate(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.FieldMatrix::preMultiply(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealMatrix::power(int):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealMatrix::getRowVector(int):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealMatrix::getColumnVector(int):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealMatrix::operate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealMatrix::preMultiply(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.RealLinearOperator" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.RealLinearOperator::operate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::createMatrix(int, int):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::copy():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.distribution.AbstractMultivariateRealDistribution" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.distribution.AbstractMultivariateRealDistribution::createSampler(org.apache.commons.rng.UniformRandomProvider):org.apache.commons.math4.legacy.distribution.MultivariateRealDistribution$Sampler" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::doCopy():org.apache.commons.math4.legacy.ode.sampling.StepInterpolator" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsFieldIntegrator" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsFieldIntegrator::integrate(org.apache.commons.math4.legacy.ode.FieldExpandableODE, org.apache.commons.math4.legacy.ode.FieldODEState, T):org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.stat.descriptive.AbstractStorelessUnivariateStatistic" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.stat.descriptive.AbstractStorelessUnivariateStatistic::copy():org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic::copy():org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="FactoryMethod()" element="org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic::copy():org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.moment.WeightedMean" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.moment.WeightedMean::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.moment.WeightedMean" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Variance" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Variance::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$Variance" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Mean" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Mean::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$Mean" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Max" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Max::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$Max" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Skewness" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Skewness::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$Skewness" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$SumOfSquares" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$SumOfSquares::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$SumOfSquares" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Min" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Min::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$Min" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$GeometricMean" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$GeometricMean::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$GeometricMean" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Sum" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Sum::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$Sum" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.summary.WeightedProduct" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.summary.WeightedProduct::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.summary.WeightedProduct" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.summary.WeightedSum" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.summary.WeightedSum::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.summary.WeightedSum" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Kurtosis" />
+			<role name="uniqueInstance" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$Kurtosis::INSTANCE:org.apache.commons.math4.legacy.stat.descriptive.Statistics$Kurtosis" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.OpenIntToDoubleHashMap" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.linear.OpenMapRealMatrix" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.linear.OpenMapRealMatrix::entries:org.apache.commons.math4.legacy.linear.OpenIntToDoubleHashMap" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.OpenMapRealMatrix::getEntry(int, int):double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.OpenMapRealMatrix::setEntry(int, int, double):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsNordsieckTransformer" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsIntegrator" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsIntegrator::transformer:org.apache.commons.math4.legacy.ode.nonstiff.AdamsNordsieckTransformer" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsIntegrator::initializeHighOrderDerivatives(double, double[], double[][], double[][]):org.apache.commons.math4.legacy.linear.Array2DRowRealMatrix" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.nonstiff.RungeKuttaStepInterpolator" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.nonstiff.EmbeddedRungeKuttaIntegrator" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.nonstiff.EmbeddedRungeKuttaIntegrator::prototype:org.apache.commons.math4.legacy.ode.nonstiff.RungeKuttaStepInterpolator" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.nonstiff.EmbeddedRungeKuttaIntegrator::integrate(org.apache.commons.math4.legacy.ode.ExpandableStatefulODE, double):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.nonstiff.RungeKuttaStepInterpolator" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.nonstiff.RungeKuttaIntegrator" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.nonstiff.RungeKuttaIntegrator::prototype:org.apache.commons.math4.legacy.ode.nonstiff.RungeKuttaStepInterpolator" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.nonstiff.RungeKuttaIntegrator::integrate(org.apache.commons.math4.legacy.ode.ExpandableStatefulODE, double):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.OpenIntToFieldHashMap" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.linear.SparseFieldMatrix" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.linear.SparseFieldMatrix::entries:org.apache.commons.math4.legacy.linear.OpenIntToFieldHashMap" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldMatrix::addToEntry(int, int, T):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldMatrix::getEntry(int, int):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldMatrix::multiplyEntry(int, int, T):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldMatrix::setEntry(int, int, T):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsNordsieckFieldTransformer" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsFieldIntegrator" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsFieldIntegrator::transformer:org.apache.commons.math4.legacy.ode.nonstiff.AdamsNordsieckFieldTransformer" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.nonstiff.AdamsFieldIntegrator::initializeHighOrderDerivatives(T, T[], T[][], T[][]):org.apache.commons.math4.legacy.linear.Array2DRowFieldMatrix" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.OpenIntToFieldHashMap" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.linear.SparseFieldVector" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::entries:org.apache.commons.math4.legacy.linear.OpenIntToFieldHashMap" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::dotProduct(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::ebeDivide(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::ebeMultiply(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::getEntry(int):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::getSubVector(int, int):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::mapDivideToSelf(T):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::mapMultiplyToSelf(T):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::outerProduct(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::setEntry(int, T):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::subtract(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SparseFieldVector::toArray():org.apache.commons.math4.legacy.core.FieldElement[]" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::p:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::getInverse():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition$Solver" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition$Solver::pseudoInverse:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.ArrayRealVector" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.linear.JacobiPreconditioner" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.linear.JacobiPreconditioner::diag:org.apache.commons.math4.legacy.linear.ArrayRealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.JacobiPreconditioner::getColumnDimension():int" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.JacobiPreconditioner::getRowDimension():int" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.JacobiPreconditioner::operate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::xMatrix:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::estimateResiduals():double[]" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.sampling.AbstractFieldStepInterpolator" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.AbstractFieldStepInterpolator::globalPreviousState:org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.AbstractFieldStepInterpolator::globalCurrentState:org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractFieldStepInterpolator::getInterpolatedState(T):org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.stat.descriptive.ResizableDoubleArray" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::eDA:org.apache.commons.math4.legacy.stat.descriptive.ResizableDoubleArray" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::getN():long" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.sampling.FixedStepHandler" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer::handler:org.apache.commons.math4.legacy.ode.sampling.FixedStepHandler" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer::init(double, double[], double):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizerBounds" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer::bounds:org.apache.commons.math4.legacy.ode.sampling.StepNormalizerBounds" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer::handleStep(org.apache.commons.math4.legacy.ode.sampling.StepInterpolator, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.SecondOrderDifferentialEquations" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.FirstOrderConverter" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.FirstOrderConverter::equations:org.apache.commons.math4.legacy.ode.SecondOrderDifferentialEquations" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.FirstOrderConverter::computeDerivatives(double, double[], double[]):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.EquationsMapper" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::primaryMapper:org.apache.commons.math4.legacy.ode.EquationsMapper" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::secondaryMappers:org.apache.commons.math4.legacy.ode.EquationsMapper[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::getInterpolatedState():double[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::getInterpolatedDerivatives():double[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::getInterpolatedSecondaryState(int):double[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::getInterpolatedSecondaryDerivatives(int):double[]" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.field.linalg.FieldDenseMatrix" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.field.linalg.FieldLUDecomposition$Solver" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.field.linalg.FieldLUDecomposition$Solver::mLU:org.apache.commons.math4.legacy.field.linalg.FieldDenseMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.field.linalg.FieldLUDecomposition$Solver::solve(org.apache.commons.math4.legacy.field.linalg.FieldDenseMatrix):org.apache.commons.math4.legacy.field.linalg.FieldDenseMatrix" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::yVector:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::estimateResiduals():double[]" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.sampling.FieldFixedStepHandler" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::handler:org.apache.commons.math4.legacy.ode.sampling.FieldFixedStepHandler" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::init(org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative, T):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizerBounds" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::bounds:org.apache.commons.math4.legacy.ode.sampling.StepNormalizerBounds" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::handleStep(org.apache.commons.math4.legacy.ode.sampling.FieldStepInterpolator, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.MultistepFieldIntegrator$FieldNordsieckInitializer" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.MultistepFieldIntegrator$FieldNordsieckInitializer::savedStart:org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.MultistepFieldIntegrator$FieldNordsieckInitializer::handleStep(org.apache.commons.math4.legacy.ode.sampling.FieldStepInterpolator, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::last:org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::first:org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::handleStep(org.apache.commons.math4.legacy.ode.sampling.FieldStepInterpolator, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile$PSquareMarkers" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile::markers:org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile$PSquareMarkers" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile::increment(double):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile::copy():org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.ParameterValidator" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::paramValidator:org.apache.commons.math4.legacy.fitting.leastsquares.ParameterValidator" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::evaluate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.QRDecomposition" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.stat.regression.OLSMultipleLinearRegression" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.stat.regression.OLSMultipleLinearRegression::qr:org.apache.commons.math4.legacy.linear.QRDecomposition" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.regression.OLSMultipleLinearRegression::calculateBeta():org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.regression.OLSMultipleLinearRegression::calculateBetaVariance():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.ParameterJacobianWrapper" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.ParameterJacobianWrapper::fode:org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.ParameterJacobianWrapper::computeParameterJacobian(double, double[], double[], java.lang.String, double[]):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.stat.descriptive.moment.VectorialCovariance" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::covarianceImpl:org.apache.commons.math4.legacy.stat.descriptive.moment.VectorialCovariance" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::getStandardDeviation():double[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::getCovariance():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.analysis.differentiation.MultivariateDifferentiableFunction" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.analysis.differentiation.GradientFunction" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.analysis.differentiation.GradientFunction::f:org.apache.commons.math4.legacy.analysis.differentiation.MultivariateDifferentiableFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.analysis.differentiation.GradientFunction::value(double[]):double[]" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter::function:org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter::value(double[]):double" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.analysis.interpolation.InterpolatingMicrosphere" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.analysis.interpolation.MicrosphereProjectionInterpolator" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.analysis.interpolation.MicrosphereProjectionInterpolator::microsphere:org.apache.commons.math4.legacy.analysis.interpolation.InterpolatingMicrosphere" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.analysis.interpolation.MicrosphereProjectionInterpolator::interpolate(double[][], double[]):org.apache.commons.math4.legacy.analysis.MultivariateFunction" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.fitting.SimpleCurveFitter$ParameterGuesser" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.fitting.SimpleCurveFitter" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.SimpleCurveFitter::guesser:org.apache.commons.math4.legacy.fitting.SimpleCurveFitter$ParameterGuesser" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.SimpleCurveFitter::getProblem(java.util.Collection):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer$Decomposition" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer::decomposition:org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer$Decomposition" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer::optimize(org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresOptimizer$Optimum" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter::scale:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter::value(double[]):double" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction::function:org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction::value(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.core.Pair" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction::value:org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction::computeValue(double[]):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.MultivariateJacobianFunction" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::model:org.apache.commons.math4.legacy.fitting.leastsquares.MultivariateJacobianFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::evaluate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.Array2DRowRealMatrix" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.sampling.NordsieckStepInterpolator" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.sampling.NordsieckStepInterpolator::nordsieck:org.apache.commons.math4.legacy.linear.Array2DRowRealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.NordsieckStepInterpolator::computeInterpolatedStateAndDerivatives(double, double):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::target:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::start:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::getObservationSize():int" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::getParameterSize():int" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::getStart():org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::evaluate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.ode.events.FilterType" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.ode.events.EventFilter" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.ode.events.EventFilter::filter:org.apache.commons.math4.legacy.ode.events.FilterType" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::g(double, double[]):double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::eventOccurred(double, double[], boolean):org.apache.commons.math4.legacy.ode.events.EventHandler$Action" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$RangeFunction" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$StatImp" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$StatImp::function:org.apache.commons.math4.legacy.stat.descriptive.Statistics$RangeFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$StatImp::evaluate(double[], int, int):double" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.analysis.differentiation.MultivariateDifferentiableVectorFunction" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.analysis.differentiation.JacobianFunction" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.analysis.differentiation.JacobianFunction::f:org.apache.commons.math4.legacy.analysis.differentiation.MultivariateDifferentiableVectorFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.analysis.differentiation.JacobianFunction::value(double[]):double[][]" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper" />
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper::boundingFunction:org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper::unboundingFunction:org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper::unboundedToBounded(double):double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper::boundedToUnbounded(double):double" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.apache.commons.math4.legacy.analysis.MultivariateMatrixFunction" />
+			<role name="Adapter" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction" />
+			<role name="adaptee" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction::jacobian:org.apache.commons.math4.legacy.analysis.MultivariateMatrixFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction::computeJacobian(double[]):org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+			<role name="Decorator" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation" />
+			<role name="component" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation::unweighted:org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation::getJacobian():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation::getResiduals():org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation::getPoint():org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem" />
+			<role name="Decorator" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresAdapter" />
+			<role name="component" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresAdapter::problem:org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresAdapter::getStart():org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresAdapter::getObservationSize():int" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresAdapter::getParameterSize():int" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresAdapter::evaluate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.math4.legacy.analysis.MultivariateFunction" />
+			<role name="Decorator" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter" />
+			<role name="component" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter::bounded:org.apache.commons.math4.legacy.analysis.MultivariateFunction" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter::value(double[]):double" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.math4.legacy.analysis.MultivariateFunction" />
+			<role name="Decorator" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionPenaltyAdapter" />
+			<role name="component" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionPenaltyAdapter::bounded:org.apache.commons.math4.legacy.analysis.MultivariateFunction" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionPenaltyAdapter::value(double[]):double" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.math4.legacy.analysis.interpolation.UnivariateInterpolator" />
+			<role name="Decorator" element="org.apache.commons.math4.legacy.analysis.interpolation.UnivariatePeriodicInterpolator" />
+			<role name="component" element="org.apache.commons.math4.legacy.analysis.interpolation.UnivariatePeriodicInterpolator::interpolator:org.apache.commons.math4.legacy.analysis.interpolation.UnivariateInterpolator" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.analysis.interpolation.UnivariatePeriodicInterpolator::interpolate(double[], double[]):org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.math4.legacy.linear.DecompositionSolver" />
+			<role name="Decorator" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver" />
+			<role name="component" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::upper:org.apache.commons.math4.legacy.linear.DecompositionSolver" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::isNonSingular():boolean" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="Decorator" element="org.apache.commons.math4.legacy.ode.JacobianMatrices$MainStateJacobianWrapper" />
+			<role name="component" element="org.apache.commons.math4.legacy.ode.JacobianMatrices$MainStateJacobianWrapper::ode:org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.ode.JacobianMatrices$MainStateJacobianWrapper::getDimension():int" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.ode.JacobianMatrices$MainStateJacobianWrapper::computeDerivatives(double, double[], double[]):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.apache.commons.math4.legacy.ode.events.EventHandler" />
+			<role name="Decorator" element="org.apache.commons.math4.legacy.ode.events.EventFilter" />
+			<role name="component" element="org.apache.commons.math4.legacy.ode.events.EventFilter::rawHandler:org.apache.commons.math4.legacy.ode.events.EventHandler" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::init(double, double[], double):void" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::g(double, double[]):double" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::eventOccurred(double, double[], boolean):org.apache.commons.math4.legacy.ode.events.EventHandler$Action" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::resetState(double, double[]):void" />
+		</instance>
+	</pattern>
+	<pattern name="Observer">
+		<instance>
+			<role name="Observer" element="org.apache.commons.math4.legacy.ode.sampling.StepInterpolator" />
+			<role name="Subject" element="org.apache.commons.math4.legacy.ode.ContinuousOutputModel" />
+			<role name="Notify()" element="org.apache.commons.math4.legacy.ode.ContinuousOutputModel::append(org.apache.commons.math4.legacy.ode.ContinuousOutputModel):void" />
+			<role name="Notify()" element="org.apache.commons.math4.legacy.ode.ContinuousOutputModel::setInterpolatedTime(double):void" />
+		</instance>
+		<instance>
+			<role name="Observer" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepInterpolator" />
+			<role name="Subject" element="org.apache.commons.math4.legacy.ode.ContinuousOutputFieldModel" />
+			<role name="Notify()" element="org.apache.commons.math4.legacy.ode.ContinuousOutputFieldModel::getInterpolatedState(T):org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+		</instance>
+	</pattern>
+	<pattern name="State">
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.EigenDecomposition" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.EigenDecomposition::cachedV:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.EigenDecomposition::cachedD:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.EigenDecomposition::cachedVt:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.EigenDecomposition::getV():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.EigenDecomposition::getD():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.EigenDecomposition::getVT():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.filter.KalmanFilter" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::errorCovariance:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::controlMatrix:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::transitionMatrix:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::transitionMatrixT:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::measurementMatrix:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::measurementMatrixT:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::getErrorCovariance():double[][]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::getErrorCovarianceMatrix():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::predict(org.apache.commons.math4.legacy.linear.RealVector):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::correct(org.apache.commons.math4.legacy.linear.RealVector):void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.CholeskyDecomposition" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.CholeskyDecomposition::cachedL:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.CholeskyDecomposition::getL():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.HessenbergTransformer" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.HessenbergTransformer::cachedPt:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.HessenbergTransformer::getPT():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.LUDecomposition" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.LUDecomposition::cachedL:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.LUDecomposition::cachedU:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.LUDecomposition::cachedP:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.LUDecomposition::getL():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.LUDecomposition::getU():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.LUDecomposition::getP():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.SchurTransformer" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SchurTransformer::cachedPt:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SchurTransformer::getPT():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition::cachedUt:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition::cachedVt:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition::getUT():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition::getVT():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.TriDiagonalTransformer" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.TriDiagonalTransformer::cachedQ:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.TriDiagonalTransformer::getQ():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Context" element="org.apache.commons.math4.legacy.stat.correlation.PearsonsCorrelation" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.correlation.PearsonsCorrelation::correlationMatrix:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.correlation.PearsonsCorrelation::getCorrelationStandardErrors():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.correlation.PearsonsCorrelation::getCorrelationPValues():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.ode.events.FieldEventHandler" />
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.events.FieldEventState" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.events.FieldEventState::handler:org.apache.commons.math4.legacy.ode.events.FieldEventHandler" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.FieldEventState::reinitializeBegin(org.apache.commons.math4.legacy.ode.sampling.FieldStepInterpolator):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.FieldEventState::evaluateStep(org.apache.commons.math4.legacy.ode.sampling.FieldStepInterpolator):boolean" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.FieldEventState::stepAccepted(org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.FieldEventState::reset(org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative):org.apache.commons.math4.legacy.ode.FieldODEState" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.SymmLQ$State" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealLinearOperator" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::m:org.apache.commons.math4.legacy.linear.RealLinearOperator" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::a:org.apache.commons.math4.legacy.linear.RealLinearOperator" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::init():void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::update():void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Context" element="org.apache.commons.math4.legacy.filter.KalmanFilter" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::stateEstimation:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::getStateDimension():int" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::getStateEstimationVector():org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::predict(org.apache.commons.math4.legacy.linear.RealVector):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::correct(org.apache.commons.math4.legacy.linear.RealVector):void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.SymmLQ$State" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::xL:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::mb:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::wbar:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::b:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::r1:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::y:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::r2:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::refineSolution(org.apache.commons.math4.legacy.linear.RealVector):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::init():void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SymmLQ$State::update():void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.Simplex$TransformFactory" />
+			<role name="Context" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.SimplexOptimizer" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.SimplexOptimizer::updateRule:org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.Simplex$TransformFactory" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.SimplexOptimizer::doOptimize():org.apache.commons.math4.legacy.optim.PointValuePair" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.FieldLUDecomposition" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.FieldLUDecomposition::cachedL:org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.FieldLUDecomposition::cachedU:org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.FieldLUDecomposition::cachedP:org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.FieldLUDecomposition::getL():org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.FieldLUDecomposition::getU():org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.FieldLUDecomposition::getP():org.apache.commons.math4.legacy.linear.FieldMatrix" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::p:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition$Solver" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition$Solver::pseudoInverse:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.SingularValueDecomposition$Solver::solve(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.optim.univariate.BracketFinder$FunctionEvaluator" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.univariate.BracketFinder$FunctionEvaluator::func:org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.univariate.BracketFinder$FunctionEvaluator::value(double):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::xmean:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::BD:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::diagD:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::weights:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::diagC:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::pc:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::ps:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::B:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::D:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::C:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::doOptimize():org.apache.commons.math4.legacy.optim.PointValuePair" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::initializeCMA(double[]):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::updateEvolutionPaths(org.apache.commons.math4.legacy.linear.RealMatrix, org.apache.commons.math4.legacy.linear.RealMatrix):boolean" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::updateCovarianceDiagonalOnly(boolean, org.apache.commons.math4.legacy.linear.RealMatrix):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::updateCovariance(boolean, org.apache.commons.math4.legacy.linear.RealMatrix, org.apache.commons.math4.legacy.linear.RealMatrix, int[], org.apache.commons.math4.legacy.linear.RealMatrix):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.noderiv.CMAESOptimizer::updateBD(double):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics" />
+			<role name="State" element="org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::maxImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::meanImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::minImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::sumImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::varianceImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::sumsqImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::geometricMeanImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::kurtosisImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::skewnessImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::percentileImpl:org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics::copy(org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics, org.apache.commons.math4.legacy.stat.descriptive.DescriptiveStatistics):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.sampling.FixedStepHandler" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer::handler:org.apache.commons.math4.legacy.ode.sampling.FixedStepHandler" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer::init(double, double[], double):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.StepNormalizer::doNormalizedStep(boolean):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics" />
+			<role name="State" element="org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::sumImpl:org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic[]" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::sumSqImpl:org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic[]" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::minImpl:org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic[]" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::maxImpl:org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic[]" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::sumLogImpl:org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic[]" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::geoMeanImpl:org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic[]" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::meanImpl:org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::addValue(double[]):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.MultivariateSummaryStatistics::clear():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl" />
+			<role name="State" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::value:org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getCovariances(double):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getSigma(double):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getRMS():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getJacobian():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getCost():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getChiSquare():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getReducedChiSquare(int):double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getResiduals():org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.OptimumImpl::getPoint():org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.QRDecomposition" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.QRDecomposition::cachedQ:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.QRDecomposition::getQ():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition::cachedP:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.linear.RRQRDecomposition::getP():org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.distribution.MultivariateNormalDistribution" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.distribution.MultivariateNormalDistribution::covarianceMatrix:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.distribution.MultivariateNormalDistribution::covarianceMatrixInverse:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.distribution.MultivariateNormalDistribution::getCovariances():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.distribution.MultivariateNormalDistribution::getStandardDeviations():double[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.distribution.MultivariateNormalDistribution::getExponentTerm(double[]):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.FirstOrderConverter" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.SecondOrderDifferentialEquations" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.FirstOrderConverter::equations:org.apache.commons.math4.legacy.ode.SecondOrderDifferentialEquations" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.FirstOrderConverter::computeDerivatives(double, double[], double[]):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.ExpandableStatefulODE" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.ExpandableStatefulODE::primary:org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.ExpandableStatefulODE::computeDerivatives(double, double[], double[]):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.ExpandableStatefulODE::addSecondaryEquations(org.apache.commons.math4.legacy.ode.SecondaryEquations):int" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ml.clustering.MultiKMeansPlusPlusClusterer" />
+			<role name="State" element="org.apache.commons.math4.legacy.ml.clustering.ClusterRanking" />
+			<role name="state" element="org.apache.commons.math4.legacy.ml.clustering.MultiKMeansPlusPlusClusterer::evaluator:org.apache.commons.math4.legacy.ml.clustering.ClusterRanking" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ml.clustering.MultiKMeansPlusPlusClusterer::cluster(java.util.Collection):java.util.List" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation::weightSqrt:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation::getJacobian():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DenseWeightedEvaluation::getResiduals():org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.sampling.FieldFixedStepHandler" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::handler:org.apache.commons.math4.legacy.ode.sampling.FieldFixedStepHandler" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::init(org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative, T):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.sampling.FieldStepNormalizer::doNormalizedStep(boolean):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter" />
+			<role name="State" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$Mapper" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter::mappers:org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$Mapper[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter::unboundedToBounded(double[]):double[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter::boundedToUnbounded(double[]):double[]" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.filter.KalmanFilter" />
+			<role name="State" element="org.apache.commons.math4.legacy.filter.ProcessModel" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::processModel:org.apache.commons.math4.legacy.filter.ProcessModel" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::predict(org.apache.commons.math4.legacy.linear.RealVector):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile" />
+			<role name="State" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile$PSquareMarkers" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile::markers:org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile$PSquareMarkers" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile::increment(double):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile::copy():org.apache.commons.math4.legacy.stat.descriptive.StorelessUnivariateStatistic" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile::maximum():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile::minimum():double" />
+		</instance>
+		<instance>
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.solvers.BracketedRealFieldUnivariateSolver" />
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.events.FieldEventState" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.events.FieldEventState::solver:org.apache.commons.math4.legacy.analysis.solvers.BracketedRealFieldUnivariateSolver" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.FieldEventState::reinitializeBegin(org.apache.commons.math4.legacy.ode.sampling.FieldStepInterpolator):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.FieldEventState::evaluateStep(org.apache.commons.math4.legacy.ode.sampling.FieldStepInterpolator):boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem" />
+			<role name="State" element="org.apache.commons.math4.legacy.fitting.leastsquares.ParameterValidator" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::paramValidator:org.apache.commons.math4.legacy.fitting.leastsquares.ParameterValidator" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::evaluate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.ParameterJacobianWrapper" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.ParameterJacobianWrapper::fode:org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.ParameterJacobianWrapper::computeParameterJacobian(double, double[], double[], java.lang.String, double[]):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.ParameterizedWrapper" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.ParameterizedWrapper::fode:org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.ParameterizedWrapper::getDimension():int" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.ParameterizedWrapper::computeDerivatives(double, double[], double[]):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.analysis.differentiation.GradientFunction" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.differentiation.MultivariateDifferentiableFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.analysis.differentiation.GradientFunction::f:org.apache.commons.math4.legacy.analysis.differentiation.MultivariateDifferentiableFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.analysis.differentiation.GradientFunction::value(double[]):double[]" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter::function:org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter::value(double[]):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile$Marker" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.interpolation.UnivariateInterpolator" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile$Marker::nonLinear:org.apache.commons.math4.legacy.analysis.interpolation.UnivariateInterpolator" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile$Marker::linear:org.apache.commons.math4.legacy.analysis.interpolation.UnivariateInterpolator" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.rank.PSquarePercentile$Marker::estimate():double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.SimpleCurveFitter" />
+			<role name="State" element="org.apache.commons.math4.legacy.fitting.SimpleCurveFitter$ParameterGuesser" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.SimpleCurveFitter::guesser:org.apache.commons.math4.legacy.fitting.SimpleCurveFitter$ParameterGuesser" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.SimpleCurveFitter::getProblem(java.util.Collection):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer" />
+			<role name="State" element="org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer$Decomposition" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer::decomposition:org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer$Decomposition" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.GaussNewtonOptimizer::optimize(org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresOptimizer$Optimum" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter::scale:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.LeastSquaresConverter::value(double[]):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.events.EventState" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.events.EventHandler" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.events.EventState::handler:org.apache.commons.math4.legacy.ode.events.EventHandler" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventState::reinitializeBegin(org.apache.commons.math4.legacy.ode.sampling.StepInterpolator):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventState::evaluateStep(org.apache.commons.math4.legacy.ode.sampling.StepInterpolator):boolean" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventState::stepAccepted(double, double[]):void" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventState::reset(double, double[]):boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction::function:org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction::value(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.core.Pair" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction::lambda$value$0(double[], int, double):double[]" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction::value:org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction::computeValue(double[]):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.filter.KalmanFilter" />
+			<role name="State" element="org.apache.commons.math4.legacy.filter.MeasurementModel" />
+			<role name="state" element="org.apache.commons.math4.legacy.filter.KalmanFilter::measurementModel:org.apache.commons.math4.legacy.filter.MeasurementModel" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.filter.KalmanFilter::correct(org.apache.commons.math4.legacy.linear.RealVector):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem" />
+			<role name="State" element="org.apache.commons.math4.legacy.fitting.leastsquares.MultivariateJacobianFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::model:org.apache.commons.math4.legacy.fitting.leastsquares.MultivariateJacobianFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::evaluate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem$LazyUnweightedEvaluation" />
+			<role name="State" element="org.apache.commons.math4.legacy.fitting.leastsquares.ValueAndJacobianFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem$LazyUnweightedEvaluation::model:org.apache.commons.math4.legacy.fitting.leastsquares.ValueAndJacobianFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem$LazyUnweightedEvaluation::getJacobian():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem$LazyUnweightedEvaluation::getResiduals():org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem" />
+			<role name="State" element="org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::target:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::start:org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::getObservationSize():int" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::getParameterSize():int" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::getStart():org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalLeastSquaresProblem::evaluate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresProblem$Evaluation" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.events.EventFilter" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.events.FilterType" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.events.EventFilter::filter:org.apache.commons.math4.legacy.ode.events.FilterType" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::g(double, double[]):double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::eventOccurred(double, double[], boolean):org.apache.commons.math4.legacy.ode.events.EventHandler$Action" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizer" />
+			<role name="State" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.gradient.Preconditioner" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizer::preconditioner:org.apache.commons.math4.legacy.optim.nonlinear.scalar.gradient.Preconditioner" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.gradient.NonLinearConjugateGradientOptimizer::doOptimize():org.apache.commons.math4.legacy.optim.PointValuePair" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$StatImp" />
+			<role name="State" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$RangeFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$StatImp::function:org.apache.commons.math4.legacy.stat.descriptive.Statistics$RangeFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.Statistics$StatImp::evaluate(double[], int, int):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.analysis.differentiation.JacobianFunction" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.differentiation.MultivariateDifferentiableVectorFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.analysis.differentiation.JacobianFunction::f:org.apache.commons.math4.legacy.analysis.differentiation.MultivariateDifferentiableVectorFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.analysis.differentiation.JacobianFunction::value(double[]):double[][]" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper::boundingFunction:org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper::unboundingFunction:org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper::unboundedToBounded(double):double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateFunctionMappingAdapter$LowerUpperBoundMapper::boundedToUnbounded(double):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.MultivariateMatrixFunction" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction::jacobian:org.apache.commons.math4.legacy.analysis.MultivariateMatrixFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.LeastSquaresFactory$LocalValueAndJacobianFunction::computeJacobian(double[]):org.apache.commons.math4.legacy.linear.RealMatrix" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction" />
+			<role name="State" element="org.apache.commons.math4.legacy.analysis.differentiation.UnivariateVectorFunctionDifferentiator" />
+			<role name="state" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction::differentiator:org.apache.commons.math4.legacy.analysis.differentiation.UnivariateVectorFunctionDifferentiator" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.fitting.leastsquares.DifferentiatorVectorMultivariateJacobianFunction::getPartialDerivative(org.apache.commons.math4.legacy.analysis.UnivariateVectorFunction, double):double[]" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ml.clustering.evaluation.SumOfClusterVariances" />
+			<role name="State" element="org.apache.commons.math4.legacy.ml.distance.DistanceMeasure" />
+			<role name="state" element="org.apache.commons.math4.legacy.ml.clustering.evaluation.SumOfClusterVariances::measure:org.apache.commons.math4.legacy.ml.distance.DistanceMeasure" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ml.clustering.evaluation.SumOfClusterVariances::distance(org.apache.commons.math4.legacy.ml.clustering.Clusterable, org.apache.commons.math4.legacy.ml.clustering.Clusterable):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.apache.commons.math4.legacy.ode.events.EventFilter" />
+			<role name="State" element="org.apache.commons.math4.legacy.ode.events.Transformer" />
+			<role name="state" element="org.apache.commons.math4.legacy.ode.events.EventFilter::transformers:org.apache.commons.math4.legacy.ode.events.Transformer[]" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ode.events.EventFilter::g(double, double[]):double" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge">
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression" />
+			<role name="Implementor" element="org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="implementor" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::xMatrix:org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::estimateResiduals():double[]" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::calculateResiduals():org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="Implementor" element="org.apache.commons.math4.legacy.analysis.MultivariateFunction" />
+			<role name="Abstraction" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateOptimizer" />
+			<role name="implementor" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateOptimizer::function:org.apache.commons.math4.legacy.analysis.MultivariateFunction" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.MultivariateOptimizer::computeObjectiveValue(double[]):double" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.math4.legacy.ml.clustering.Clusterer" />
+			<role name="Implementor" element="org.apache.commons.math4.legacy.ml.distance.DistanceMeasure" />
+			<role name="implementor" element="org.apache.commons.math4.legacy.ml.clustering.Clusterer::measure:org.apache.commons.math4.legacy.ml.distance.DistanceMeasure" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.ml.clustering.Clusterer::distance(org.apache.commons.math4.legacy.ml.clustering.Clusterable, org.apache.commons.math4.legacy.ml.clustering.Clusterable):double" />
+		</instance>
+		<instance>
+			<role name="Implementor" element="org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="Abstraction" element="org.apache.commons.math4.legacy.optim.univariate.UnivariateOptimizer" />
+			<role name="implementor" element="org.apache.commons.math4.legacy.optim.univariate.UnivariateOptimizer::function:org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.optim.univariate.UnivariateOptimizer::computeObjectiveValue(double):double" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.math4.legacy.analysis.integration.BaseAbstractUnivariateIntegrator" />
+			<role name="Implementor" element="org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="implementor" element="org.apache.commons.math4.legacy.analysis.integration.BaseAbstractUnivariateIntegrator::function:org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.analysis.integration.BaseAbstractUnivariateIntegrator::computeObjectiveValue(double):double" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.math4.legacy.analysis.solvers.AbstractUnivariateDifferentiableSolver" />
+			<role name="Implementor" element="org.apache.commons.math4.legacy.analysis.differentiation.UnivariateDifferentiableFunction" />
+			<role name="implementor" element="org.apache.commons.math4.legacy.analysis.solvers.AbstractUnivariateDifferentiableSolver::function:org.apache.commons.math4.legacy.analysis.differentiation.UnivariateDifferentiableFunction" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.analysis.solvers.AbstractUnivariateDifferentiableSolver::computeObjectiveValueAndDerivative(double):org.apache.commons.math4.legacy.analysis.differentiation.DerivativeStructure" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.math4.legacy.analysis.solvers.BaseAbstractUnivariateSolver" />
+			<role name="Implementor" element="org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="implementor" element="org.apache.commons.math4.legacy.analysis.solvers.BaseAbstractUnivariateSolver::function:org.apache.commons.math4.legacy.analysis.UnivariateFunction" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.analysis.solvers.BaseAbstractUnivariateSolver::computeObjectiveValue(double):double" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.GradientMultivariateOptimizer" />
+			<role name="Implementor" element="org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="implementor" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.GradientMultivariateOptimizer::gradient:org.apache.commons.math4.legacy.analysis.MultivariateVectorFunction" />
+			<role name="Operation()" element="org.apache.commons.math4.legacy.optim.nonlinear.scalar.GradientMultivariateOptimizer::computeObjectiveGradient(double[]):double[]" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.fitting.AbstractCurveFitter" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.fitting.AbstractCurveFitter::fit(java.util.Collection):double[]" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.analysis.integration.gauss.BaseRuleFactory" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.analysis.integration.gauss.BaseRuleFactory::getRuleInternal(int):org.apache.commons.math4.legacy.core.Pair" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.analysis.integration.BaseAbstractUnivariateIntegrator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.analysis.integration.BaseAbstractUnivariateIntegrator::integrate(int, org.apache.commons.math4.legacy.analysis.UnivariateFunction, double, double):double" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.analysis.solvers.BaseAbstractUnivariateSolver" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.analysis.solvers.BaseAbstractUnivariateSolver::solve(int, FUNC, double, double, double):double" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::add(org.apache.commons.math4.legacy.linear.FieldMatrix):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::subtract(org.apache.commons.math4.legacy.linear.FieldMatrix):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::scalarAdd(T):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::scalarMultiply(T):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::multiply(org.apache.commons.math4.legacy.linear.FieldMatrix):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::power(int):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::getData():org.apache.commons.math4.legacy.core.FieldElement[][]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::getSubMatrix(int, int, int, int):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::getSubMatrix(int[], int[]):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::copySubMatrix(int[], int[], T[][]):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::setSubMatrix(T[][], int, int):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::getRowMatrix(int):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::setRowMatrix(int, org.apache.commons.math4.legacy.linear.FieldMatrix):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::getColumnMatrix(int):org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::setColumnMatrix(int, org.apache.commons.math4.legacy.linear.FieldMatrix):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::setRowVector(int, org.apache.commons.math4.legacy.linear.FieldVector):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::setColumnVector(int, org.apache.commons.math4.legacy.linear.FieldVector):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::getRow(int):org.apache.commons.math4.legacy.core.FieldElement[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::setRow(int, T[]):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::getColumn(int):org.apache.commons.math4.legacy.core.FieldElement[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::setColumn(int, T[]):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::transpose():org.apache.commons.math4.legacy.linear.FieldMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::getTrace():org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::operate(T[]):org.apache.commons.math4.legacy.core.FieldElement[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::operate(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::preMultiply(T[]):org.apache.commons.math4.legacy.core.FieldElement[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::preMultiply(org.apache.commons.math4.legacy.linear.FieldVector):org.apache.commons.math4.legacy.linear.FieldVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::walkInRowOrder(org.apache.commons.math4.legacy.linear.FieldMatrixChangingVisitor):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::walkInRowOrder(org.apache.commons.math4.legacy.linear.FieldMatrixPreservingVisitor):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::walkInRowOrder(org.apache.commons.math4.legacy.linear.FieldMatrixChangingVisitor, int, int, int, int):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::walkInRowOrder(org.apache.commons.math4.legacy.linear.FieldMatrixPreservingVisitor, int, int, int, int):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::walkInColumnOrder(org.apache.commons.math4.legacy.linear.FieldMatrixChangingVisitor):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::walkInColumnOrder(org.apache.commons.math4.legacy.linear.FieldMatrixPreservingVisitor):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::walkInColumnOrder(org.apache.commons.math4.legacy.linear.FieldMatrixChangingVisitor, int, int, int, int):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::walkInColumnOrder(org.apache.commons.math4.legacy.linear.FieldMatrixPreservingVisitor, int, int, int, int):org.apache.commons.math4.legacy.core.FieldElement" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::toString():java.lang.String" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::equals(java.lang.Object):boolean" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractFieldMatrix::hashCode():int" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::addToEntry(int, double):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::checkVectorDimensions(org.apache.commons.math4.legacy.linear.RealVector):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::checkVectorDimensions(int):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::checkIndex(int):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::checkIndices(int, int):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::add(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::subtract(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::mapAdd(double):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::dotProduct(org.apache.commons.math4.legacy.linear.RealVector):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::getDistance(org.apache.commons.math4.legacy.linear.RealVector):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::getL1Distance(org.apache.commons.math4.legacy.linear.RealVector):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::getLInfDistance(org.apache.commons.math4.legacy.linear.RealVector):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::getMinValue():double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::getMaxValue():double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::mapMultiply(double):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::mapSubtract(double):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::mapDivide(double):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::outerProduct(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::toArray():double[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::iterator():java.util.Iterator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::map(org.apache.commons.math4.legacy.analysis.UnivariateFunction):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::combine(double, double, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::combineToSelf(double, double, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::walkInDefaultOrder(org.apache.commons.math4.legacy.linear.RealVectorPreservingVisitor):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::walkInDefaultOrder(org.apache.commons.math4.legacy.linear.RealVectorPreservingVisitor, int, int):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::walkInDefaultOrder(org.apache.commons.math4.legacy.linear.RealVectorChangingVisitor):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.RealVector::walkInDefaultOrder(org.apache.commons.math4.legacy.linear.RealVectorChangingVisitor, int, int):double" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.linear.PreconditionedIterativeLinearSolver" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.PreconditionedIterativeLinearSolver::solve(org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealVector, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.PreconditionedIterativeLinearSolver::solve(org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.PreconditionedIterativeLinearSolver::solve(org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealVector, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.PreconditionedIterativeLinearSolver::solve(org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.PreconditionedIterativeLinearSolver::solveInPlace(org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealVector, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::add(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::subtract(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::scalarAdd(double):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::scalarMultiply(double):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::multiply(org.apache.commons.math4.legacy.linear.RealMatrix):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::power(int):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::getData():double[][]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::getSubMatrix(int, int, int, int):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::getSubMatrix(int[], int[]):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::copySubMatrix(int[], int[], double[][]):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::setSubMatrix(double[][], int, int):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::getRowMatrix(int):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::setRowMatrix(int, org.apache.commons.math4.legacy.linear.RealMatrix):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::getColumnMatrix(int):org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::setColumnMatrix(int, org.apache.commons.math4.legacy.linear.RealMatrix):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::setRowVector(int, org.apache.commons.math4.legacy.linear.RealVector):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::setColumnVector(int, org.apache.commons.math4.legacy.linear.RealVector):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::getRow(int):double[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::setRow(int, double[]):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::getColumn(int):double[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::setColumn(int, double[]):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::addToEntry(int, int, double):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::multiplyEntry(int, int, double):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::transpose():org.apache.commons.math4.legacy.linear.RealMatrix" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::getTrace():double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::operate(double[]):double[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::operate(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::preMultiply(double[]):double[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::preMultiply(org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::walkInRowOrder(org.apache.commons.math4.legacy.linear.RealMatrixChangingVisitor):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::walkInRowOrder(org.apache.commons.math4.legacy.linear.RealMatrixPreservingVisitor):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::walkInRowOrder(org.apache.commons.math4.legacy.linear.RealMatrixChangingVisitor, int, int, int, int):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::walkInRowOrder(org.apache.commons.math4.legacy.linear.RealMatrixPreservingVisitor, int, int, int, int):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::walkInColumnOrder(org.apache.commons.math4.legacy.linear.RealMatrixChangingVisitor):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::walkInColumnOrder(org.apache.commons.math4.legacy.linear.RealMatrixPreservingVisitor):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::walkInColumnOrder(org.apache.commons.math4.legacy.linear.RealMatrixChangingVisitor, int, int, int, int):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::walkInColumnOrder(org.apache.commons.math4.legacy.linear.RealMatrixPreservingVisitor, int, int, int, int):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::equals(java.lang.Object):boolean" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.AbstractRealMatrix::hashCode():int" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.linear.IterativeLinearSolver" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.IterativeLinearSolver::solve(org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.linear.IterativeLinearSolver::solve(org.apache.commons.math4.legacy.linear.RealLinearOperator, org.apache.commons.math4.legacy.linear.RealVector, org.apache.commons.math4.legacy.linear.RealVector):org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.optim.BaseMultiStartMultivariateOptimizer" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.optim.BaseMultiStartMultivariateOptimizer::doOptimize():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.optim.BaseOptimizer" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.optim.BaseOptimizer::optimize(org.apache.commons.math4.legacy.optim.OptimizationData[]):java.lang.Object" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.optim.BaseOptimizer::optimize():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::copy():org.apache.commons.math4.legacy.ode.sampling.StepInterpolator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractStepInterpolator::evaluateCompleteInterpolatedState():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.ode.sampling.AbstractFieldStepInterpolator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractFieldStepInterpolator::restrictStep(org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative, org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative):org.apache.commons.math4.legacy.ode.sampling.AbstractFieldStepInterpolator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.ode.sampling.AbstractFieldStepInterpolator::getInterpolatedState(T):org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.ode.nonstiff.EmbeddedRungeKuttaIntegrator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.ode.nonstiff.EmbeddedRungeKuttaIntegrator::integrate(org.apache.commons.math4.legacy.ode.ExpandableStatefulODE, double):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.ode.nonstiff.EmbeddedRungeKuttaFieldIntegrator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.ode.nonstiff.EmbeddedRungeKuttaFieldIntegrator::integrate(org.apache.commons.math4.legacy.ode.FieldExpandableODE, org.apache.commons.math4.legacy.ode.FieldODEState, T):org.apache.commons.math4.legacy.ode.FieldODEStateAndDerivative" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.ode.AbstractIntegrator" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.ode.AbstractIntegrator::integrate(org.apache.commons.math4.legacy.ode.FirstOrderDifferentialEquations, double, double[], double, double[]):double" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.stat.descriptive.AbstractStorelessUnivariateStatistic" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.stat.descriptive.AbstractStorelessUnivariateStatistic::evaluate(double[], int, int):double" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.stat.descriptive.AbstractStorelessUnivariateStatistic::incrementAll(double[], int, int):void" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.stat.descriptive.AbstractStorelessUnivariateStatistic::copy():org.apache.commons.math4.legacy.stat.descriptive.UnivariateStatistic" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.stat.descriptive.AbstractUnivariateStatistic" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.stat.descriptive.AbstractUnivariateStatistic::evaluate(double[]):double" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::estimateRegressionParameters():double[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::estimateResiduals():double[]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::estimateRegressionParametersVariance():double[][]" />
+			<role name="TemplateMethod()" element="org.apache.commons.math4.legacy.stat.regression.AbstractMultipleLinearRegression::calculateResiduals():org.apache.commons.math4.legacy.linear.RealVector" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor" />
+	<pattern name="Proxy">
+		<instance>
+			<role name="Proxy" element="org.apache.commons.math4.legacy.ml.clustering.MultiKMeansPlusPlusClusterer" />
+			<role name="RealSubject" element="org.apache.commons.math4.legacy.ml.clustering.KMeansPlusPlusClusterer" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.ml.clustering.MultiKMeansPlusPlusClusterer::cluster(java.util.Collection):java.util.List" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.apache.commons.math4.legacy.stat.descriptive.AggregateSummaryStatistics" />
+			<role name="RealSubject" element="org.apache.commons.math4.legacy.stat.descriptive.SummaryStatistics" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.AggregateSummaryStatistics::getMax():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.AggregateSummaryStatistics::getMean():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.AggregateSummaryStatistics::getMin():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.AggregateSummaryStatistics::getN():long" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.AggregateSummaryStatistics::getStandardDeviation():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.AggregateSummaryStatistics::getSum():double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.stat.descriptive.AggregateSummaryStatistics::getVariance():double" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.apache.commons.math4.legacy.analysis.polynomials.PolynomialSplineFunction" />
+			<role name="RealSubject" element="org.apache.commons.math4.legacy.analysis.polynomials.PolynomialFunction" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.analysis.polynomials.PolynomialSplineFunction::value(double):double" />
+			<role name="Request()" element="org.apache.commons.math4.legacy.analysis.polynomials.PolynomialSplineFunction::value(org.apache.commons.math4.legacy.analysis.differentiation.DerivativeStructure):org.apache.commons.math4.legacy.analysis.differentiation.DerivativeStructure" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+

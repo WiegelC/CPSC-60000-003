@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="org.jfree.chart.renderer.xy.XYItemRenderer" />
+			<role name="FactoryMethod()" element="org.jfree.chart.renderer.xy.XYItemRenderer::findDomainBounds(org.jfree.data.xy.XYDataset):org.jfree.data.Range" />
+			<role name="FactoryMethod()" element="org.jfree.chart.renderer.xy.XYItemRenderer::findRangeBounds(org.jfree.data.xy.XYDataset):org.jfree.data.Range" />
+			<role name="FactoryMethod()" element="org.jfree.chart.renderer.xy.XYItemRenderer::initialise(java.awt.Graphics2D, java.awt.geom.Rectangle2D, org.jfree.chart.plot.XYPlot, org.jfree.data.xy.XYDataset, org.jfree.chart.plot.PlotRenderingInfo):org.jfree.chart.renderer.xy.XYItemRendererState" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.chart.plot.ValueAxisPlot" />
+			<role name="FactoryMethod()" element="org.jfree.chart.plot.ValueAxisPlot::getDataRange(org.jfree.chart.axis.ValueAxis):org.jfree.data.Range" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.chart.swing.editor.ChartEditorFactory" />
+			<role name="FactoryMethod()" element="org.jfree.chart.swing.editor.ChartEditorFactory::createEditor(org.jfree.chart.JFreeChart):org.jfree.chart.swing.editor.ChartEditor" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.chart.annotations.XYAnnotationBoundsInfo" />
+			<role name="FactoryMethod()" element="org.jfree.chart.annotations.XYAnnotationBoundsInfo::getXRange():org.jfree.data.Range" />
+			<role name="FactoryMethod()" element="org.jfree.chart.annotations.XYAnnotationBoundsInfo::getYRange():org.jfree.data.Range" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.chart.axis.TickUnitSource" />
+			<role name="FactoryMethod()" element="org.jfree.chart.axis.TickUnitSource::getLargerTickUnit(org.jfree.chart.axis.TickUnit):org.jfree.chart.axis.TickUnit" />
+			<role name="FactoryMethod()" element="org.jfree.chart.axis.TickUnitSource::getCeilingTickUnit(double):org.jfree.chart.axis.TickUnit" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.chart.axis.Axis" />
+			<role name="FactoryMethod()" element="org.jfree.chart.axis.Axis::reserveSpace(java.awt.Graphics2D, org.jfree.chart.plot.Plot, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge, org.jfree.chart.axis.AxisSpace):org.jfree.chart.axis.AxisSpace" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.chart.block.Block" />
+			<role name="FactoryMethod()" element="org.jfree.chart.block.Block::arrange(java.awt.Graphics2D, org.jfree.chart.block.RectangleConstraint):org.jfree.chart.block.Size2D" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.chart.block.Arrangement" />
+			<role name="FactoryMethod()" element="org.jfree.chart.block.Arrangement::arrange(org.jfree.chart.block.BlockContainer, java.awt.Graphics2D, org.jfree.chart.block.RectangleConstraint):org.jfree.chart.block.Size2D" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.data.time.RegularTimePeriod" />
+			<role name="FactoryMethod()" element="org.jfree.data.time.RegularTimePeriod::previous():org.jfree.data.time.RegularTimePeriod" />
+			<role name="FactoryMethod()" element="org.jfree.data.time.RegularTimePeriod::next():org.jfree.data.time.RegularTimePeriod" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.data.DomainInfo" />
+			<role name="FactoryMethod()" element="org.jfree.data.DomainInfo::getDomainBounds(boolean):org.jfree.data.Range" />
+		</instance>
+		<instance>
+			<role name="Creator" element="org.jfree.data.RangeInfo" />
+			<role name="FactoryMethod()" element="org.jfree.data.RangeInfo::getRangeBounds(boolean):org.jfree.data.Range" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype">
+		<instance>
+			<role name="Client" element="org.jfree.chart.JFreeChart" />
+			<role name="Prototype" element="org.jfree.chart.plot.Plot" />
+			<role name="prototype" element="org.jfree.chart.JFreeChart::plot:org.jfree.chart.plot.Plot" />
+			<role name="Operation()" element="org.jfree.chart.JFreeChart::clone():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Client" element="org.jfree.chart.plot.FastScatterPlot" />
+			<role name="Prototype" element="org.jfree.chart.axis.ValueAxis" />
+			<role name="prototype" element="org.jfree.chart.plot.FastScatterPlot::domainAxis:org.jfree.chart.axis.ValueAxis" />
+			<role name="prototype" element="org.jfree.chart.plot.FastScatterPlot::rangeAxis:org.jfree.chart.axis.ValueAxis" />
+			<role name="Operation()" element="org.jfree.chart.plot.FastScatterPlot::clone():java.lang.Object" />
+		</instance>
+	</pattern>
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="org.jfree.chart.api.RectangleInsets" />
+			<role name="uniqueInstance" element="org.jfree.chart.api.RectangleInsets::ZERO_INSETS:org.jfree.chart.api.RectangleInsets" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.jfree.chart.block.RectangleConstraint" />
+			<role name="uniqueInstance" element="org.jfree.chart.block.RectangleConstraint::NONE:org.jfree.chart.block.RectangleConstraint" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="org.jfree.chart.block.BlockBorder" />
+			<role name="uniqueInstance" element="org.jfree.chart.block.BlockBorder::NONE:org.jfree.chart.block.BlockBorder" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.title.Title" />
+			<role name="Adapter" element="org.jfree.chart.annotations.XYTitleAnnotation" />
+			<role name="adaptee" element="org.jfree.chart.annotations.XYTitleAnnotation::title:org.jfree.chart.title.Title" />
+			<role name="Request()" element="org.jfree.chart.annotations.XYTitleAnnotation::draw(java.awt.Graphics2D, org.jfree.chart.plot.XYPlot, java.awt.geom.Rectangle2D, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, int, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleInsets" />
+			<role name="Adapter" element="org.jfree.chart.plot.dial.DialValueIndicator" />
+			<role name="adaptee" element="org.jfree.chart.plot.dial.DialValueIndicator::insets:org.jfree.chart.api.RectangleInsets" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialValueIndicator::draw(java.awt.Graphics2D, org.jfree.chart.plot.dial.DialPlot, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleInsets" />
+			<role name="Adapter" element="org.jfree.chart.plot.CategoryPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.CategoryPlot::axisOffset:org.jfree.chart.api.RectangleInsets" />
+			<role name="Request()" element="org.jfree.chart.plot.CategoryPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleInsets" />
+			<role name="Adapter" element="org.jfree.chart.plot.XYPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.XYPlot::axisOffset:org.jfree.chart.api.RectangleInsets" />
+			<role name="Request()" element="org.jfree.chart.plot.XYPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleAnchor" />
+			<role name="Adapter" element="org.jfree.chart.plot.dial.DialValueIndicator" />
+			<role name="adaptee" element="org.jfree.chart.plot.dial.DialValueIndicator::frameAnchor:org.jfree.chart.api.RectangleAnchor" />
+			<role name="adaptee" element="org.jfree.chart.plot.dial.DialValueIndicator::valueAnchor:org.jfree.chart.api.RectangleAnchor" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialValueIndicator::draw(java.awt.Graphics2D, org.jfree.chart.plot.dial.DialPlot, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.data.KeyedObjects2D" />
+			<role name="Adapter" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset" />
+			<role name="adaptee" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::data:org.jfree.data.KeyedObjects2D" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMeanValue(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMeanValue(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMedianValue(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMedianValue(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getQ1Value(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getQ1Value(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getQ3Value(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getQ3Value(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMinRegularValue(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMinRegularValue(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMaxRegularValue(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMaxRegularValue(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMinOutlier(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMinOutlier(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMaxOutlier(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getMaxOutlier(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getOutliers(int, int):java.util.List" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::getOutliers(R, C):java.util.List" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset::clone():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.data.KeyedObjects2D" />
+			<role name="Adapter" element="org.jfree.data.statistics.DefaultMultiValueCategoryDataset" />
+			<role name="adaptee" element="org.jfree.data.statistics.DefaultMultiValueCategoryDataset::data:org.jfree.data.KeyedObjects2D" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultMultiValueCategoryDataset::getValues(int, int):java.util.List" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultMultiValueCategoryDataset::getValues(R, C):java.util.List" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultMultiValueCategoryDataset::clone():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.data.KeyedObjects2D" />
+			<role name="Adapter" element="org.jfree.data.statistics.DefaultStatisticalCategoryDataset" />
+			<role name="adaptee" element="org.jfree.data.statistics.DefaultStatisticalCategoryDataset::data:org.jfree.data.KeyedObjects2D" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultStatisticalCategoryDataset::getMeanValue(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultStatisticalCategoryDataset::getMeanValue(R, C):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultStatisticalCategoryDataset::getStdDevValue(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.statistics.DefaultStatisticalCategoryDataset::getStdDevValue(R, C):java.lang.Number" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.util.GradientPaintTransformType" />
+			<role name="Adapter" element="org.jfree.chart.util.StandardGradientPaintTransformer" />
+			<role name="adaptee" element="org.jfree.chart.util.StandardGradientPaintTransformer::type:org.jfree.chart.util.GradientPaintTransformType" />
+			<role name="Request()" element="org.jfree.chart.util.StandardGradientPaintTransformer::transform(java.awt.GradientPaint, java.awt.Shape):java.awt.GradientPaint" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.axis.CategoryLabelPositions" />
+			<role name="Adapter" element="org.jfree.chart.axis.CategoryAxis" />
+			<role name="adaptee" element="org.jfree.chart.axis.CategoryAxis::categoryLabelPositions:org.jfree.chart.axis.CategoryLabelPositions" />
+			<role name="Request()" element="org.jfree.chart.axis.CategoryAxis::refreshTicks(java.awt.Graphics2D, org.jfree.chart.axis.AxisState, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):java.util.List" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.legend.LegendItemCollection" />
+			<role name="Adapter" element="org.jfree.chart.plot.XYPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.XYPlot::fixedLegendItems:org.jfree.chart.legend.LegendItemCollection" />
+			<role name="Request()" element="org.jfree.chart.plot.XYPlot::clone():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.plot.PlotOrientation" />
+			<role name="Adapter" element="org.jfree.chart.plot.CategoryPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.CategoryPlot::orientation:org.jfree.chart.plot.PlotOrientation" />
+			<role name="Request()" element="org.jfree.chart.plot.CategoryPlot::zoomRangeAxes(double, org.jfree.chart.plot.PlotRenderingInfo, java.awt.geom.Point2D, boolean):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleAnchor" />
+			<role name="Adapter" element="org.jfree.chart.block.LabelBlock" />
+			<role name="adaptee" element="org.jfree.chart.block.LabelBlock::textAnchor:org.jfree.chart.api.RectangleAnchor" />
+			<role name="Request()" element="org.jfree.chart.block.LabelBlock::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.lang.Object):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.text.TextBlock" />
+			<role name="Adapter" element="org.jfree.chart.block.LabelBlock" />
+			<role name="adaptee" element="org.jfree.chart.block.LabelBlock::label:org.jfree.chart.text.TextBlock" />
+			<role name="Request()" element="org.jfree.chart.block.LabelBlock::arrange(java.awt.Graphics2D, org.jfree.chart.block.RectangleConstraint):org.jfree.chart.block.Size2D" />
+			<role name="Request()" element="org.jfree.chart.block.LabelBlock::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.lang.Object):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.data.category.CategoryDataset" />
+			<role name="Adapter" element="org.jfree.chart.plot.SpiderWebPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.SpiderWebPlot::dataset:org.jfree.data.category.CategoryDataset" />
+			<role name="Request()" element="org.jfree.chart.plot.SpiderWebPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.data.category.CategoryDataset" />
+			<role name="Adapter" element="org.jfree.chart.plot.pie.MultiplePiePlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.pie.MultiplePiePlot::dataset:org.jfree.data.category.CategoryDataset" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.MultiplePiePlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.data.Range" />
+			<role name="Adapter" element="org.jfree.chart.plot.MeterPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.MeterPlot::range:org.jfree.data.Range" />
+			<role name="Request()" element="org.jfree.chart.plot.MeterPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleAnchor" />
+			<role name="Adapter" element="org.jfree.chart.annotations.XYTitleAnnotation" />
+			<role name="adaptee" element="org.jfree.chart.annotations.XYTitleAnnotation::anchor:org.jfree.chart.api.RectangleAnchor" />
+			<role name="Request()" element="org.jfree.chart.annotations.XYTitleAnnotation::draw(java.awt.Graphics2D, org.jfree.chart.plot.XYPlot, java.awt.geom.Rectangle2D, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, int, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleAnchor" />
+			<role name="Adapter" element="org.jfree.chart.annotations.XYImageAnnotation" />
+			<role name="adaptee" element="org.jfree.chart.annotations.XYImageAnnotation::anchor:org.jfree.chart.api.RectangleAnchor" />
+			<role name="Request()" element="org.jfree.chart.annotations.XYImageAnnotation::draw(java.awt.Graphics2D, org.jfree.chart.plot.XYPlot, java.awt.geom.Rectangle2D, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, int, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.plot.dial.DialLayer" />
+			<role name="Adapter" element="org.jfree.chart.plot.dial.DialPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.dial.DialPlot::background:org.jfree.chart.plot.dial.DialLayer" />
+			<role name="adaptee" element="org.jfree.chart.plot.dial.DialPlot::cap:org.jfree.chart.plot.dial.DialLayer" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.Drawable" />
+			<role name="Adapter" element="org.jfree.chart.annotations.XYDrawableAnnotation" />
+			<role name="adaptee" element="org.jfree.chart.annotations.XYDrawableAnnotation::drawable:org.jfree.chart.Drawable" />
+			<role name="Request()" element="org.jfree.chart.annotations.XYDrawableAnnotation::draw(java.awt.Graphics2D, org.jfree.chart.plot.XYPlot, java.awt.geom.Rectangle2D, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, int, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.block.Arrangement" />
+			<role name="Adapter" element="org.jfree.chart.block.BlockContainer" />
+			<role name="adaptee" element="org.jfree.chart.block.BlockContainer::arrangement:org.jfree.chart.block.Arrangement" />
+			<role name="Request()" element="org.jfree.chart.block.BlockContainer::arrange(java.awt.Graphics2D, org.jfree.chart.block.RectangleConstraint):org.jfree.chart.block.Size2D" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.data.time.RegularTimePeriod" />
+			<role name="Adapter" element="org.jfree.chart.axis.PeriodAxis" />
+			<role name="adaptee" element="org.jfree.chart.axis.PeriodAxis::first:org.jfree.data.time.RegularTimePeriod" />
+			<role name="adaptee" element="org.jfree.chart.axis.PeriodAxis::last:org.jfree.data.time.RegularTimePeriod" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::valueToJava2D(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::java2DToValue(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleInsets" />
+			<role name="Adapter" element="org.jfree.chart.block.BlockBorder" />
+			<role name="adaptee" element="org.jfree.chart.block.BlockBorder::insets:org.jfree.chart.api.RectangleInsets" />
+			<role name="Request()" element="org.jfree.chart.block.BlockBorder::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.api.RectangleInsets" />
+			<role name="Adapter" element="org.jfree.chart.block.LineBorder" />
+			<role name="adaptee" element="org.jfree.chart.block.LineBorder::insets:org.jfree.chart.api.RectangleInsets" />
+			<role name="Request()" element="org.jfree.chart.block.LineBorder::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.renderer.xy.XYBarPainter" />
+			<role name="Adapter" element="org.jfree.chart.renderer.xy.XYBarRenderer" />
+			<role name="adaptee" element="org.jfree.chart.renderer.xy.XYBarRenderer::barPainter:org.jfree.chart.renderer.xy.XYBarPainter" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYBarRenderer::drawItem(java.awt.Graphics2D, org.jfree.chart.renderer.xy.XYItemRendererState, java.awt.geom.Rectangle2D, org.jfree.chart.plot.PlotRenderingInfo, org.jfree.chart.plot.XYPlot, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, org.jfree.data.xy.XYDataset, int, int, org.jfree.chart.plot.CrosshairState, int):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.data.flow.FlowDataset" />
+			<role name="Adapter" element="org.jfree.chart.plot.flow.FlowPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.flow.FlowPlot::dataset:org.jfree.data.flow.FlowDataset" />
+			<role name="Request()" element="org.jfree.chart.plot.flow.FlowPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.jfree.chart.plot.dial.DialBackground" />
+			<role name="Adaptee" element="org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="adaptee" element="org.jfree.chart.plot.dial.DialBackground::gradientPaintTransformer:org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialBackground::draw(java.awt.Graphics2D, org.jfree.chart.plot.dial.DialPlot, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.jfree.chart.renderer.xy.XYAreaRenderer" />
+			<role name="Adaptee" element="org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="adaptee" element="org.jfree.chart.renderer.xy.XYAreaRenderer::gradientTransformer:org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYAreaRenderer::drawItem(java.awt.Graphics2D, org.jfree.chart.renderer.xy.XYItemRendererState, java.awt.geom.Rectangle2D, org.jfree.chart.plot.PlotRenderingInfo, org.jfree.chart.plot.XYPlot, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, org.jfree.data.xy.XYDataset, int, int, org.jfree.chart.plot.CrosshairState, int):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.JFreeChart" />
+			<role name="Adapter" element="org.jfree.chart.swing.ChartPanel" />
+			<role name="adaptee" element="org.jfree.chart.swing.ChartPanel::chart:org.jfree.chart.JFreeChart" />
+			<role name="Request()" element="org.jfree.chart.swing.ChartPanel::chartChanged(org.jfree.chart.event.ChartChangeEvent):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.jfree.chart.plot.ThermometerPlot" />
+			<role name="Adaptee" element="org.jfree.data.general.ValueDataset" />
+			<role name="adaptee" element="org.jfree.chart.plot.ThermometerPlot::dataset:org.jfree.data.general.ValueDataset" />
+			<role name="Request()" element="org.jfree.chart.plot.ThermometerPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.labels.XYSeriesLabelGenerator" />
+			<role name="Adapter" element="org.jfree.chart.renderer.xy.AbstractXYItemRenderer" />
+			<role name="adaptee" element="org.jfree.chart.renderer.xy.AbstractXYItemRenderer::legendItemLabelGenerator:org.jfree.chart.labels.XYSeriesLabelGenerator" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.AbstractXYItemRenderer::getLegendItem(int, int):org.jfree.chart.legend.LegendItem" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.util.ShadowGenerator" />
+			<role name="Adapter" element="org.jfree.chart.plot.CategoryPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.CategoryPlot::shadowGenerator:org.jfree.chart.util.ShadowGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.CategoryPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.util.ShadowGenerator" />
+			<role name="Adapter" element="org.jfree.chart.plot.XYPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.XYPlot::shadowGenerator:org.jfree.chart.util.ShadowGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.XYPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.util.ShadowGenerator" />
+			<role name="Adapter" element="org.jfree.chart.plot.pie.PiePlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.pie.PiePlot::shadowGenerator:org.jfree.chart.util.ShadowGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.labels.CategorySeriesLabelGenerator" />
+			<role name="Adapter" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer" />
+			<role name="adaptee" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer::legendItemLabelGenerator:org.jfree.chart.labels.CategorySeriesLabelGenerator" />
+			<role name="adaptee" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer::legendItemToolTipGenerator:org.jfree.chart.labels.CategorySeriesLabelGenerator" />
+			<role name="adaptee" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer::legendItemURLGenerator:org.jfree.chart.labels.CategorySeriesLabelGenerator" />
+			<role name="Request()" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer::getLegendItem(int, int):org.jfree.chart.legend.LegendItem" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.plot.dial.DialFrame" />
+			<role name="Adapter" element="org.jfree.chart.plot.dial.DialPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.dial.DialPlot::dialFrame:org.jfree.chart.plot.dial.DialFrame" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.renderer.PaintScale" />
+			<role name="Adapter" element="org.jfree.chart.renderer.xy.XYBlockRenderer" />
+			<role name="adaptee" element="org.jfree.chart.renderer.xy.XYBlockRenderer::paintScale:org.jfree.chart.renderer.PaintScale" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYBlockRenderer::drawItem(java.awt.Graphics2D, org.jfree.chart.renderer.xy.XYItemRendererState, java.awt.geom.Rectangle2D, org.jfree.chart.plot.PlotRenderingInfo, org.jfree.chart.plot.XYPlot, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, org.jfree.data.xy.XYDataset, int, int, org.jfree.chart.plot.CrosshairState, int):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="org.jfree.chart.swing.editor.DefaultChartEditor" />
+			<role name="Adaptee" element="org.jfree.chart.swing.editor.DefaultTitleEditor" />
+			<role name="adaptee" element="org.jfree.chart.swing.editor.DefaultChartEditor::titleEditor:org.jfree.chart.swing.editor.DefaultTitleEditor" />
+			<role name="Request()" element="org.jfree.chart.swing.editor.DefaultChartEditor::updateChart(org.jfree.chart.JFreeChart):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.labels.FlowLabelGenerator" />
+			<role name="Adapter" element="org.jfree.chart.plot.flow.FlowPlot" />
+			<role name="adaptee" element="org.jfree.chart.plot.flow.FlowPlot::toolTipGenerator:org.jfree.chart.labels.FlowLabelGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.flow.FlowPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.axis.Timeline" />
+			<role name="Adapter" element="org.jfree.chart.axis.DateAxis" />
+			<role name="adaptee" element="org.jfree.chart.axis.DateAxis::timeline:org.jfree.chart.axis.Timeline" />
+			<role name="Request()" element="org.jfree.chart.axis.DateAxis::valueToJava2D(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+			<role name="Request()" element="org.jfree.chart.axis.DateAxis::java2DToValue(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+			<role name="Request()" element="org.jfree.chart.axis.DateAxis::autoAdjustRange():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="org.jfree.chart.swing.editor.DefaultPlotEditor" />
+			<role name="Adapter" element="org.jfree.chart.swing.editor.DefaultChartEditor" />
+			<role name="adaptee" element="org.jfree.chart.swing.editor.DefaultChartEditor::plotEditor:org.jfree.chart.swing.editor.DefaultPlotEditor" />
+			<role name="Request()" element="org.jfree.chart.swing.editor.DefaultChartEditor::updateChart(org.jfree.chart.JFreeChart):void" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite">
+		<instance>
+			<role name="Component" element="org.jfree.chart.block.Block" />
+			<role name="Composite" element="org.jfree.chart.block.BlockContainer" />
+			<role name="Operation()" element="org.jfree.chart.block.BlockContainer::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.lang.Object):java.lang.Object" />
+		</instance>
+	</pattern>
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="org.jfree.data.gantt.GanttCategoryDataset" />
+			<role name="Decorator" element="org.jfree.data.gantt.SlidingGanttCategoryDataset" />
+			<role name="component" element="org.jfree.data.gantt.SlidingGanttCategoryDataset::underlying:org.jfree.data.gantt.GanttCategoryDataset" />
+			<role name="Operation()" element="org.jfree.data.gantt.SlidingGanttCategoryDataset::getEndValue(int, int, int):java.lang.Number" />
+			<role name="Operation()" element="org.jfree.data.gantt.SlidingGanttCategoryDataset::getPercentComplete(int, int):java.lang.Number" />
+			<role name="Operation()" element="org.jfree.data.gantt.SlidingGanttCategoryDataset::getPercentComplete(int, int, int):java.lang.Number" />
+			<role name="Operation()" element="org.jfree.data.gantt.SlidingGanttCategoryDataset::getStartValue(int, int, int):java.lang.Number" />
+			<role name="Operation()" element="org.jfree.data.gantt.SlidingGanttCategoryDataset::getSubIntervalCount(int, int):int" />
+		</instance>
+		<instance>
+			<role name="Component" element="org.jfree.data.xy.XYDataset" />
+			<role name="Decorator" element="org.jfree.data.xy.XYBarDataset" />
+			<role name="component" element="org.jfree.data.xy.XYBarDataset::underlying:org.jfree.data.xy.XYDataset" />
+			<role name="Operation()" element="org.jfree.data.xy.XYBarDataset::getItemCount(int):int" />
+			<role name="Operation()" element="org.jfree.data.xy.XYBarDataset::getX(int, int):java.lang.Number" />
+			<role name="Operation()" element="org.jfree.data.xy.XYBarDataset::getXValue(int, int):double" />
+			<role name="Operation()" element="org.jfree.data.xy.XYBarDataset::getY(int, int):java.lang.Number" />
+			<role name="Operation()" element="org.jfree.data.xy.XYBarDataset::getYValue(int, int):double" />
+		</instance>
+	</pattern>
+	<pattern name="Observer">
+		<instance>
+			<role name="Observer" element="org.jfree.chart.annotations.XYAnnotation" />
+			<role name="Subject" element="org.jfree.chart.plot.XYPlot" />
+			<role name="Notify()" element="org.jfree.chart.plot.XYPlot::drawAnnotations(java.awt.Graphics2D, java.awt.geom.Rectangle2D, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Observer" element="org.jfree.chart.annotations.XYAnnotation" />
+			<role name="Subject" element="org.jfree.chart.renderer.xy.AbstractXYItemRenderer" />
+			<role name="Notify()" element="org.jfree.chart.renderer.xy.AbstractXYItemRenderer::drawAnnotations(java.awt.Graphics2D, java.awt.geom.Rectangle2D, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, org.jfree.chart.api.Layer, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Observer" element="org.jfree.chart.annotations.CategoryAnnotation" />
+			<role name="Subject" element="org.jfree.chart.plot.CategoryPlot" />
+			<role name="Notify()" element="org.jfree.chart.plot.CategoryPlot::drawAnnotations(java.awt.Graphics2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Observer" element="org.jfree.chart.swing.Overlay" />
+			<role name="Subject" element="org.jfree.chart.swing.ChartPanel" />
+			<role name="Notify()" element="org.jfree.chart.swing.ChartPanel::paintComponent(java.awt.Graphics):void" />
+		</instance>
+	</pattern>
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="org.jfree.chart.legend.LegendTitle" />
+			<role name="State" element="org.jfree.chart.legend.LegendItemSource" />
+			<role name="state" element="org.jfree.chart.legend.LegendTitle::sources:org.jfree.chart.legend.LegendItemSource[]" />
+			<role name="Request()" element="org.jfree.chart.legend.LegendTitle::fetchLegendItems():void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.jfree.data.xy.XYDataset" />
+			<role name="Context" element="org.jfree.data.xy.IntervalXYDelegate" />
+			<role name="state" element="org.jfree.data.xy.IntervalXYDelegate::dataset:org.jfree.data.xy.XYDataset" />
+			<role name="Request()" element="org.jfree.data.xy.IntervalXYDelegate::getStartX(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.xy.IntervalXYDelegate::getStartXValue(int, int):double" />
+			<role name="Request()" element="org.jfree.data.xy.IntervalXYDelegate::getEndX(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.xy.IntervalXYDelegate::getEndXValue(int, int):double" />
+			<role name="Request()" element="org.jfree.data.xy.IntervalXYDelegate::calculateIntervalForSeries(int):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.dial.DialPlot" />
+			<role name="State" element="org.jfree.chart.plot.dial.DialLayer" />
+			<role name="state" element="org.jfree.chart.plot.dial.DialPlot::background:org.jfree.chart.plot.dial.DialLayer" />
+			<role name="state" element="org.jfree.chart.plot.dial.DialPlot::cap:org.jfree.chart.plot.dial.DialLayer" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialPlot::setBackground(org.jfree.chart.plot.dial.DialLayer):void" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialPlot::setCap(org.jfree.chart.plot.dial.DialLayer):void" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.annotations.XYDrawableAnnotation" />
+			<role name="State" element="org.jfree.chart.Drawable" />
+			<role name="state" element="org.jfree.chart.annotations.XYDrawableAnnotation::drawable:org.jfree.chart.Drawable" />
+			<role name="Request()" element="org.jfree.chart.annotations.XYDrawableAnnotation::draw(java.awt.Graphics2D, org.jfree.chart.plot.XYPlot, java.awt.geom.Rectangle2D, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, int, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.data.xy.XYDatasetTableModel" />
+			<role name="State" element="org.jfree.data.xy.TableXYDataset" />
+			<role name="state" element="org.jfree.data.xy.XYDatasetTableModel::model:org.jfree.data.xy.TableXYDataset" />
+			<role name="Request()" element="org.jfree.data.xy.XYDatasetTableModel::getRowCount():int" />
+		</instance>
+		<instance>
+			<role name="State" element="org.jfree.chart.block.Arrangement" />
+			<role name="Context" element="org.jfree.chart.block.BlockContainer" />
+			<role name="state" element="org.jfree.chart.block.BlockContainer::arrangement:org.jfree.chart.block.Arrangement" />
+			<role name="Request()" element="org.jfree.chart.block.BlockContainer::add(org.jfree.chart.block.Block, java.lang.Object):void" />
+			<role name="Request()" element="org.jfree.chart.block.BlockContainer::clear():void" />
+			<role name="Request()" element="org.jfree.chart.block.BlockContainer::arrange(java.awt.Graphics2D, org.jfree.chart.block.RectangleConstraint):org.jfree.chart.block.Size2D" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.renderer.category.BarRenderer" />
+			<role name="State" element="org.jfree.chart.renderer.category.BarPainter" />
+			<role name="state" element="org.jfree.chart.renderer.category.BarRenderer::barPainter:org.jfree.chart.renderer.category.BarPainter" />
+			<role name="Request()" element="org.jfree.chart.renderer.category.BarRenderer::drawItem(java.awt.Graphics2D, org.jfree.chart.renderer.category.CategoryItemRendererState, java.awt.geom.Rectangle2D, org.jfree.chart.plot.CategoryPlot, org.jfree.chart.axis.CategoryAxis, org.jfree.chart.axis.ValueAxis, org.jfree.data.category.CategoryDataset, int, int, int):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.block.BorderArrangement" />
+			<role name="State" element="org.jfree.chart.block.Block" />
+			<role name="state" element="org.jfree.chart.block.BorderArrangement::topBlock:org.jfree.chart.block.Block" />
+			<role name="state" element="org.jfree.chart.block.BorderArrangement::bottomBlock:org.jfree.chart.block.Block" />
+			<role name="state" element="org.jfree.chart.block.BorderArrangement::leftBlock:org.jfree.chart.block.Block" />
+			<role name="state" element="org.jfree.chart.block.BorderArrangement::rightBlock:org.jfree.chart.block.Block" />
+			<role name="state" element="org.jfree.chart.block.BorderArrangement::centerBlock:org.jfree.chart.block.Block" />
+			<role name="Request()" element="org.jfree.chart.block.BorderArrangement::arrangeNN(org.jfree.chart.block.BlockContainer, java.awt.Graphics2D):org.jfree.chart.block.Size2D" />
+			<role name="Request()" element="org.jfree.chart.block.BorderArrangement::arrangeFN(org.jfree.chart.block.BlockContainer, java.awt.Graphics2D, double):org.jfree.chart.block.Size2D" />
+			<role name="Request()" element="org.jfree.chart.block.BorderArrangement::arrangeRR(org.jfree.chart.block.BlockContainer, org.jfree.data.Range, org.jfree.data.Range, java.awt.Graphics2D):org.jfree.chart.block.Size2D" />
+			<role name="Request()" element="org.jfree.chart.block.BorderArrangement::arrangeFF(org.jfree.chart.block.BlockContainer, java.awt.Graphics2D, org.jfree.chart.block.RectangleConstraint):org.jfree.chart.block.Size2D" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.axis.PeriodAxis" />
+			<role name="State" element="org.jfree.data.time.RegularTimePeriod" />
+			<role name="state" element="org.jfree.chart.axis.PeriodAxis::first:org.jfree.data.time.RegularTimePeriod" />
+			<role name="state" element="org.jfree.chart.axis.PeriodAxis::last:org.jfree.data.time.RegularTimePeriod" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::setFirst(org.jfree.data.time.RegularTimePeriod):void" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::setLast(org.jfree.data.time.RegularTimePeriod):void" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::setTimeZone(java.util.TimeZone):void" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::setRange(org.jfree.data.Range, boolean, boolean):void" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::drawTickMarksHorizontal(java.awt.Graphics2D, org.jfree.chart.axis.AxisState, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):void" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::drawTickLabels(int, java.awt.Graphics2D, org.jfree.chart.axis.AxisState, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):org.jfree.chart.axis.AxisState" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::valueToJava2D(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+			<role name="Request()" element="org.jfree.chart.axis.PeriodAxis::java2DToValue(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.renderer.xy.XYBarRenderer" />
+			<role name="State" element="org.jfree.chart.renderer.xy.XYBarPainter" />
+			<role name="state" element="org.jfree.chart.renderer.xy.XYBarRenderer::barPainter:org.jfree.chart.renderer.xy.XYBarPainter" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYBarRenderer::drawItem(java.awt.Graphics2D, org.jfree.chart.renderer.xy.XYItemRendererState, java.awt.geom.Rectangle2D, org.jfree.chart.plot.PlotRenderingInfo, org.jfree.chart.plot.XYPlot, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, org.jfree.data.xy.XYDataset, int, int, org.jfree.chart.plot.CrosshairState, int):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.data.time.DynamicTimeSeriesCollection" />
+			<role name="State" element="org.jfree.data.time.RegularTimePeriod" />
+			<role name="state" element="org.jfree.data.time.DynamicTimeSeriesCollection::pointsInTime:org.jfree.data.time.RegularTimePeriod[]" />
+			<role name="Request()" element="org.jfree.data.time.DynamicTimeSeriesCollection::setTimeBase(org.jfree.data.time.RegularTimePeriod):long" />
+			<role name="Request()" element="org.jfree.data.time.DynamicTimeSeriesCollection::advanceTime():org.jfree.data.time.RegularTimePeriod" />
+			<role name="Request()" element="org.jfree.data.time.DynamicTimeSeriesCollection::getStartX(int, int):java.lang.Number" />
+			<role name="Request()" element="org.jfree.data.time.DynamicTimeSeriesCollection::getEndX(int, int):java.lang.Number" />
+		</instance>
+		<instance>
+			<role name="State" element="org.jfree.chart.labels.CategoryToolTipGenerator" />
+			<role name="Context" element="org.jfree.chart.plot.SpiderWebPlot" />
+			<role name="state" element="org.jfree.chart.plot.SpiderWebPlot::toolTipGenerator:org.jfree.chart.labels.CategoryToolTipGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.SpiderWebPlot::drawRadarPoly(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotRenderingInfo, int, int, double, double):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.flow.FlowPlot" />
+			<role name="State" element="org.jfree.data.flow.FlowDataset" />
+			<role name="state" element="org.jfree.chart.plot.flow.FlowPlot::dataset:org.jfree.data.flow.FlowDataset" />
+			<role name="Request()" element="org.jfree.chart.plot.flow.FlowPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+			<role name="Request()" element="org.jfree.chart.plot.flow.FlowPlot::lookupNodeColor(org.jfree.data.flow.NodeKey):java.awt.Color" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.legend.LegendGraphic" />
+			<role name="State" element="org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="state" element="org.jfree.chart.legend.LegendGraphic::fillPaintTransformer:org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="Request()" element="org.jfree.chart.legend.LegendGraphic::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.dial.DialBackground" />
+			<role name="State" element="org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="state" element="org.jfree.chart.plot.dial.DialBackground::gradientPaintTransformer:org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialBackground::draw(java.awt.Graphics2D, org.jfree.chart.plot.dial.DialPlot, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.renderer.xy.XYAreaRenderer" />
+			<role name="State" element="org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="state" element="org.jfree.chart.renderer.xy.XYAreaRenderer::gradientTransformer:org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYAreaRenderer::drawItem(java.awt.Graphics2D, org.jfree.chart.renderer.xy.XYItemRendererState, java.awt.geom.Rectangle2D, org.jfree.chart.plot.PlotRenderingInfo, org.jfree.chart.plot.XYPlot, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, org.jfree.data.xy.XYDataset, int, int, org.jfree.chart.plot.CrosshairState, int):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.renderer.xy.XYBezierRenderer" />
+			<role name="State" element="org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="state" element="org.jfree.chart.renderer.xy.XYBezierRenderer::gradientPaintTransformer:org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYBezierRenderer::drawPrimaryLineAsPath(org.jfree.chart.renderer.xy.XYItemRendererState, java.awt.Graphics2D, org.jfree.chart.plot.XYPlot, org.jfree.data.xy.XYDataset, int, int, int, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.renderer.xy.XYSplineRenderer" />
+			<role name="State" element="org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="state" element="org.jfree.chart.renderer.xy.XYSplineRenderer::gradientPaintTransformer:org.jfree.chart.util.GradientPaintTransformer" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYSplineRenderer::drawPrimaryLineAsPath(org.jfree.chart.renderer.xy.XYItemRendererState, java.awt.Graphics2D, org.jfree.chart.plot.XYPlot, org.jfree.data.xy.XYDataset, int, int, int, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.jfree.chart.labels.CategoryItemLabelGenerator" />
+			<role name="Context" element="org.jfree.chart.plot.SpiderWebPlot" />
+			<role name="state" element="org.jfree.chart.plot.SpiderWebPlot::labelGenerator:org.jfree.chart.labels.CategoryItemLabelGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.SpiderWebPlot::drawLabel(java.awt.Graphics2D, java.awt.geom.Rectangle2D, double, int, double, double):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.CategoryPlot" />
+			<role name="State" element="org.jfree.chart.util.ShadowGenerator" />
+			<role name="state" element="org.jfree.chart.plot.CategoryPlot::shadowGenerator:org.jfree.chart.util.ShadowGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.CategoryPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.XYPlot" />
+			<role name="State" element="org.jfree.chart.util.ShadowGenerator" />
+			<role name="state" element="org.jfree.chart.plot.XYPlot::shadowGenerator:org.jfree.chart.util.ShadowGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.XYPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.pie.PiePlot" />
+			<role name="State" element="org.jfree.chart.util.ShadowGenerator" />
+			<role name="state" element="org.jfree.chart.plot.pie.PiePlot::shadowGenerator:org.jfree.chart.util.ShadowGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.dial.DialPlot" />
+			<role name="State" element="org.jfree.chart.plot.dial.DialFrame" />
+			<role name="state" element="org.jfree.chart.plot.dial.DialPlot::dialFrame:org.jfree.chart.plot.dial.DialFrame" />
+			<role name="Request()" element="org.jfree.chart.plot.dial.DialPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.legend.PaintScaleLegend" />
+			<role name="State" element="org.jfree.chart.renderer.PaintScale" />
+			<role name="state" element="org.jfree.chart.legend.PaintScaleLegend::scale:org.jfree.chart.renderer.PaintScale" />
+			<role name="Request()" element="org.jfree.chart.legend.PaintScaleLegend::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.lang.Object):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.renderer.xy.XYBlockRenderer" />
+			<role name="State" element="org.jfree.chart.renderer.PaintScale" />
+			<role name="state" element="org.jfree.chart.renderer.xy.XYBlockRenderer::paintScale:org.jfree.chart.renderer.PaintScale" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYBlockRenderer::drawItem(java.awt.Graphics2D, org.jfree.chart.renderer.xy.XYItemRendererState, java.awt.geom.Rectangle2D, org.jfree.chart.plot.PlotRenderingInfo, org.jfree.chart.plot.XYPlot, org.jfree.chart.axis.ValueAxis, org.jfree.chart.axis.ValueAxis, org.jfree.data.xy.XYDataset, int, int, org.jfree.chart.plot.CrosshairState, int):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.renderer.xy.XYShapeRenderer" />
+			<role name="State" element="org.jfree.chart.renderer.PaintScale" />
+			<role name="state" element="org.jfree.chart.renderer.xy.XYShapeRenderer::paintScale:org.jfree.chart.renderer.PaintScale" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.XYShapeRenderer::getPaint(org.jfree.data.xy.XYDataset, int, int):java.awt.Paint" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.block.AbstractBlock" />
+			<role name="State" element="org.jfree.chart.block.BlockFrame" />
+			<role name="state" element="org.jfree.chart.block.AbstractBlock::frame:org.jfree.chart.block.BlockFrame" />
+			<role name="Request()" element="org.jfree.chart.block.AbstractBlock::getContentXOffset():double" />
+			<role name="Request()" element="org.jfree.chart.block.AbstractBlock::getContentYOffset():double" />
+			<role name="Request()" element="org.jfree.chart.block.AbstractBlock::trimToContentWidth(double):double" />
+			<role name="Request()" element="org.jfree.chart.block.AbstractBlock::trimToContentHeight(double):double" />
+			<role name="Request()" element="org.jfree.chart.block.AbstractBlock::calculateTotalWidth(double):double" />
+			<role name="Request()" element="org.jfree.chart.block.AbstractBlock::calculateTotalHeight(double):double" />
+			<role name="Request()" element="org.jfree.chart.block.AbstractBlock::trimBorder(java.awt.geom.Rectangle2D):java.awt.geom.Rectangle2D" />
+			<role name="Request()" element="org.jfree.chart.block.AbstractBlock::drawBorder(java.awt.Graphics2D, java.awt.geom.Rectangle2D):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.pie.PiePlot" />
+			<role name="State" element="org.jfree.chart.plot.pie.AbstractPieLabelDistributor" />
+			<role name="state" element="org.jfree.chart.plot.pie.PiePlot::labelDistributor:org.jfree.chart.plot.pie.AbstractPieLabelDistributor" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::drawLeftLabels(org.jfree.data.KeyedValues, java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D, float, org.jfree.chart.plot.pie.PiePlotState):void" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::drawRightLabels(org.jfree.data.KeyedValues, java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D, float, org.jfree.chart.plot.pie.PiePlotState):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.flow.FlowPlot" />
+			<role name="State" element="org.jfree.chart.labels.FlowLabelGenerator" />
+			<role name="state" element="org.jfree.chart.plot.flow.FlowPlot::toolTipGenerator:org.jfree.chart.labels.FlowLabelGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.flow.FlowPlot::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotState, org.jfree.chart.plot.PlotRenderingInfo):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.ChartRenderingInfo" />
+			<role name="State" element="org.jfree.chart.entity.EntityCollection" />
+			<role name="state" element="org.jfree.chart.ChartRenderingInfo::entities:org.jfree.chart.entity.EntityCollection" />
+			<role name="Request()" element="org.jfree.chart.ChartRenderingInfo::clear():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.axis.DateAxis" />
+			<role name="State" element="org.jfree.chart.axis.Timeline" />
+			<role name="state" element="org.jfree.chart.axis.DateAxis::timeline:org.jfree.chart.axis.Timeline" />
+			<role name="Request()" element="org.jfree.chart.axis.DateAxis::isHiddenValue(long):boolean" />
+			<role name="Request()" element="org.jfree.chart.axis.DateAxis::valueToJava2D(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+			<role name="Request()" element="org.jfree.chart.axis.DateAxis::java2DToValue(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+			<role name="Request()" element="org.jfree.chart.axis.DateAxis::autoAdjustRange():void" />
+			<role name="Request()" element="org.jfree.chart.axis.DateAxis::zoomRange(double, double):void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.jfree.chart.labels.XYItemLabelGenerator" />
+			<role name="Context" element="org.jfree.chart.renderer.xy.YIntervalRenderer" />
+			<role name="state" element="org.jfree.chart.renderer.xy.YIntervalRenderer::additionalItemLabelGenerator:org.jfree.chart.labels.XYItemLabelGenerator" />
+			<role name="Request()" element="org.jfree.chart.renderer.xy.YIntervalRenderer::drawAdditionalItemLabel(java.awt.Graphics2D, org.jfree.chart.plot.PlotOrientation, org.jfree.data.xy.XYDataset, int, int, double, double):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.data.general.DefaultKeyedValueDataset" />
+			<role name="State" element="org.jfree.data.KeyedValue" />
+			<role name="state" element="org.jfree.data.general.DefaultKeyedValueDataset::data:org.jfree.data.KeyedValue" />
+			<role name="Request()" element="org.jfree.data.general.DefaultKeyedValueDataset::getKey():java.lang.Comparable" />
+			<role name="Request()" element="org.jfree.data.general.DefaultKeyedValueDataset::updateValue(java.lang.Number):void" />
+			<role name="Request()" element="org.jfree.data.general.DefaultKeyedValueDataset::equals(java.lang.Object):boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.pie.PiePlot" />
+			<role name="State" element="org.jfree.chart.labels.PieSectionLabelGenerator" />
+			<role name="state" element="org.jfree.chart.plot.pie.PiePlot::labelGenerator:org.jfree.chart.labels.PieSectionLabelGenerator" />
+			<role name="state" element="org.jfree.chart.plot.pie.PiePlot::legendLabelGenerator:org.jfree.chart.labels.PieSectionLabelGenerator" />
+			<role name="state" element="org.jfree.chart.plot.pie.PiePlot::legendLabelToolTipGenerator:org.jfree.chart.labels.PieSectionLabelGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::drawLeftLabels(org.jfree.data.KeyedValues, java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D, float, org.jfree.chart.plot.pie.PiePlotState):void" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::drawRightLabels(org.jfree.data.KeyedValues, java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D, float, org.jfree.chart.plot.pie.PiePlotState):void" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::getLegendItems():org.jfree.chart.legend.LegendItemCollection" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.pie.PiePlot" />
+			<role name="State" element="org.jfree.chart.labels.PieToolTipGenerator" />
+			<role name="state" element="org.jfree.chart.plot.pie.PiePlot::toolTipGenerator:org.jfree.chart.labels.PieToolTipGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::drawItem(java.awt.Graphics2D, int, java.awt.geom.Rectangle2D, org.jfree.chart.plot.pie.PiePlotState, int):void" />
+		</instance>
+		<instance>
+			<role name="State" element="org.jfree.chart.urls.CategoryURLGenerator" />
+			<role name="Context" element="org.jfree.chart.plot.SpiderWebPlot" />
+			<role name="state" element="org.jfree.chart.plot.SpiderWebPlot::urlGenerator:org.jfree.chart.urls.CategoryURLGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.SpiderWebPlot::drawRadarPoly(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, org.jfree.chart.plot.PlotRenderingInfo, int, int, double, double):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.plot.pie.PiePlot" />
+			<role name="State" element="org.jfree.chart.urls.PieURLGenerator" />
+			<role name="state" element="org.jfree.chart.plot.pie.PiePlot::urlGenerator:org.jfree.chart.urls.PieURLGenerator" />
+			<role name="state" element="org.jfree.chart.plot.pie.PiePlot::legendLabelURLGenerator:org.jfree.chart.urls.PieURLGenerator" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::drawItem(java.awt.Graphics2D, int, java.awt.geom.Rectangle2D, org.jfree.chart.plot.pie.PiePlotState, int):void" />
+			<role name="Request()" element="org.jfree.chart.plot.pie.PiePlot::getLegendItems():org.jfree.chart.legend.LegendItemCollection" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.jfree.chart.swing.editor.ChartEditorManager" />
+			<role name="State" element="org.jfree.chart.swing.editor.ChartEditorFactory" />
+			<role name="state" element="org.jfree.chart.swing.editor.ChartEditorManager::factory:org.jfree.chart.swing.editor.ChartEditorFactory" />
+			<role name="Request()" element="org.jfree.chart.swing.editor.ChartEditorManager::getChartEditor(org.jfree.chart.JFreeChart):org.jfree.chart.swing.editor.ChartEditor" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy">
+		<instance>
+			<role name="Context" element="org.jfree.chart.swing.ChartPanel" />
+			<role name="Strategy" element="org.jfree.chart.swing.SelectionZoomStrategy" />
+			<role name="strategy" element="org.jfree.chart.swing.ChartPanel::selectionZoomStrategy:org.jfree.chart.swing.SelectionZoomStrategy" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::getFillZoomRectangle():boolean" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::setFillZoomRectangle(boolean):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::getZoomTriggerDistance():int" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::setZoomTriggerDistance(int):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::getZoomFillPaint():java.awt.Paint" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::setZoomFillPaint(java.awt.Paint):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::getZoomOutlinePaint():java.awt.Paint" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::setZoomOutlinePaint(java.awt.Paint):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::paintComponent(java.awt.Graphics):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::actionPerformed(java.awt.event.ActionEvent):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::mousePressed(java.awt.event.MouseEvent):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::mouseDragged(java.awt.event.MouseEvent):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::mouseReleased(java.awt.event.MouseEvent):void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::restoreAutoDomainBounds():void" />
+			<role name="ContextInterface()" element="org.jfree.chart.swing.ChartPanel::restoreAutoRangeBounds():void" />
+		</instance>
+	</pattern>
+	<pattern name="Bridge">
+		<instance>
+			<role name="Abstraction" element="org.jfree.chart.ChartFactory" />
+			<role name="Implementor" element="org.jfree.chart.ChartTheme" />
+			<role name="implementor" element="org.jfree.chart.ChartFactory::currentTheme:org.jfree.chart.ChartTheme" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createPieChart(java.lang.String, org.jfree.data.general.PieDataset, boolean, boolean, java.util.Locale):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createPieChart(java.lang.String, org.jfree.data.general.PieDataset, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createPieChart(java.lang.String, org.jfree.data.general.PieDataset, org.jfree.data.general.PieDataset, int, boolean, boolean, boolean, java.util.Locale, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createPieChart(java.lang.String, org.jfree.data.general.PieDataset, org.jfree.data.general.PieDataset, int, boolean, boolean, boolean, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createRingChart(java.lang.String, org.jfree.data.general.PieDataset, boolean, boolean, java.util.Locale):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createRingChart(java.lang.String, org.jfree.data.general.PieDataset, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createMultiplePieChart(java.lang.String, org.jfree.data.category.CategoryDataset, org.jfree.chart.api.TableOrder, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createBarChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.category.CategoryDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createStackedBarChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.category.CategoryDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createAreaChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.category.CategoryDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createStackedAreaChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.category.CategoryDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createLineChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.category.CategoryDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createGanttChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.category.IntervalCategoryDataset, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createWaterfallChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.category.CategoryDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createPolarChart(java.lang.String, org.jfree.data.xy.XYDataset, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createScatterPlot(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.XYDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createXYBarChart(java.lang.String, java.lang.String, boolean, java.lang.String, org.jfree.data.xy.IntervalXYDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createXYAreaChart(, java.lang.String, java.lang.String, org.jfree.data.xy.XYDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createStackedXYAreaChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.TableXYDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createXYLineChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.XYDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createXYStepChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.XYDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createXYStepAreaChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.XYDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createTimeSeriesChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.XYDataset, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createCandlestickChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.OHLCDataset, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createHighLowChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.OHLCDataset, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createBubbleChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.XYZDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createHistogram(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.IntervalXYDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createBoxAndWhiskerChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.statistics.BoxAndWhiskerCategoryDataset, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createBoxAndWhiskerChart(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.statistics.BoxAndWhiskerXYDataset, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createWindPlot(java.lang.String, java.lang.String, java.lang.String, org.jfree.data.xy.WindDataset, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+			<role name="Operation()" element="org.jfree.chart.ChartFactory::createWaferMapChart(java.lang.String, org.jfree.data.general.WaferMapDataset, org.jfree.chart.plot.PlotOrientation, boolean, boolean, boolean):org.jfree.chart.JFreeChart" />
+		</instance>
+		<instance>
+			<role name="Implementor" element="org.jfree.chart.labels.XYSeriesLabelGenerator" />
+			<role name="Abstraction" element="org.jfree.chart.renderer.xy.AbstractXYItemRenderer" />
+			<role name="implementor" element="org.jfree.chart.renderer.xy.AbstractXYItemRenderer::legendItemLabelGenerator:org.jfree.chart.labels.XYSeriesLabelGenerator" />
+			<role name="Operation()" element="org.jfree.chart.renderer.xy.AbstractXYItemRenderer::getLegendItem(int, int):org.jfree.chart.legend.LegendItem" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer" />
+			<role name="Implementor" element="org.jfree.chart.labels.CategorySeriesLabelGenerator" />
+			<role name="implementor" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer::legendItemLabelGenerator:org.jfree.chart.labels.CategorySeriesLabelGenerator" />
+			<role name="implementor" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer::legendItemToolTipGenerator:org.jfree.chart.labels.CategorySeriesLabelGenerator" />
+			<role name="implementor" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer::legendItemURLGenerator:org.jfree.chart.labels.CategorySeriesLabelGenerator" />
+			<role name="Operation()" element="org.jfree.chart.renderer.category.AbstractCategoryItemRenderer::getLegendItem(int, int):org.jfree.chart.legend.LegendItem" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="org.jfree.chart.renderer.AbstractRenderer" />
+			<role name="TemplateMethod()" element="org.jfree.chart.renderer.AbstractRenderer::lookupSeriesPaint(int):java.awt.Paint" />
+			<role name="TemplateMethod()" element="org.jfree.chart.renderer.AbstractRenderer::lookupSeriesFillPaint(int):java.awt.Paint" />
+			<role name="TemplateMethod()" element="org.jfree.chart.renderer.AbstractRenderer::lookupSeriesOutlinePaint(int):java.awt.Paint" />
+			<role name="TemplateMethod()" element="org.jfree.chart.renderer.AbstractRenderer::lookupSeriesStroke(int):java.awt.Stroke" />
+			<role name="TemplateMethod()" element="org.jfree.chart.renderer.AbstractRenderer::lookupSeriesOutlineStroke(int):java.awt.Stroke" />
+			<role name="TemplateMethod()" element="org.jfree.chart.renderer.AbstractRenderer::lookupSeriesShape(int):java.awt.Shape" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.jfree.chart.plot.compass.MeterNeedle" />
+			<role name="TemplateMethod()" element="org.jfree.chart.plot.compass.MeterNeedle::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.awt.geom.Point2D, double):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.jfree.chart.date.SerialDate" />
+			<role name="TemplateMethod()" element="org.jfree.chart.date.SerialDate::addDays(int, org.jfree.chart.date.SerialDate):org.jfree.chart.date.SerialDate" />
+			<role name="TemplateMethod()" element="org.jfree.chart.date.SerialDate::addMonths(int, org.jfree.chart.date.SerialDate):org.jfree.chart.date.SerialDate" />
+			<role name="TemplateMethod()" element="org.jfree.chart.date.SerialDate::addYears(int, org.jfree.chart.date.SerialDate):org.jfree.chart.date.SerialDate" />
+			<role name="TemplateMethod()" element="org.jfree.chart.date.SerialDate::getPreviousDayOfWeek(int, org.jfree.chart.date.SerialDate):org.jfree.chart.date.SerialDate" />
+			<role name="TemplateMethod()" element="org.jfree.chart.date.SerialDate::getFollowingDayOfWeek(int, org.jfree.chart.date.SerialDate):org.jfree.chart.date.SerialDate" />
+			<role name="TemplateMethod()" element="org.jfree.chart.date.SerialDate::getNearestDayOfWeek(int, org.jfree.chart.date.SerialDate):org.jfree.chart.date.SerialDate" />
+			<role name="TemplateMethod()" element="org.jfree.chart.date.SerialDate::getEndOfCurrentMonth(org.jfree.chart.date.SerialDate):org.jfree.chart.date.SerialDate" />
+			<role name="TemplateMethod()" element="org.jfree.chart.date.SerialDate::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.jfree.chart.axis.Axis" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.Axis::setPlot(org.jfree.chart.plot.Plot):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.jfree.chart.axis.ValueAxis" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.ValueAxis::calculateAnchorPoint(org.jfree.chart.axis.ValueTick, double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):float[]" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.ValueAxis::drawTickMarksAndLabels(java.awt.Graphics2D, double, java.awt.geom.Rectangle2D, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):org.jfree.chart.axis.AxisState" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.ValueAxis::setAutoRange(boolean, boolean):void" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.ValueAxis::setAutoRangeMinimumSize(double, boolean):void" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.ValueAxis::setLowerMargin(double):void" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.ValueAxis::setUpperMargin(double):void" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.ValueAxis::setFixedAutoRange(double):void" />
+			<role name="TemplateMethod()" element="org.jfree.chart.axis.ValueAxis::lengthToJava2D(double, java.awt.geom.Rectangle2D, org.jfree.chart.api.RectangleEdge):double" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.jfree.data.general.Series" />
+			<role name="TemplateMethod()" element="org.jfree.data.general.Series::isEmpty():boolean" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.jfree.data.general.AbstractSeriesDataset" />
+			<role name="TemplateMethod()" element="org.jfree.data.general.AbstractSeriesDataset::indexOf(S):int" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.jfree.data.time.RegularTimePeriod" />
+			<role name="TemplateMethod()" element="org.jfree.data.time.RegularTimePeriod::getStart():java.util.Date" />
+			<role name="TemplateMethod()" element="org.jfree.data.time.RegularTimePeriod::getEnd():java.util.Date" />
+			<role name="TemplateMethod()" element="org.jfree.data.time.RegularTimePeriod::getMiddleMillisecond():long" />
+			<role name="TemplateMethod()" element="org.jfree.data.time.RegularTimePeriod::getMiddleMillisecond(java.util.Calendar):long" />
+			<role name="TemplateMethod()" element="org.jfree.data.time.RegularTimePeriod::getMillisecond(org.jfree.data.time.TimePeriodAnchor, java.util.Calendar):long" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor">
+		<instance>
+			<role name="ConcreteElement" element="org.jfree.chart.plot.Plot" />
+			<role name="Visitor" element="org.jfree.chart.ChartElementVisitor" />
+			<role name="Accept()" element="org.jfree.chart.plot.Plot::receive(org.jfree.chart.ChartElementVisitor):void" />
+		</instance>
+		<instance>
+			<role name="ConcreteElement" element="org.jfree.chart.JFreeChart" />
+			<role name="Visitor" element="org.jfree.chart.ChartElementVisitor" />
+			<role name="Accept()" element="org.jfree.chart.JFreeChart::receive(org.jfree.chart.ChartElementVisitor):void" />
+		</instance>
+		<instance>
+			<role name="ConcreteElement" element="org.jfree.chart.axis.Axis" />
+			<role name="Visitor" element="org.jfree.chart.ChartElementVisitor" />
+			<role name="Accept()" element="org.jfree.chart.axis.Axis::receive(org.jfree.chart.ChartElementVisitor):void" />
+		</instance>
+		<instance>
+			<role name="ConcreteElement" element="org.jfree.chart.renderer.AbstractRenderer" />
+			<role name="Visitor" element="org.jfree.chart.ChartElementVisitor" />
+			<role name="Accept()" element="org.jfree.chart.renderer.AbstractRenderer::receive(org.jfree.chart.ChartElementVisitor):void" />
+		</instance>
+		<instance>
+			<role name="ConcreteElement" element="org.jfree.chart.title.Title" />
+			<role name="Visitor" element="org.jfree.chart.ChartElementVisitor" />
+			<role name="Accept()" element="org.jfree.chart.title.Title::receive(org.jfree.chart.ChartElementVisitor):void" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy">
+		<instance>
+			<role name="Proxy" element="org.jfree.chart.legend.LegendTitle" />
+			<role name="RealSubject" element="org.jfree.chart.block.BlockContainer" />
+			<role name="Request()" element="org.jfree.chart.legend.LegendTitle::arrange(java.awt.Graphics2D, org.jfree.chart.block.RectangleConstraint):org.jfree.chart.block.Size2D" />
+			<role name="Request()" element="org.jfree.chart.legend.LegendTitle::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.lang.Object):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.jfree.chart.title.CompositeTitle" />
+			<role name="RealSubject" element="org.jfree.chart.block.BlockContainer" />
+			<role name="Request()" element="org.jfree.chart.title.CompositeTitle::arrange(java.awt.Graphics2D, org.jfree.chart.block.RectangleConstraint):org.jfree.chart.block.Size2D" />
+			<role name="Request()" element="org.jfree.chart.title.CompositeTitle::draw(java.awt.Graphics2D, java.awt.geom.Rectangle2D, java.lang.Object):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.jfree.data.xy.CategoryTableXYDataset" />
+			<role name="RealSubject" element="org.jfree.data.DefaultKeyedValues2D" />
+			<role name="Request()" element="org.jfree.data.xy.CategoryTableXYDataset::clone():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.jfree.data.xy.CategoryTableXYDataset" />
+			<role name="RealSubject" element="org.jfree.data.xy.IntervalXYDelegate" />
+			<role name="Request()" element="org.jfree.data.xy.CategoryTableXYDataset::getDomainLowerBound(boolean):double" />
+			<role name="Request()" element="org.jfree.data.xy.CategoryTableXYDataset::getDomainUpperBound(boolean):double" />
+			<role name="Request()" element="org.jfree.data.xy.CategoryTableXYDataset::getDomainBounds(boolean):org.jfree.data.Range" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.jfree.chart.plot.FastScatterPlot" />
+			<role name="RealSubject" element="org.jfree.chart.axis.ValueAxis" />
+			<role name="Request()" element="org.jfree.chart.plot.FastScatterPlot::clone():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.jfree.chart.JFreeChart" />
+			<role name="RealSubject" element="org.jfree.chart.plot.Plot" />
+			<role name="Request()" element="org.jfree.chart.JFreeChart::receive(org.jfree.chart.ChartElementVisitor):void" />
+		</instance>
+		<instance>
+			<role name="RealSubject" element="org.jfree.data.time.Day" />
+			<role name="Proxy" element="org.jfree.data.time.Millisecond" />
+			<role name="Request()" element="org.jfree.data.time.Millisecond::getSerialIndex():long" />
+		</instance>
+		<instance>
+			<role name="RealSubject" element="org.jfree.data.time.Day" />
+			<role name="Proxy" element="org.jfree.data.time.Minute" />
+			<role name="Request()" element="org.jfree.data.time.Minute::getSerialIndex():long" />
+		</instance>
+		<instance>
+			<role name="RealSubject" element="org.jfree.data.time.Day" />
+			<role name="Proxy" element="org.jfree.data.time.Second" />
+			<role name="Request()" element="org.jfree.data.time.Second::getSerialIndex():long" />
+		</instance>
+		<instance>
+			<role name="RealSubject" element="org.jfree.data.time.Day" />
+			<role name="Proxy" element="org.jfree.data.time.Hour" />
+			<role name="Request()" element="org.jfree.data.time.Hour::previous():org.jfree.data.time.RegularTimePeriod" />
+			<role name="Request()" element="org.jfree.data.time.Hour::next():org.jfree.data.time.RegularTimePeriod" />
+			<role name="Request()" element="org.jfree.data.time.Hour::getSerialIndex():long" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.jfree.data.gantt.XYTaskDataset" />
+			<role name="RealSubject" element="org.jfree.data.gantt.TaskSeriesCollection" />
+			<role name="Request()" element="org.jfree.data.gantt.XYTaskDataset::getSeriesCount():int" />
+			<role name="Request()" element="org.jfree.data.gantt.XYTaskDataset::getSeriesKey(int):java.lang.Comparable" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.jfree.data.xy.DefaultTableXYDataset" />
+			<role name="RealSubject" element="org.jfree.data.xy.IntervalXYDelegate" />
+			<role name="Request()" element="org.jfree.data.xy.DefaultTableXYDataset::getDomainLowerBound(boolean):double" />
+			<role name="Request()" element="org.jfree.data.xy.DefaultTableXYDataset::getDomainUpperBound(boolean):double" />
+			<role name="Request()" element="org.jfree.data.xy.DefaultTableXYDataset::getDomainBounds(boolean):org.jfree.data.Range" />
+		</instance>
+		<instance>
+			<role name="Proxy" element="org.jfree.data.xy.XYSeriesCollection" />
+			<role name="RealSubject" element="org.jfree.data.xy.IntervalXYDelegate" />
+			<role name="Request()" element="org.jfree.data.xy.XYSeriesCollection::clone():java.lang.Object" />
+			<role name="Request()" element="org.jfree.data.xy.XYSeriesCollection::getDomainLowerBound(boolean):double" />
+			<role name="Request()" element="org.jfree.data.xy.XYSeriesCollection::getDomainUpperBound(boolean):double" />
+			<role name="Request()" element="org.jfree.data.xy.XYSeriesCollection::getDomainBounds(boolean):org.jfree.data.Range" />
+		</instance>
+	</pattern>
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility">
+		<instance>
+			<role name="Handler" element="org.jfree.chart.plot.Plot" />
+			<role name="successor" element="org.jfree.chart.plot.Plot::parent:org.jfree.chart.plot.Plot" />
+		</instance>
+	</pattern>
+</system>
+
